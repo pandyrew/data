@@ -18,9 +18,16 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
           '100%': { transform: 'translateY(0)' },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         bob: 'bob 1s ease-in-out infinite',
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       fontFamily: {
         anderson: ['var(--font-anderson)'],
@@ -28,6 +35,12 @@ module.exports = {
         satoshi: ['var(--font-satoshi)'],
       }
       
+    },
+  },
+  variants:{
+    extend: {
+      translate: ['group-hover'],
+      transform: ['group-hover'],
     },
   },
   plugins: [addVariablesForColors],

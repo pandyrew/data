@@ -9,18 +9,12 @@ export default function Home() {
 
 
   return (
-    // <div className="h-[40rem] rounded-md flex flex-col antialiased bg-black dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-    //   <InfiniteMovingCards
-    //     items={testimonials}
-    //     direction="right"
-    //     speed="slow"
-    //   />
-    // </div>
-    <div className="relative h-[10000px]">
-      <div className="absolute bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10">
+
+    <div className="relative h-fit">
+      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10">
         <div className="relative font-clash font-medium top-[15%] text-[128px] ">Data At UCI</div>
         <div className="relative bg-black rounded-2xl top-[22%]">
-          <Image src={heroPicture} alt='asdf' sizes="100vw" width={0} height={0} className='w-full h-auto rounded-2xl relative opacity-50'></Image>
+          <Image src={heroPicture} alt='asdf' sizes="100vw" width={0} height={0} className='relative w-full h-auto rounded-2xl relative opacity-50'></Image>
           <div className="flex">
             <div className="absolute top-0 p-10 text-6xl bg-red text-white font-satoshi font-black tracking-normal">Making the invisible, visible</div>
             <div className="absolute top-20 p-10 text-2xl w-[800px] bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">Join an expanding community of data-science lovers, and unlock the secrets of data with us</div>
@@ -30,7 +24,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-        <Navbar></Navbar>
+      
+      <div className="relative w-full h-[500px]"></div>
+      <div className="relative w-full h-[600px] bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 items-center justify-center">
+      <div>What Students at UCI are saying</div>
+      <div className="h-[200px] ">
+
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
+      </div>
+      </div>
     </div>
   )
 }
