@@ -16,7 +16,7 @@ export default function Home() {
 
     <div className="relative h-fit">
       <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10 z-[30]">
-        <div className="relative font-clash font-medium top-[15%] text-[128px] ">Data At UCI</div>
+        <div className="relative font-clash font-medium top-[15%] text-[128px]  ">Data At UCI</div>
         <div className="relative bg-black rounded-2xl top-[22%] h-[78%]">
           <Image src={heroPicture} alt='asdf' sizes="100vw" width={0} height={0} className='h-full object-cover rounded-2xl relative opacity-50'></Image>
           <div className="flex">

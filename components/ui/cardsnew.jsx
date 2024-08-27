@@ -233,9 +233,49 @@ const cards = [
       );
     },
   },
-
   {
-    description: "VP of Marketing",
+    description: "Director of Community Development",
+    title: "Elane Elza Shane",
+    src: '/photos/hero-picture.png',
+    ctaText: "View",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        (<p>Led Zeppelin, a legendary British rock band, is renowned for their
+                    innovative sound and profound impact on the music industry. Formed in
+                    London in 1968, they have become a cultural icon in the rock music
+                    world. <br /> <br />Their songs often reflect a blend of blues, hard
+                    rock, and folk music, capturing the essence of the 1970s rock era.
+                    With a career spanning over a decade, Led Zeppelin has released
+                    numerous hit albums and singles that have garnered them a massive fan
+                    following both in the United Kingdom and abroad.
+                  </p>)
+      );
+    },
+  },
+  {
+    description: "VP of Community Development",
+    title: "Kyle Huynh",
+    src: '/photos/data-alt.png',
+    ctaText: "View",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        (<p>"Aawarapan", a Bollywood movie starring Emraan Hashmi, is
+                    renowned for its intense storyline and powerful performances. Directed
+                    by Mohit Suri, the film has become a significant work in the Indian
+                    film industry. <br /> <br />The movie explores themes of love,
+                    redemption, and sacrifice, capturing the essence of human emotions and
+                    relationships. With a gripping narrative and memorable music,
+                    "Aawarapan" has garnered a massive fan following both in
+                    India and abroad, solidifying Emraan Hashmi's status as a
+                    versatile actor.
+                  </p>)
+      );
+    },
+  },
+  {
+    description: "Co-Director of Marketing",
     title: "Jake Silverman",
     src: '/photos/group.png',
     ctaText: "View",
@@ -256,27 +296,7 @@ const cards = [
     },
   },
   {
-    description: "VP of Community Development",
-    title: "Kyle Huynh",
-    src: '/photos/hero-picture.png',
-    ctaText: "View",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        (<p>Led Zeppelin, a legendary British rock band, is renowned for their
-                    innovative sound and profound impact on the music industry. Formed in
-                    London in 1968, they have become a cultural icon in the rock music
-                    world. <br /> <br />Their songs often reflect a blend of blues, hard
-                    rock, and folk music, capturing the essence of the 1970s rock era.
-                    With a career spanning over a decade, Led Zeppelin has released
-                    numerous hit albums and singles that have garnered them a massive fan
-                    following both in the United Kingdom and abroad.
-                  </p>)
-      );
-    },
-  },
-  {
-    description: "Marketing",
+    description: "Graphic Designer",
     title: "Elle Hsu",
     src: '/photos/data-alt.png',
     ctaText: "View",
