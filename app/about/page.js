@@ -30,7 +30,7 @@ export default function About() {
     flex items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px]" >Regular meetups, hackathons, and seminars provide opportunities for members to collaborate, network, and learn from each other.</div>
         </div>
       </div>
-      <div className="relative flex flex-col items-center">
+      <div className="relative flex flex-col items-center z-[12]">
         <Image src={gradient} className="relative"></Image>
         <div className="rounded-2xl bg-[#D4D4D4] p-8 px-[300px] ring-1 ring-black/5 absolute  top-[6%] bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-md shadow-md">
           <p className='font-clash text-7xl font-medium'>Our Mission</p>
@@ -50,10 +50,14 @@ export default function About() {
         </div>
         <Image src={aboutWave} className="absolute bottom-0"></Image>
       </div>
-      <div className="w-full h-[500px] flex">
-        <Cards></Cards>
-        <CardsTwo></CardsTwo>
-
+      <div className="relative w-full h-fit flex flex-col items-center gap-[100px] pt-[100px] z-[15] pb-[200px] border-b">
+        <div className="rounded-2xl bg-[#D4D4D4] p-8 px-[300px] absolute -top-[110px] ring-1 ring-black/5 bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blue-md shadow-md">
+        <p className="font-clash text-7xl font-medium">Our Leadership</p>
+        </div>
+        <div className="flex flex-row justify-around w-[80%] gap-10 ">
+          <Cards></Cards>
+          <CardsTwo></CardsTwo>
+        </div>
       </div>
 
     </div>
