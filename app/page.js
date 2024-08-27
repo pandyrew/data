@@ -4,6 +4,10 @@ import Navbar from "@/components/ui/navbar";
 import heroPicture from '/public/photos/data-alt.png'
 import sparkle from '/public/icons/sparkle.svg'
 import arrow from '/public/icons/arrow.svg'
+import wave1 from '/public/wave/wave-1.png'
+import wave2 from '/public/wave/wave-2.png'
+import gradient from '/public/gradients/front-page-gradient-2.png'
+
 export default function Home() {
 
 
@@ -11,10 +15,10 @@ export default function Home() {
   return (
 
     <div className="relative h-fit">
-      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10">
+      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10 z-[30]">
         <div className="relative font-clash font-medium top-[15%] text-[128px] ">Data At UCI</div>
-        <div className="relative bg-black rounded-2xl top-[22%]">
-          <Image src={heroPicture} alt='asdf' sizes="100vw" width={0} height={0} className='relative w-full h-auto rounded-2xl relative opacity-50'></Image>
+        <div className="relative bg-black rounded-2xl top-[22%] h-[78%]">
+          <Image src={heroPicture} alt='asdf' sizes="100vw" width={0} height={0} className='h-full object-cover rounded-2xl relative opacity-50'></Image>
           <div className="flex">
             <div className="absolute top-0 p-10 text-6xl bg-red text-white font-satoshi font-black tracking-normal">Making the invisible, visible</div>
             <div className="absolute top-20 p-10 text-2xl w-[800px] bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">Join an expanding community of data-science lovers, and unlock the secrets of data with us</div>
@@ -24,19 +28,29 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
-      <div className="relative w-full h-[500px]"></div>
-      <div className="relative w-full h-[600px] bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 items-center justify-center">
-      <div>What Students at UCI are saying</div>
-      <div className="h-[200px] ">
+      <div className="relative z-[1]">
+        <Image src={gradient} className=""></Image>
+        <Image src={wave1} className="absolute z-[1] top-0"></Image>
+        <div className="absolute bottom-0 z-[1] w-full">
+          <Image src={wave2} className=""></Image>
+          <div className="relative w-full h-[550px]  bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 p-5 pb-20 items-center justify-center">
+          <div>What Students at UCI are saying</div>
+          <div className="h-[200px] ">
+            <InfiniteMovingCards
+              items={testimonials}
+              direction="right"
+              speed="slow"
+              className="mb-[200px]"
+            />
+          </div>
+        </div>
+      </div>
+      </div>
 
-        <InfiniteMovingCards
-          items={testimonials}
-          direction="right"
-          speed="slow"
-        />
-      </div>
-      </div>
+
+      
+
+      
     </div>
   )
 }
