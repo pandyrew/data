@@ -8,7 +8,7 @@ import group from '/public/photos/group.png'
 import hero from '/public/photos/hero-picture.png'
 import juan from '/public/photos/juan.png'
 
-export default function cardsnewtwo() {
+export default function Cardsnewtwo() {
   const [active, setActive] = useState(null);
   const ref = useRef(null);
   const id = useId();
