@@ -10,7 +10,7 @@ export default function About() {
     <div className="relative h-[10000px] ">
       <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen p-10 pl-[70px]">
       </div>
-        <Navbar></Navbar>
+
     </div>
   )
 }

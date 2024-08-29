@@ -1,100 +1,139 @@
-"use client";
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
 import {
   motion,
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "framer-motion";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import dataIcon from '/public/icons/data-icon.svg'
-import linkedInIcon from '/public/icons/linkedin-icon.svg'
-import instagramIcon from '/public/icons/instagram-icon.svg'
-import Image from "next/image";
+} from 'framer-motion';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import dataIcon from '/public/icons/data-icon.svg';
+import linkedInIcon from '/public/icons/linkedin-icon.svg';
+import instagramIcon from '/public/icons/instagram-icon.svg';
+import Image from 'next/image';
+import hamburgerIcon from '/public/icons/hamburger.png';
 
-export const FloatingNav = ({
-  navItems,
-  className
-}) => {
+export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
+  useMotionValueEvent(scrollYProgress, 'change', (current) => {
     // Check if current is not undefined and is a number
-    if (typeof current === "number") {
+    if (typeof current === 'number') {
       let direction = current - scrollYProgress.getPrevious();
 
-
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      
+      if (direction < 0) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
     }
   });
-  
+
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   return (
-    (<AnimatePresence mode="wait">
+    <AnimatePresence mode="wait">
       <motion.div
         initial={{
           opacity: 1,
-          y: -100,
+          y: isMobile ? 0 : -100,
         }}
         animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
+          y: visible ? 0 : isMobile ? 0 : -100,
+          opacity: visible ? 1 : isMobile ? 1 : 0,
         }}
         transition={{
-          duration: 0.2,
+          duration: isMobile ? 0 : 0.2,
         }}
         className={cn(
-          "flex max-w-fit ring-1 font-anderson bg-white/20 font-medium text-3xl ring-black/5 bg-clip-padding backdrop-filter shadow backdrop-blur-md bg-opacity-60 fixed top-8 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-xl dark:bg-black z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-8",
+          'flex lg:max-w-fit w-full ring-1 font-anderson bg-white/20 font-medium text-3xl ring-black/5 bg-clip-padding backdrop-filter shadow backdrop-blur-md bg-opacity-60 fixed lg:top-8 top-0 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2]  lg:rounded-xl dark:bg-black z-[5000] pr-2 lg:pl-8 py-2 pl-2 rounded-b-xl lg:items-center items-center justify-center lg:space-x-8 space-x-0 h-fit',
           className
-        )}>
-          <Link href='/' className="">
-                
-                <Image
-                    src={dataIcon}
-                    alt="Picture of the author"
-                    className="h-full"
-                />
-                </Link>
+        )}
+      >
+        <Link href="/" className="">
+          <Image
+            src={dataIcon}
+            alt="Picture of the author"
+            className="h-full"
+          />
+        </Link>
         {navItems.map((navItem, idx) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-500 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm"
-            )}>
+              'hidden relative dark:text-neutral-50 items-center lg:flex space-x-1 text-neutral-500 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
+            )}
+          >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <div className="xl:w-[400px] lg:w-[300px] w-[200px]">
-
+        <div className="xl:w-[400px] lg:w-[300px] w-[200px] hidden lg:flex"></div>
+        <div className="gap-14 items-center h-auto justify-center hidden lg:flex">
+          <Link
+            href="https://www.linkedin.com/company/data-uci/mycompany/"
+            className=""
+          >
+            <Image
+              src={linkedInIcon}
+              alt="Picture of the author"
+              className="h-full"
+            />
+          </Link>
+          <Link href="https://www.instagram.com/dataatuci/?__d=1" className="">
+            <Image
+              src={instagramIcon}
+              alt="Picture of the author"
+              className="h-[30%]"
+            />
+          </Link>
         </div>
-        <div className="flex gap-14 items-center h-auto justify-center">
-                <Link href="https://www.linkedin.com/company/data-uci/mycompany/" className=''>
+        {isMobile && (
+          <div className="absolute right-[20px]">
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="text-neutral-500 dark:text-neutral-50 flex justify-center items-center"
+            >
+              <div className="h-full flex justify-center items-center">
                 <Image
-                    src={linkedInIcon}
-                    alt="Picture of the author"
-                    className='h-full'
-                />
+                  src={hamburgerIcon}
+                  alt="hamburger icon"
+                  width={30}
+                  height={30}
+                  className="h-full"
+                ></Image>
+              </div>
+            </button>
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-md shadow-lg">
+                <Link
+                  href="/about"
+                  className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  About
                 </Link>
-                <Link href="https://www.instagram.com/dataatuci/?__d=1" className="">
-                <Image
-                    src={instagramIcon}
-                    alt="Picture of the author"
-                    className="h-[30%]"
-                />
+                <Link
+                  href="/datathon"
+                  className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  Datathon
                 </Link>
-
-            </div>
+                <Link
+                  href="/contact"
+                  className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  Contact
+                </Link>
+              </div>
+            )}
+          </div>
+        )}
       </motion.div>
-    </AnimatePresence>)
+    </AnimatePresence>
   );
 };

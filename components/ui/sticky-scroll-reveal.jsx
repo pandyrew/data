@@ -53,8 +53,11 @@ export const StickyScroll = ({
   return (
     (<motion.div
       
-      className="h-auto flex justify-center relative  rounded-md p-[40px] w-full"
+      className="h-auto flex justify-center relative p-[40px] pt-[100px] w-full mt-[200px] border-t"
       ref={ref}>
+      <div className="absolute px-[300px] top-[60px] rounded-2xl bg-[#D4D4D4] p-8 ring-1 ring-black/5 bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blue-md shadow-md">
+        <p className="text-7xl font-clash font-medium ">Past Hackathons</p>
+      </div>
       <div className="div relative flex items-start px-4 w-full">
         <div className="w-full">
           {content.map((item, index) => (
