@@ -35,7 +35,7 @@ export default function About() {
           ></Image>
           <div
             className="absolute xl:p-10 lg:p-8 md:p-4 -bottom-[80px]  xl:w-[500px] lg:w-[300px] w-[200px] bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-md h-auto rounded-xl bg-white/20 ring-1 ring-black/5
-    flex items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px]"
+   items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px] hidden lg:flex"
           >
             Regular meetups, hackathons, and seminars provide opportunities for
             members to collaborate, network, and learn from each other.
@@ -62,7 +62,7 @@ export default function About() {
               className="rounded-2xl border-4 border-[#9D9D9D]"
             ></Image>
           </div>
-          <div className="flex-1 sm:p-10 p-5 font-satoshi sm:text-2xl flex flex-col gap-5">
+          <div className="flex-1 sm:p-10 p-5 font-satoshi lg:text-2xl flex flex-col gap-5">
             <p>
               Data@UCI aims to nurture a community of Anteaters exploring their
               place in an increasingly data-driven world. Through workshops,
@@ -71,7 +71,7 @@ export default function About() {
               deeper appreciation for data — helping them to succeed in college
               and in their careers.{' '}
             </p>
-            <p>
+            <p className="hidden sm:flex">
               We are a student-run organization ultimately dedicated to the UCI
               and larger Orange County communities.{' '}
             </p>
@@ -79,7 +79,7 @@ export default function About() {
           <div>
             <div
               className="absolute xl:p-10 lg:p-8 md:p-4 -bottom-[80px]  xl:w-[500px] lg:w-[300px] w-[200px] bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-md h-auto rounded-xl bg-white/20 ring-1 ring-black/5
-    flex items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px]"
+     items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px] hidden lg:flex"
             >
               Photo taken from a Data Science Applications in Finance panel.
             </div>
@@ -93,7 +93,7 @@ export default function About() {
       </div>
       <div className="relative w-full h-fit flex flex-col items-center gap-[100px] pt-[100px] z-[15] pb-[200px] border-b">
         <div className="rounded-2xl bg-[#D4D4D4] p-8 lg:px-[300px] px-4 absolute sm:-top-[110px] top-0 ring-1 ring-black/5 bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blue-md shadow-md">
-          <p className="font-clash lg:text-7xl text-4xl font-medium">
+          <p className="font-clash lg:text-5xl text-4xl font-medium xl:text-7xl">
             Our Leadership
           </p>
         </div>

@@ -23,22 +23,26 @@ export default function Datathon() {
           sizes="100vw"
           className=""
         />
-        <p className="absolute top-[7%] left-[5%] font-clash text-7xl font-medium w-fit">
+        <p className="absolute lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-0">
           What is a Datathon?
         </p>
       </div>
       <div className="relative w-full h-[500px]  flex flex-col justify-center items-center -mt-10">
         <div className="relative">
-          <div className="w-[350px]">
+          <div className="lg:w-[350px] w-[200px]">
             <Image
               alt="Nathan"
               src={nathan}
-              className="rounded-xl border-[#9D9D9D] border-4"
+              className="rounded-xl border-[#9D9D9D] border-4 hidden lg:flex"
             ></Image>
           </div>
-          <div className="w-[300px] absolute -top-[50px] left-[200px]">
-            <Image alt="textbox" src={textbox}></Image>
-            <div className="absolute top-0 w-full p-6 flex items-center">
+          <div className="sm:w-[300px] absolute lg:-top-[50px] -top-[150px] lg:left-[200px] w-[250px] -left-[10px]">
+            <Image
+              alt="textbox"
+              src={textbox}
+              className="hidden lg:flex"
+            ></Image>
+            <div className="absolute top-0 w-full p-6 flex items-center sm:font-normal">
               <p className="">
                 Similar to hackathons, datathons provide students an opportunity
                 to explore the vast world of data by working on a data science
@@ -55,7 +59,7 @@ export default function Datathon() {
         <Image
           alt="black sparkle"
           src={sparkle}
-          className="absolute right-[16%] top-[60%]"
+          className="absolute lg:right-[16%] right-[14%] top-[60%]"
         ></Image>
         <Image
           alt="black sparkle"
@@ -63,16 +67,16 @@ export default function Datathon() {
           className="absolute left-[30%] top-[80%]"
         ></Image>
       </div>
-      <div className="w-full h-full relative flex flex-col items-center ">
-        <Image
-          alt="gradient"
-          src={gradient}
-          quality={100}
-          sizes="100vw"
-          className=""
-        />
-        <div className=" h-full w-[90%] absolute">
-          <StickyScroll content={content}></StickyScroll>
+      <div className="w-full h-fit relative flex-col items-center flex">
+        <div className="h-full relative w-full flex justify-center items-center">
+          <Image
+            alt="gradient"
+            src={gradient}
+            quality={100}
+            sizes="100vw"
+            className="absolute bg-cover h-full w-full"
+          />
+          <StickyScroll content={content} className=""></StickyScroll>
         </div>
       </div>
     </div>
