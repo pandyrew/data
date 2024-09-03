@@ -13,6 +13,8 @@ import linkedInIcon from '/public/icons/linkedin-icon.svg';
 import instagramIcon from '/public/icons/instagram-icon.svg';
 import Image from 'next/image';
 import hamburgerIcon from '/public/icons/hamburger.png';
+import { useEffect } from 'react';
+
 
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
@@ -32,6 +34,20 @@ export const FloatingNav = ({ navItems, className }) => {
       }
     }
   });
+
+  useEffect(() => {
+    const closeDropdown = (e) => {
+      if (dropdownOpen) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', closeDropdown);
+
+    return () => {
+      document.removeEventListener('click', closeDropdown);
+    };
+  }, [dropdownOpen]);
 
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
