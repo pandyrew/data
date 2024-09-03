@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <div className="relative h-fit">
       <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10 z-[30]">
-        <div className="relative font-clash font-medium top-[15%] lg:text-[128px] text-6xl ">
+        <div className="relative font-clash font-medium top-[15%] lg:text-[128px] text-5xl ">
           Data At UCI
         </div>
-        <div className="relative bg-black rounded-2xl top-[22%] h-[78%]">
+        <div className="relative bg-black rounded-2xl top-[22%] sm:h-[78%] h-[50%]">
           <Image
             src={heroPicture}
             alt="asdf"
@@ -56,15 +56,15 @@ export default function Home() {
         <Image
           src={wave1}
           alt="Wave Graphic"
-          className="absolute z-[1] top-0"
+          className="absolute z-[1] top-0 sm:flex hidden"
         ></Image>
-        <div className="w-1/2 h-fit z-[2] absolute xl:top-[400px] lg:top-[300px] top-[200px] left-[50%] -translate-x-1/2 flex flex-col items-center gap-5">
+        <div className="w-1/2 h-fit z-[2] absolute xl:top-[400px] lg:top-[300px] sm:top-[200px] top-[100px] left-[50%] -translate-x-1/2 flex flex-col items-center gap-5">
           <div className="w-full flex flex-col items-center justify-center p-5">
             <p className="xl:text-6xl font-clash font-medium text-5xl">
               Upcoming Event
             </p>
           </div>
-          <div className="xl:w-full w-[90%]">
+          <div className="xl:w-full sm:w-[90%] w-full">
             <Image
               src={winter}
               alt="Winter Workshop"
