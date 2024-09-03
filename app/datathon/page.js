@@ -85,9 +85,9 @@ export default function Datathon() {
 
 const content = [
   {
-    title: 'Collaborative Editing',
+    title: 'Lorem Ipsum',
     description:
-      'Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.',
+      'Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent natoque nibh sociosqu scelerisque.',
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
         Atlantis 2024
@@ -95,9 +95,9 @@ const content = [
     ),
   },
   {
-    title: 'Real time changes',
+    title: 'Lorem Ipsum',
     description:
-      'See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.',
+      'Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent natoque nibh sociosqu scelerisque.',
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         Atlantis 2024
@@ -105,9 +105,9 @@ const content = [
     ),
   },
   {
-    title: 'Version control',
+    title: 'Lorem Ipsum',
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      'Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent natoque nibh sociosqu scelerisque.',
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
         Atlantis 2024
