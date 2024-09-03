@@ -43,7 +43,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center z-[12] h-screen">
+      <div className="relative flex flex-col items-center z-[12] lg:h-full h-screen">
         <Image
           src={gradient}
           alt="Gradient Background"
