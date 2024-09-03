@@ -50,7 +50,7 @@ export const FloatingNav = ({ navItems, className }) => {
           duration: isMobile ? 0 : 0.2,
         }}
         className={cn(
-          'flex lg:max-w-fit w-full ring-1 font-anderson bg-white/20 font-medium text-3xl ring-black/5 bg-clip-padding backdrop-filter shadow backdrop-blur-md bg-opacity-60 fixed lg:top-8 top-0 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2]  lg:rounded-xl dark:bg-black z-[5000] pr-2 lg:pl-8 py-2 pl-2 rounded-b-xl lg:items-center items-center justify-center lg:space-x-8 space-x-0 h-fit',
+          'flex sm:max-w-fit w-full ring-1 font-anderson bg-white/20 font-medium text-3xl ring-black/5 bg-clip-padding backdrop-filter shadow backdrop-blur-md bg-opacity-60 fixed sm:top-8 top-0 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2]  sm:rounded-xl dark:bg-black z-[5000] pr-2 sm:pl-8 py-2 pl-2 rounded-b-xl sm:items-center items-center justify-center sm:space-x-8 space-x-0 h-fit',
           className
         )}
       >
@@ -66,15 +66,15 @@ export const FloatingNav = ({ navItems, className }) => {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              'hidden relative dark:text-neutral-50 items-center lg:flex space-x-1 text-neutral-500 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
+              'hidden relative dark:text-neutral-50 items-center sm:block space-x-1 text-neutral-500 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <div className="xl:w-[400px] lg:w-[300px] w-[200px] hidden lg:flex"></div>
-        <div className="gap-14 items-center h-auto justify-center hidden lg:flex">
+        <div className="xl:w-[400px] lg:w-[300px] w-[200px] hidden sm:flex"></div>
+        <div className="gap-14 items-center h-auto justify-center hidden sm:flex">
           <Link
             href="https://www.linkedin.com/company/data-uci/mycompany/"
             className=""

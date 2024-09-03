@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+import { cn } from '@/lib/utils';
+import React, { useEffect, useState } from 'react';
 
 export const InfiniteMovingCards = ({
   items,
-  direction = "left",
-  speed = "fast",
+  direction = 'left',
+  speed = 'fast',
   pauseOnHover = true,
-  className
+  className,
 }) => {
   const containerRef = React.useRef(null);
   const scrollerRef = React.useRef(null);
@@ -35,52 +35,61 @@ export const InfiniteMovingCards = ({
   }
   const getDirection = () => {
     if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty("--animation-direction", "forwards");
+      if (direction === 'left') {
+        containerRef.current.style.setProperty(
+          '--animation-direction',
+          'forwards'
+        );
       } else {
-        containerRef.current.style.setProperty("--animation-direction", "reverse");
+        containerRef.current.style.setProperty(
+          '--animation-direction',
+          'reverse'
+        );
       }
     }
   };
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+      if (speed === 'fast') {
+        containerRef.current.style.setProperty('--animation-duration', '20s');
+      } else if (speed === 'normal') {
+        containerRef.current.style.setProperty('--animation-duration', '40s');
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty('--animation-duration', '80s');
       }
     }
   };
   return (
-    (<div
+    <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-[1450px] overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        'scroller relative z-20  max-w-[calc((100dvw)-100px)]  overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className
-      )}>
+      )}
+    >
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
-          pauseOnHover && "hover:[animation-play-state:paused]"
-        )}>
+          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
+          start && 'animate-scroll ',
+          pauseOnHover && 'hover:[animation-play-state:paused]'
+        )}
+      >
         {items.map((item, idx) => (
           <li
             className="w-[350px] max-w-full relative rounded-xl border-[2px] border-b-0 border-white px-8 py-6 md:w-[450px]"
             style={{
               background:
-                "linear-gradient(180deg, var(--slate-100), var(--slate-200)",
+                'linear-gradient(180deg, var(--slate-100), var(--slate-200)',
             }}
-            key={item.name}>
+            key={item.name}
+          >
             <blockquote>
               <div
                 aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-full w-full"></div>
-              <div
-                className=" relative z-20 text-base font-anderson font-bold  text-[#3E3E3E] ">
+                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-full w-full"
+              ></div>
+              <div className=" relative z-20 text-base font-anderson font-bold  text-[#3E3E3E] ">
                 {item.quote}
               </div>
               <div className="relative z-20 mt-6 flex flex-row items-center">
@@ -97,6 +106,6 @@ export const InfiniteMovingCards = ({
           </li>
         ))}
       </ul>
-    </div>)
+    </div>
   );
 };

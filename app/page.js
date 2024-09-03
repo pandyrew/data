@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="relative h-fit">
       <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10 z-[30]">
-        <div className="relative font-clash font-medium top-[15%] text-[128px]  ">
+        <div className="relative font-clash font-medium top-[15%] lg:text-[128px] text-6xl ">
           Data At UCI
         </div>
         <div className="relative bg-black rounded-2xl top-[22%] h-[78%]">
@@ -26,26 +26,28 @@ export default function Home() {
             className="h-full object-cover rounded-2xl relative opacity-50"
           ></Image>
           <div className="flex">
-            <div className="absolute top-0 p-10 text-6xl bg-red text-white font-satoshi font-black tracking-normal">
-              Making the invisible, visible
+            <div className="absolute top-0 p-10 lg:text-6xl bg-red text-white font-satoshi font-black tracking-normal text-4xl">
+              Making the invisible, visible{' '}
+              <Image
+                src={sparkle}
+                alt="sparkle"
+                className="absolute top-5 left-[94%] hidden lg:flex p-2"
+              ></Image>
             </div>
-            <div className="absolute top-20 p-10 text-2xl w-[800px] bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">
+            <div className="hidden lg:flex absolute top-20 p-10 text-2xl w-[800px] bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">
               Join an expanding community of data-science lovers, and unlock the
               secrets of data with us
             </div>
-            <div className="absolute right-20 bottom-20 p-10 text-4xl bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">
-              Learn More
+            <div className="absolute right-[5%] bottom-[5%] flex-col items-center justify-center hidden sm:flex">
+              <div className="p-10 lg:text-4xl md:ext-3xl text-xl bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">
+                Learn More
+              </div>
+              <Image
+                src={arrow}
+                alt="sparkle"
+                className="lg:p-2 animate-bob lg:-mt-3 p-4 -mt-10"
+              ></Image>
             </div>
-            <Image
-              src={sparkle}
-              alt="sparkle"
-              className="absolute top-5 p-2 right-[40%]"
-            ></Image>
-            <Image
-              src={arrow}
-              alt="sparkle"
-              className="absolute bottom-10 p-2 right-[12%] animate-bob"
-            ></Image>
           </div>
         </div>
       </div>
@@ -56,11 +58,13 @@ export default function Home() {
           alt="Wave Graphic"
           className="absolute z-[1] top-0"
         ></Image>
-        <div className="w-1/2 h-fit z-[2] absolute top-[400px] left-[50%] -translate-x-1/2 flex flex-col items-center gap-5">
+        <div className="w-1/2 h-fit z-[2] absolute xl:top-[400px] lg:top-[300px] top-[200px] left-[50%] -translate-x-1/2 flex flex-col items-center gap-5">
           <div className="w-full flex flex-col items-center justify-center p-5">
-            <p className="text-6xl font-clash font-medium">Upcoming Event</p>
+            <p className="xl:text-6xl font-clash font-medium text-5xl">
+              Upcoming Event
+            </p>
           </div>
-          <div className="w-full h-3/4">
+          <div className="xl:w-full w-[90%]">
             <Image
               src={winter}
               alt="Winter Workshop"
@@ -68,7 +72,7 @@ export default function Home() {
             ></Image>
           </div>
         </div>
-        <div className="absolute bottom-0 z-[1] w-full">
+        <div className="absolute bottom-0 z-[1] w-full hidden lg:block">
           <Image src={wave2} alt="Wave Graphic" className=""></Image>
           <div className="relative w-full h-[550px]  bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 p-5 pb-20 items-center justify-center">
             <div>What Students at UCI are saying</div>
