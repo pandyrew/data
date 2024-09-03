@@ -62,7 +62,7 @@ export default function About() {
               className="rounded-2xl border-4 border-[#9D9D9D]"
             ></Image>
           </div>
-          <div className="flex-1 sm:p-10 p-5 font-satoshi lg:text-2xl flex flex-col gap-5">
+          <div className="flex-1 sm:p-10 p-5 font-satoshi lg:text-2xl flex flex-col gap-5 text-sm">
             <p>
               Data@UCI aims to nurture a community of Anteaters exploring their
               place in an increasingly data-driven world. Through workshops,
