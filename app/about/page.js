@@ -10,8 +10,8 @@ import CardsTwo from '@/components/ui/cardsnewtwo';
 
 export default function About() {
   return (
-    <div className="lg:relative h-fit w-[calc(100dvw)]">
-      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] sm:w-[calc(100dvw)] sm:h-[calc(100dvh)] h-[calc(100dvh-200px)] lg:p-10 lg:pl-[70px] p-0">
+    <div className="lg:relative h-fit w-full">
+      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] h-screen lg:p-10 lg:pl-[70px] p-0">
         <div className="relative sm:top-[18%] flex gap-1 top-[20%]">
           <div className="relative flex flex-col gap-2 justify-center items-center sm:justify-normal sm:items-start ">
             <p className="text-[#5EA1FF] font-clash font-medium sm:text-3xl text-2xl">
