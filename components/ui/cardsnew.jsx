@@ -72,14 +72,17 @@ export default function Cardsnew() {
               ref={ref}
               className="w-full max-w-[500px] h-fit max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div
+                layoutId={`image-${active.title}-${id}`}
+                className="bg-gray-100 dark:bg-gray-800 w-full flex justify-center items-center"
+              >
                 <Image
                   priority
-                  width={200}
-                  height={200}
+                  width={500}
+                  height={500}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-auto max-h-[80vh] sm:rounded-tr-lg sm:rounded-tl-lg object-contain"
                 />
               </motion.div>
 
@@ -115,7 +118,7 @@ export default function Cardsnew() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base max-h-40 md:max-h-60 pb-10 flex flex-col items-start gap-4 overflow-y-auto dark:text-neutral-400 [mask-image:linear-gradient(to_bottom,white_calc(100%-2rem),transparent)] pr-4"
                   >
                     {typeof active.content === 'function'
                       ? active.content()
@@ -213,20 +216,14 @@ const cards = [
   {
     description: 'Co-President',
     title: 'Azra Zahin',
-    src: '/photos/juan.png',
+    src: '/photos/azra.png',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/azra-zahin/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Computer Science Major, previously Software Engineer Intern at
+          Atlassian
         </p>
       );
     },
@@ -234,20 +231,14 @@ const cards = [
   {
     description: 'Executive External Vice President',
     title: 'Catelynn Chen',
-    src: '/photos/juan.png',
+    src: '/photos/catelynn.png',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/catelynn-chen/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          I am a second year doubling in data science and business information
+          management.
         </p>
       );
     },
@@ -255,20 +246,20 @@ const cards = [
   {
     description: 'Director of Community Development',
     title: 'Elane Elza Shane',
-    src: '/photos/hero-picture.png',
+    src: '/photos/elane.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/elane-shane/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Hello! I&apos;m Elane Shane, a software engineering major at the
+          University of California, Irvine, with a passion for using technology
+          to drive innovation. My primary focus is on Machine Learning and Data
+          Analysis, where I have honed my skills through coursework and hands-on
+          projects. <br /> <br />
+          Beyond my technical expertise, I bring a unique blend of creativity
+          and analytical thinking, cultivated through my experience in social
+          media-based marketing and fundraising.
         </p>
       );
     },
@@ -276,20 +267,16 @@ const cards = [
   {
     description: 'VP of Community Development',
     title: 'Kyle Huynh',
-    src: '/photos/data-alt.png',
+    src: '/photos/kyle.png',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/kyle-huynh-093b8624b/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          I am a third year data science student minoring in health informatics
+          and bioinformatics. I love all thing computational biology and
+          biotech! Feel free to come talk to me about anything I love getting to
+          know other people&apos;s interests in and outside of data!
         </p>
       );
     },
@@ -297,20 +284,22 @@ const cards = [
   {
     description: 'Co-Director of Marketing',
     title: 'Jake Silverman',
-    src: '/photos/group.png',
+    src: '/photos/jake.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/jakelsilverman/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Hi, my name is Jake Silverman, and I&apos;m currently a full-time
+          student at the University of California, Irvine pursuing a B.S in Data
+          Science. I&apos;m passionate about the many problems an understanding
+          of data can provide solutions to in many fields and disciplines.{' '}
+          <br />
+          <br />
+          Outside of academics, I&apos;m an avid music listener and enjoy
+          collecting vinyl from my favorite artists. Additionally, I closely
+          follow the esports scenes of my favorite games and stay up to date
+          with my favorite players and teams.
         </p>
       );
     },
@@ -318,20 +307,14 @@ const cards = [
   {
     description: 'Graphic Designer',
     title: 'Elle Hsu',
-    src: '/photos/data-alt.png',
+    src: '/photos/elle.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/ellehsu/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Business Administration Major, previously Marketing Operations Intern
+          at Celebrate Inc.
         </p>
       );
     },

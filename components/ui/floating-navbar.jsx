@@ -15,7 +15,6 @@ import Image from 'next/image';
 import hamburgerIcon from '/public/icons/hamburger.png';
 import { useEffect } from 'react';
 
-
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
 
@@ -82,7 +81,7 @@ export const FloatingNav = ({ navItems, className }) => {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              'hidden relative dark:text-neutral-50 items-center sm:block space-x-1 text-neutral-500 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
+              'hidden relative dark:text-neutral-50 items-center sm:block space-x-1 text-neutral-800 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>

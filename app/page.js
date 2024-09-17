@@ -14,7 +14,7 @@ export default function Home() {
     <div className="relative h-fit">
       <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10 z-[30]">
         <div className="relative font-clash font-medium top-[15%] lg:text-[128px] text-5xl ">
-          Data At UCI
+          Data @ UCI
         </div>
         <div className="relative bg-black rounded-2xl top-[22%] sm:h-[78%] h-[50%]">
           <Image
@@ -94,31 +94,32 @@ export default function Home() {
 const testimonials = [
   {
     quote:
-      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.',
-    name: 'Charles Dickens',
-    title: 'A Tale of Two Cities',
+      'Data @ UCI has been instrumental in my journey as a data science enthusiast. The workshops and events they organize have given me practical skills that complement my coursework perfectly.',
+    name: 'Computer Science Student',
+    title: "Class of '24",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: 'William Shakespeare',
-    title: 'Hamlet',
-  },
-  {
-    quote: 'All that we see or seem is but a dream within a dream.',
-    name: 'Edgar Allan Poe',
-    title: 'A Dream Within a Dream',
+      "Joining Data @ UCI was one of the best decisions I made in my college career. The community is incredibly supportive, and I've made great connections with both peers and industry professionals.",
+    name: 'Data Science Major',
+    title: "Class of '23",
   },
   {
     quote:
-      'It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.',
-    name: 'Jane Austen',
-    title: 'Pride and Prejudice',
+      'The Datathon organized by Data @ UCI was an amazing experience. It challenged me to apply my skills to real-world problems and work collaboratively under pressure.',
+    name: 'Statistics Student',
+    title: "Class of '25",
   },
   {
     quote:
-      'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.',
-    name: 'Herman Melville',
-    title: 'Moby-Dick',
+      'As someone new to data science, Data @ UCI provided a welcoming environment to learn and grow. Their beginner-friendly workshops helped me build a strong foundation in data analysis.',
+    name: 'Business Information Management Major',
+    title: "Class of '24",
+  },
+  {
+    quote:
+      'The guest speakers invited by Data @ UCI have been incredibly inspiring. Hearing from industry leaders and UCI alumni about their career paths in data science has really shaped my professional goals.',
+    name: 'Informatics Student',
+    title: "Class of '23",
   },
 ];

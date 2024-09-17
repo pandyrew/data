@@ -50,18 +50,9 @@ export default function Cardsnewtwo() {
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.05 } }}
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
@@ -70,16 +61,19 @@ export default function Cardsnewtwo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-fit max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-fit max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div
+                layoutId={`image-${active.title}-${id}`}
+                className="bg-gray-100 dark:bg-gray-800 w-full flex justify-center items-center"
+              >
                 <Image
                   priority
-                  width={200}
-                  height={200}
+                  width={500}
+                  height={500}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-auto max-h-[80vh] sm:rounded-tr-lg sm:rounded-tl-lg object-contain"
                 />
               </motion.div>
 
@@ -115,7 +109,7 @@ export default function Cardsnewtwo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base max-h-40 md:max-h-60 pb-10 flex flex-col items-start gap-4 overflow-y-auto dark:text-neutral-400 [mask-image:linear-gradient(to_bottom,white_calc(100%-2rem),transparent)] pr-4"
                   >
                     {typeof active.content === 'function'
                       ? active.content()
@@ -132,7 +126,10 @@ export default function Cardsnewtwo() {
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
-            onClick={() => setActive(card)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setActive(card);
+            }}
             className="p-4 flex flex-col md:flex-row justify-between min-h-[380px] sm:min-h-[0px] items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col md:flex-row ">
@@ -210,63 +207,45 @@ const cards = [
   {
     description: 'Co-President',
     title: 'Katherine Frields',
-    src: '/photos/juan.png',
+    src: '/photos/katie.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/katherine-frields-5672a6251/',
     content: () => {
-      return (
-        <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
-        </p>
-      );
+      return <p>UCI Data Science Major &amp; Regents&apos; Scholar</p>;
     },
   },
   {
     description: 'Executive Internal Vice President',
     title: 'Shreya Shyam',
-    src: '/photos/juan.png',
+    src: '/photos/shreya.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/shreyashyam/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Hi, I&apos;m Shreya! I&apos;m a third year at UC Irvine, majoring in
+          Data Science and a minor in Economics. My enthusiasm lies in utilizing
+          quantitative research and statistical programming to address societal
+          needs. Currently seeking new opportunities to grow as a professional
+          and gain valuable experience/industry skills.
         </p>
       );
     },
   },
 
   {
-    description: 'Director of Finance',
+    description: 'Vice President of Finance',
     title: 'Zeeshan Babul',
-    src: '/photos/hero-picture.png',
+    src: '/photos/zeeshan.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/zeeshanbabul/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Hey everyone! My name is Zeeshan and I am the Vice President of
+          Finance for Data @ UCI. I am a second year Data Science major and I
+          love to play basketball, hang out with friends, and explore new
+          places. Hope to see you all at our events!
         </p>
       );
     },
@@ -274,20 +253,16 @@ const cards = [
   {
     description: 'VP of Community Development',
     title: 'Tulika Basu',
-    src: '/photos/data-alt.png',
+    src: '/photos/tulika.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/tulikabasu/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Passionate Cognitive Science student with a keen interest in
+          data-driven decisions and solutions as well as computational
+          neuroscience. I love exploring these interests in relation to the
+          marketing field and consumer/UI/UX research!
         </p>
       );
     },
@@ -295,20 +270,16 @@ const cards = [
   {
     description: 'Co-Director of Marketing',
     title: 'Megan Le',
-    src: '/photos/group.png',
+    src: '/photos/megan.jpg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/meganthuyvanle/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          I am a computer science student at UC Irvine, specializing in
+          intelligent systems. Currently, I am working on categorizing plant
+          specimen images in collaboration with New York Botanical Garden and
+          Kaggle for Break Through Tech AI&apos;s private competition.
         </p>
       );
     },
@@ -316,20 +287,15 @@ const cards = [
   {
     description: 'Webmaster',
     title: 'Andrew Hwang',
-    src: '/photos/data-alt.png',
+    src: '/photos/andrew.jpeg',
     ctaText: 'View',
-    ctaLink: 'https://ui.aceternity.com/templates',
+    ctaLink: 'https://www.linkedin.com/in/andrew-hwang-78b375258/',
     content: () => {
       return (
         <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a
-          maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent
-          natoque nibh sociosqu scelerisque. Fringilla placerat lobortis iaculis
-          inceptos lectus litora. Atristique proin leo mollis efficitur orci
-          posuere laoreet. <br /> <br />
-          Vestibulum ultricies posuere massa ad nunc laoreet tristique
-          ridiculus. Arcu ultrices platea sociosqu eros; aliquet nunc. Praesent
-          urna euismod massa mi odio integer commodo.
+          Hey! Im Andrew and I am the Webmaster for Data @ UCI. I am a second
+          year Data Science major. I love studying at cafes and learning new
+          instruments. Excited to see you all at our events!
         </p>
       );
     },
