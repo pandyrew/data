@@ -85,32 +85,32 @@ export default function Datathon() {
 
 const content = [
   {
-    title: 'Lorem Ipsum',
+    title: 'Datathon 2024: Dive into Data',
     description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent natoque nibh sociosqu scelerisque.',
+      'Join us for Datathon 2024, an exciting journey into the world of data science. This event challenges participants to explore diverse datasets and develop innovative solutions for real-world problems.',
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Atlantis 2024
+      <div className="h-full w-full bg-[url('/photos/datathon3.png')] bg-cover flex items-center justify-center text-white">
+        Datathon 2024
       </div>
     ),
   },
   {
-    title: 'Lorem Ipsum',
+    title: 'Uncharted Territories',
     description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent natoque nibh sociosqu scelerisque.',
+      'Datathon 2024 offers uncharted territories for data enthusiasts. Tackle complex problems across various domains, from healthcare to finance, using cutting-edge data analysis techniques and machine learning algorithms.',
     content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
-        Atlantis 2024
+      <div className="h-full w-full bg-[url('/photos/datathon4.png')] bg-cover flex items-center justify-center text-white">
+        Datathon 2024
       </div>
     ),
   },
   {
-    title: 'Lorem Ipsum',
+    title: 'Collaborate and Innovate',
     description:
-      'Lorem ipsum odor amet, consectetuer adipiscing elit. Dolor augue a maecenas aliquet nisi integer. Eleifend vulputate ultrices aptent natoque nibh sociosqu scelerisque.',
+      'Immerse yourself in a collaborative environment at Datathon 2024. Network with fellow data scientists, domain experts, and industry professionals. Participate in workshops and mentorship sessions to enhance your skills.',
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Atlantis 2024
+      <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white">
+        Datathon 2024
       </div>
     ),
   },
