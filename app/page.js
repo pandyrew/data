@@ -75,7 +75,7 @@ export default function Home() {
         <div className="absolute bottom-0 z-[1] w-full hidden lg:block">
           <Image src={wave2} alt="Wave Graphic" className=""></Image>
           <div className="relative w-full h-[550px]  bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 p-5 pb-20 items-center justify-center">
-            <div>What Students at UCI are saying</div>
+            <div>Memories from Data@UCI</div>
             <div className="h-[200px] ">
               <InfiniteMovingCards
                 items={testimonials}
