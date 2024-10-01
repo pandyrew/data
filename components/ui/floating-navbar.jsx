@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   motion,
   AnimatePresence,
@@ -8,21 +8,18 @@ import {
 } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import Image from 'next/image';
 import dataIcon from '/public/icons/data-icon.svg';
 import linkedInIcon from '/public/icons/linkedin-icon.svg';
 import instagramIcon from '/public/icons/instagram-icon.svg';
-import Image from 'next/image';
 import hamburgerIcon from '/public/icons/hamburger.png';
-import { useEffect } from 'react';
 
 export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useMotionValueEvent(scrollYProgress, 'change', (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === 'number') {
       let direction = current - scrollYProgress.getPrevious();
 
@@ -40,7 +37,6 @@ export const FloatingNav = ({ navItems, className }) => {
         setDropdownOpen(false);
       }
     };
-
     document.addEventListener('click', closeDropdown);
 
     return () => {
@@ -76,18 +72,19 @@ export const FloatingNav = ({ navItems, className }) => {
             className="h-full"
           />
         </Link>
-        {navItems.map((navItem, idx) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              'hidden relative dark:text-neutral-50 items-center sm:block space-x-1 text-neutral-800 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
+        <div className="hidden sm:flex items-center space-x-10 overflow-x-auto whitespace-nowrap">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                'relative dark:text-neutral-50 items-center text-neutral-800 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
+              )}
+            >
+              <span className="text-sm">{navItem.name}</span>
+            </Link>
+          ))}
+        </div>
         <div className="xl:w-[400px] lg:w-[300px] w-[200px] hidden sm:flex"></div>
         <div className="gap-14 items-center h-auto justify-center hidden sm:flex">
           <Link
@@ -143,6 +140,12 @@ export const FloatingNav = ({ navItems, className }) => {
                   className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
                   Contact
+                </Link>
+                <Link
+                  href="/meet-us"
+                  className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  Meet Us
                 </Link>
               </div>
             )}

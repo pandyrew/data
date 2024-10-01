@@ -91,17 +91,6 @@ export default function About() {
           className="absolute bottom-0"
         ></Image>
       </div>
-      <div className="relative w-full h-fit flex flex-col items-center gap-[100px] pt-[100px] z-[15] pb-[200px] border-b">
-        <div className="rounded-2xl bg-[#D4D4D4] p-8 lg:px-[300px] px-4 absolute sm:-top-[110px] top-0 ring-1 ring-black/5 bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blue-md shadow-md">
-          <p className="font-clash lg:text-5xl text-4xl font-medium xl:text-7xl">
-            Our Leadership
-          </p>
-        </div>
-        <div className="flex flex-row justify-around w-[80%] gap-10 mt-10 sm:mt-0">
-          <Cards></Cards>
-          <CardsTwo></CardsTwo>
-        </div>
-      </div>
     </div>
   );
 }

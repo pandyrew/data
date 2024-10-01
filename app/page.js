@@ -7,7 +7,7 @@ import arrow from '/public/icons/arrow.svg';
 import wave1 from '/public/wave/wave-1.png';
 import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
-import winter from '/public/photos/winter-workshop.png';
+import intro from '/public/photos/intro.png';
 
 export default function Home() {
   return (
@@ -66,9 +66,9 @@ export default function Home() {
           </div>
           <div className="xl:w-full sm:w-[90%] w-full">
             <Image
-              src={winter}
-              alt="Winter Workshop"
-              className="object-cover rounded-2xl border-4 border-[#808080]"
+              src={intro}
+              alt="intro event"
+              className="object-cover rounded-2xl "
             ></Image>
           </div>
         </div>

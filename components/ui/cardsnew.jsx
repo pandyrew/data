@@ -139,9 +139,9 @@ export default function Cardsnew() {
               e.stopPropagation(); // Stop the click event from propagating to the window
               setActive(card);
             }}
-            className="p-4 flex flex-col md:flex-row justify-between min-h-[380px] sm:min-h-[0px] items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col md:flex-row min-h-[380px] justify-between sm:min-h-[0px] items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col md:flex-row ">
+            <div className="flex gap-4 flex-col md:flex-row justify-center items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
