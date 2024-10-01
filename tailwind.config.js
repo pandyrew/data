@@ -5,11 +5,11 @@ const {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     extend: {
       keyframes: {
@@ -18,26 +18,29 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
           '100%': { transform: 'translateY(0)' },
         },
+        screens: {
+          'h-sm': { raw: '(max-height: 600px)' }, // for small height screens
+          'h-md': { raw: '(max-height: 800px)' }, // for medium height screens
+        },
         scroll: {
           to: {
-            transform: "translate(calc(-50% - 0.5rem))",
+            transform: 'translate(calc(-50% - 0.5rem))',
           },
         },
       },
       animation: {
         bob: 'bob 1s ease-in-out infinite',
         scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
       },
       fontFamily: {
         anderson: ['var(--font-anderson)'],
         clash: ['var(--font-clash)'],
         satoshi: ['var(--font-satoshi)'],
-      }
-      
+      },
     },
   },
-  variants:{
+  variants: {
     extend: {
       translate: ['group-hover'],
       transform: ['group-hover'],

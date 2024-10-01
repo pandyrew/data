@@ -11,9 +11,9 @@ import CardsTwo from '@/components/ui/cardsnewtwo';
 export default function About() {
   return (
     <div className="lg:relative h-fit w-full">
-      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] h-screen lg:p-10 lg:pl-[70px] p-0">
+      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] h-screen lg:p-10 lg:pl-[70px] p-0 h-sm:h-auto h-md:h-80">
         <div className="relative sm:top-[18%] flex gap-1 top-[20%]">
-          <div className="relative flex flex-col gap-2 justify-center items-center sm:justify-normal sm:items-start ">
+          <div className="relative flex flex-col gap-2 justify-center items-center sm:justify-normal sm:items-start z-50">
             <p className="text-[#5EA1FF] font-clash font-medium sm:text-3xl text-2xl">
               About us
             </p>
@@ -27,7 +27,7 @@ export default function About() {
             className="bottom-0 mt-8 hidden sm:block"
           ></Image>
         </div>
-        <div className="absolute sm:top-[33%] sm:right-12 top-[48%]">
+        <div className="absolute sm:top-[33%] sm:right-12 top-[48%] z-1">
           <Image
             src={groupPhoto}
             alt="Group Photo"
