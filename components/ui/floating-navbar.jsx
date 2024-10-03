@@ -72,16 +72,16 @@ export const FloatingNav = ({ navItems, className }) => {
             className="h-full"
           />
         </Link>
-        <div className="hidden sm:flex items-center space-x-10 overflow-x-auto whitespace-nowrap">
+        <div className="hidden sm:flex items-center justify-center space-x-10 overflow-x-auto whitespace-nowrap">
           {navItems.map((navItem, idx) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                'relative dark:text-neutral-50 items-center text-neutral-800 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
+                'relative dark:text-neutral-50 mb-[5px] items-center justify-center text-neutral-800 dark:hover:text-neutral-100 hover:text-neutral-700 transition duration-300 hover:drop-shadow-sm'
               )}
             >
-              <span className="text-sm">{navItem.name}</span>
+              <span className="text-sm ">{navItem.name}</span>
             </Link>
           ))}
         </div>

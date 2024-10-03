@@ -8,7 +8,7 @@ import group from '/public/photos/group.png';
 import hero from '/public/photos/hero-picture.png';
 import juan from '/public/photos/juan.png';
 
-export default function Cardsnewtwo() {
+export default function Cardsnew() {
   const [active, setActive] = useState(null);
   const ref = useRef(null);
   const id = useId();
@@ -50,9 +50,18 @@ export default function Cardsnewtwo() {
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.05 } }}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.05,
+                },
+              }}
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
@@ -61,23 +70,22 @@ export default function Cardsnewtwo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-fit max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-fit max-h-[90vh] flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
               <motion.div
                 layoutId={`image-${active.title}-${id}`}
-                className="bg-gray-100 dark:bg-gray-800 w-full flex justify-center items-center"
+                className="w-full h-[40vh] relative"
               >
                 <Image
                   priority
-                  width={500}
-                  height={500}
+                  fill
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-auto max-h-[80vh] sm:rounded-tr-lg sm:rounded-tl-lg object-contain"
+                  className="object-cover"
                 />
               </motion.div>
 
-              <div>
+              <div className="overflow-y-auto flex-grow">
                 <div className="flex justify-between items-start p-4">
                   <div className="">
                     <motion.h3
@@ -103,13 +111,13 @@ export default function Cardsnewtwo() {
                     {active.ctaText}
                   </motion.a>
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="pt-4 relative px-4 pb-4">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base max-h-40 md:max-h-60 pb-10 flex flex-col items-start gap-4 overflow-y-auto dark:text-neutral-400 [mask-image:linear-gradient(to_bottom,white_calc(100%-2rem),transparent)] pr-4"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base flex flex-col items-start gap-4 dark:text-neutral-400"
                   >
                     {typeof active.content === 'function'
                       ? active.content()
@@ -127,10 +135,10 @@ export default function Cardsnewtwo() {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={(e) => {
-              e.stopPropagation();
+              e.stopPropagation(); // Stop the click event from propagating to the window
               setActive(card);
             }}
-            className="p-4 flex flex-col md:flex-row justify-between min-h-[380px] sm:min-h-[0px] items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col md:flex-row min-h-[380px] justify-between sm:min-h-[0px] items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col md:flex-row justify-center items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -217,7 +225,7 @@ const cards = [
   {
     description: 'Executive Internal Vice President',
     title: 'Shreya Shyam',
-    src: '/photos/shreya.jpeg',
+    src: '/photos/shreya_shyam.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/shreyashyam/',
     content: () => {
@@ -253,7 +261,7 @@ const cards = [
   {
     description: 'VP of Community Development',
     title: 'Tulika Basu',
-    src: '/photos/tulika.jpeg',
+    src: '/photos/tulika_basu.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/tulikabasu/',
     content: () => {
@@ -270,7 +278,7 @@ const cards = [
   {
     description: 'Co-Director of Marketing',
     title: 'Megan Le',
-    src: '/photos/megan.jpg',
+    src: '/photos/megan_le.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/meganthuyvanle/',
     content: () => {

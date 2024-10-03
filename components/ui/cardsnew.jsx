@@ -70,23 +70,22 @@ export default function Cardsnew() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-fit max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-fit max-h-[90vh] flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
               <motion.div
                 layoutId={`image-${active.title}-${id}`}
-                className="bg-gray-100 dark:bg-gray-800 w-full flex justify-center items-center"
+                className="w-full h-[40vh] relative"
               >
                 <Image
                   priority
-                  width={500}
-                  height={500}
+                  fill
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-auto max-h-[80vh] sm:rounded-tr-lg sm:rounded-tl-lg object-contain"
+                  className="object-cover"
                 />
               </motion.div>
 
-              <div>
+              <div className="overflow-y-auto flex-grow">
                 <div className="flex justify-between items-start p-4">
                   <div className="">
                     <motion.h3
@@ -112,13 +111,13 @@ export default function Cardsnew() {
                     {active.ctaText}
                   </motion.a>
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="pt-4 relative px-4 pb-4">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base max-h-40 md:max-h-60 pb-10 flex flex-col items-start gap-4 overflow-y-auto dark:text-neutral-400 [mask-image:linear-gradient(to_bottom,white_calc(100%-2rem),transparent)] pr-4"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base flex flex-col items-start gap-4 dark:text-neutral-400"
                   >
                     {typeof active.content === 'function'
                       ? active.content()
@@ -216,7 +215,7 @@ const cards = [
   {
     description: 'Co-President',
     title: 'Azra Zahin',
-    src: '/photos/azra.png',
+    src: '/photos/azra_zahin.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/azra-zahin/',
     content: () => {
@@ -231,7 +230,7 @@ const cards = [
   {
     description: 'Executive External Vice President',
     title: 'Catelynn Chen',
-    src: '/photos/catelynn.png',
+    src: '/photos/catelynn_chen.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/catelynn-chen/',
     content: () => {
@@ -246,7 +245,7 @@ const cards = [
   {
     description: 'Director of Community Development',
     title: 'Elane Elza Shane',
-    src: '/photos/elane.jpeg',
+    src: '/photos/elane_shane.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/elane-shane/',
     content: () => {
@@ -256,10 +255,8 @@ const cards = [
           University of California, Irvine, with a passion for using technology
           to drive innovation. My primary focus is on Machine Learning and Data
           Analysis, where I have honed my skills through coursework and hands-on
-          projects. <br /> <br />
-          Beyond my technical expertise, I bring a unique blend of creativity
-          and analytical thinking, cultivated through my experience in social
-          media-based marketing and fundraising.
+          projects.
+
         </p>
       );
     },
@@ -267,7 +264,7 @@ const cards = [
   {
     description: 'VP of Community Development',
     title: 'Kyle Huynh',
-    src: '/photos/kyle.png',
+    src: '/photos/kyle_huynh.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/kyle-huynh-093b8624b/',
     content: () => {
@@ -284,7 +281,7 @@ const cards = [
   {
     description: 'Co-Director of Marketing',
     title: 'Jake Silverman',
-    src: '/photos/jake.jpeg',
+    src: '/photos/jake_silverman.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/jakelsilverman/',
     content: () => {
@@ -294,12 +291,7 @@ const cards = [
           student at the University of California, Irvine pursuing a B.S in Data
           Science. I&apos;m passionate about the many problems an understanding
           of data can provide solutions to in many fields and disciplines.{' '}
-          <br />
-          <br />
-          Outside of academics, I&apos;m an avid music listener and enjoy
-          collecting vinyl from my favorite artists. Additionally, I closely
-          follow the esports scenes of my favorite games and stay up to date
-          with my favorite players and teams.
+
         </p>
       );
     },
@@ -307,7 +299,7 @@ const cards = [
   {
     description: 'Graphic Designer',
     title: 'Elle Hsu',
-    src: '/photos/elle.jpeg',
+    src: '/photos/elle_hsu.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/ellehsu/',
     content: () => {

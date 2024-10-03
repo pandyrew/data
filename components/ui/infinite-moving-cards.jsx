@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export const InfiniteMovingCards = ({
   items,
@@ -16,7 +17,9 @@ export const InfiniteMovingCards = ({
   useEffect(() => {
     addAnimation();
   }, []);
+
   const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
@@ -33,6 +36,7 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === 'left') {
@@ -48,6 +52,7 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === 'fast') {
@@ -59,50 +64,41 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative z-20  max-w-[calc((100dvw)-100px)]  overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+        'scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
-          start && 'animate-scroll ',
+          'flex min-w-full shrink-0 gap-6 py-4 w-max flex-nowrap',
+          start && 'animate-scroll',
           pauseOnHover && 'hover:[animation-play-state:paused]'
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
-            className="w-[350px] max-w-full relative rounded-xl border-[2px] border-b-0 border-white px-8 py-6 md:w-[450px]"
-            style={{
-              background:
-                'linear-gradient(180deg, var(--slate-100), var(--slate-200)',
-            }}
-            key={item.name}
+            className="w-[400px] h-[300px] relative rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-slate-200 dark:border-slate-800 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300 group"
+            key={item.id}
           >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-full w-full"
-              ></div>
-              <div className=" relative z-20 text-base font-anderson font-bold  text-[#3E3E3E] ">
-                {item.quote}
+            <div className="w-full h-full relative">
+              <Image
+                src={item.image}
+                alt={item.alt}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                <p className="text-white font-satoshi text-center text-lg px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {item.description}
+                </p>
               </div>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1 ">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
-                  </span>
-                </span>
-              </div>
-            </blockquote>
+            </div>
           </li>
         ))}
       </ul>

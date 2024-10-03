@@ -8,6 +8,10 @@ import wave1 from '/public/wave/wave-1.png';
 import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
 import intro from '/public/photos/intro.png';
+import memories1 from '/public/photos/memories1.png';
+import memories2 from '/public/photos/memories2.png';
+import memories3 from '/public/photos/memories3.png';
+import memories4 from '/public/photos/memories4.png';
 
 export default function Home() {
   return (
@@ -76,12 +80,12 @@ export default function Home() {
           <Image src={wave2} alt="Wave Graphic" className=""></Image>
           <div className="relative w-full h-[550px]  bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 p-5 pb-20 items-center justify-center">
             <div>Memories from Data@UCI</div>
-            <div className="h-[200px] ">
+            <div className="">
               <InfiniteMovingCards
                 items={testimonials}
                 direction="right"
                 speed="slow"
-                className="mb-[200px]"
+                className=""
               />
             </div>
           </div>
@@ -93,33 +97,30 @@ export default function Home() {
 
 const testimonials = [
   {
-    quote:
-      'Data @ UCI has been instrumental in my journey as a data science enthusiast. The workshops and events they organize have given me practical skills that complement my coursework perfectly.',
-    name: 'Computer Science Student',
-    title: "Class of '24",
+    id: 1,
+    image: memories1,
+    alt: 'Datathon Attendees',
+    description:
+      'A group of participants from the Atlantis 2024 Datathon posing together.',
   },
   {
-    quote:
-      "Joining Data @ UCI was one of the best decisions I made in my college career. The community is incredibly supportive, and I've made great connections with both peers and industry professionals.",
-    name: 'Data Science Major',
-    title: "Class of '23",
+    id: 2,
+    image: memories2,
+    alt: 'Data@UCI Workshop Participants',
+    description:
+      'A group photo of Data@UCI members after an engaging workshop. These collaborative sessions help students develop practical skills in data science and analytics.',
   },
   {
-    quote:
-      'The Datathon organized by Data @ UCI was an amazing experience. It challenged me to apply my skills to real-world problems and work collaboratively under pressure.',
-    name: 'Statistics Student',
-    title: "Class of '25",
+    id: 3,
+    image: memories3,
+    alt: 'Data@UCI Board Members',
+    description: 'A group photo of Data@UCI board members from last year.',
   },
   {
-    quote:
-      'As someone new to data science, Data @ UCI provided a welcoming environment to learn and grow. Their beginner-friendly workshops helped me build a strong foundation in data analysis.',
-    name: 'Business Information Management Major',
-    title: "Class of '24",
-  },
-  {
-    quote:
-      'The guest speakers invited by Data @ UCI have been incredibly inspiring. Hearing from industry leaders and UCI alumni about their career paths in data science has really shaped my professional goals.',
-    name: 'Informatics Student',
-    title: "Class of '23",
+    id: 4,
+    image: memories4,
+    alt: 'Data@UCI Workshop Participants',
+    description:
+      'Engaged learners at a recent Data@UCI workshop. These hands-on sessions provide valuable opportunities for students to enhance their data science skills and collaborate on real-world problems.',
   },
 ];
