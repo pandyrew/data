@@ -7,7 +7,7 @@ import arrow from '/public/icons/arrow.svg';
 import wave1 from '/public/wave/wave-1.png';
 import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
-import intro from '/public/photos/intro.png';
+import sqlworkshop from '/public/photos/sqlworkshop.png';
 import memories1 from '/public/photos/memories1.png';
 import memories2 from '/public/photos/memories2.png';
 import memories3 from '/public/photos/memories3.png';
@@ -70,8 +70,8 @@ export default function Home() {
           </div>
           <div className="xl:w-full sm:w-[90%] w-full">
             <Image
-              src={intro}
-              alt="intro event"
+              src={sqlworkshop}
+              alt="SQL Workshop"
               className="object-cover rounded-2xl "
             ></Image>
           </div>
