@@ -231,10 +231,10 @@ const cards = [
     content: () => {
       return (
         <p>
-          Hello! My name is Shreya Shyam\. I&apos;m the Internal VP for Data @ UCI\.
-          I&apos;m a third-year Quantitative Economics and DS major\. I love hanging
-          out with friends and trying new restaurants in my free time\. Excited
-          to meet everyone at our events!
+          Hello! My name is Shreya Shyam. I&apos;m the Internal VP for Data @
+          UCI. I&apos;m a third-year Quantitative Economics and DS major. I love
+          hanging out with friends and trying new restaurants in my free time.
+          Excited to meet everyone at our events!
         </p>
       );
     },
