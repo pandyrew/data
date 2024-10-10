@@ -231,11 +231,10 @@ const cards = [
     content: () => {
       return (
         <p>
-          Hi, I&apos;m Shreya! I&apos;m a third year at UC Irvine, majoring in
-          Data Science and a minor in Economics. My enthusiasm lies in utilizing
-          quantitative research and statistical programming to address societal
-          needs. Currently seeking new opportunities to grow as a professional
-          and gain valuable experience/industry skills.
+          Hello! My name is Shreya Shyam\. I&apos;m the Internal VP for Data @ UCI\.
+          I&apos;m a third-year Quantitative Economics and DS major\. I love hanging
+          out with friends and trying new restaurants in my free time\. Excited
+          to meet everyone at our events!
         </p>
       );
     },
