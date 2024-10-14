@@ -7,11 +7,11 @@ import arrow from '/public/icons/arrow.svg';
 import wave1 from '/public/wave/wave-1.png';
 import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
-import sqlworkshop from '/public/photos/sqlworkshop.png';
 import memories1 from '/public/photos/memories1.png';
 import memories2 from '/public/photos/memories2.png';
 import memories3 from '/public/photos/memories3.png';
 import memories4 from '/public/photos/memories4.png';
+import internshipSearchStrategies from '/public/photos/internship_search_strategies.png';
 
 export default function Home() {
   return (
@@ -70,8 +70,8 @@ export default function Home() {
           </div>
           <div className="xl:w-full sm:w-[90%] w-full">
             <Image
-              src={sqlworkshop}
-              alt="SQL Workshop"
+              src={internshipSearchStrategies}
+              alt="Internship Search Strategies"
               className="object-cover rounded-2xl "
             ></Image>
           </div>
