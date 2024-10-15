@@ -147,6 +147,12 @@ export const FloatingNav = ({ navItems, className }) => {
                 >
                   Meet Us
                 </Link>
+                <Link
+                  href="/apply"
+                  className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  Apply
+                </Link>
               </div>
             )}
           </div>
