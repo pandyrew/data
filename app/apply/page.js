@@ -46,7 +46,7 @@ export default function Apply() {
                   animate="visible"
                   transition={{
                     duration: 0.5,
-                    delay: 0.2 + index * 0.05,
+                    delay: 0.2 + index * 0.03,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
@@ -59,7 +59,7 @@ export default function Apply() {
             className="font-satoshi xl:text-lg md:text-md text-xs text-gray-600 max-w-[600px] w-1/2"
             variants={contentVariants}
             initial="hidden"
-            animate={isClient ? 'visible' : 'hidden'}
+            animate="visible"
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             By being an intern, you&apos;ll get hands-on experience and see what
