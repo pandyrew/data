@@ -1,3 +1,6 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 import Navbar from '@/components/ui/navbar';
@@ -12,48 +15,95 @@ import memories2 from '/public/photos/memories2.png';
 import memories3 from '/public/photos/memories3.png';
 import memories4 from '/public/photos/memories4.png';
 import internshipSearchStrategies from '/public/photos/internship_search_strategies.png';
+import { motion } from 'framer-motion';
 
 export default function Home() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const text = 'Data @ UCI';
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="relative h-fit">
-      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] w-screen h-screen flex flex-col items-center p-10 z-[30]">
-        <div className="relative font-clash font-medium top-[15%] lg:text-[128px] text-5xl ">
-          Data @ UCI
-        </div>
-        <div className="relative bg-black rounded-2xl top-[22%] sm:h-[78%] h-[50%]">
+      <div className="relative w-screen h-screen flex flex-col items-center p-10 z-[30]">
+        <Image
+          src="/gradients/front-page-gradient-png.png"
+          alt="Background Gradient"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAJWANbvRFKjQAAAABJRU5ErkJggg=="
+        />
+        {isClient && (
+          <motion.div className="relative font-clash font-medium top-[15%] lg:text-[128px] text-5xl flex">
+            {text.split('').map((char, index) => (
+              <motion.span
+                key={`${char}-${index}`}
+                variants={letterVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2 + index * 0.07,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))}
+          </motion.div>
+        )}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0 }}
+          className="relative bg-black rounded-2xl top-[22%] sm:h-[78%] h-[50%] w-full overflow-hidden"
+        >
           <Image
             src={heroPicture}
-            alt="asdf"
-            sizes="100vw"
-            width={0}
-            height={0}
-            className="h-full object-cover rounded-2xl relative opacity-50"
-          ></Image>
-          <div className="flex">
-            <div className="absolute top-0 p-10 lg:text-6xl bg-red text-white font-satoshi font-black tracking-normal text-4xl">
-              Making the invisible, visible{' '}
-              <Image
-                src={sparkle}
-                alt="sparkle"
-                className="absolute top-5 left-[94%] hidden lg:flex p-2"
-              ></Image>
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-2xl opacity-50"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="absolute inset-0 flex flex-col justify-between p-8"
+          >
+            <div>
+              <div className="lg:text-6xl text-white font-satoshi font-black tracking-normal text-4xl mb-4">
+                Making the invisible, visible{' '}
+                <Image src={sparkle} alt="sparkle" className="inline-block" />
+              </div>
+              <div className="hidden lg:block text-2xl text-[#e9e9e9] font-satoshi font-medium tracking-normal mt-4 max-w-[800px]">
+                Join an expanding community of data-science lovers, and unlock
+                the secrets of data with us
+              </div>
             </div>
-            <div className="hidden lg:flex absolute top-20 p-10 text-2xl w-[800px] bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">
-              Join an expanding community of data-science lovers, and unlock the
-              secrets of data with us
-            </div>
-            <div className="absolute right-[5%] bottom-[5%] flex-col items-center justify-center hidden sm:flex">
-              <div className="p-10 lg:text-4xl md:ext-3xl text-xl bg-red text-[#e9e9e9] font-satoshi font-medium tracking-normal">
+            <div className="flex-col items-center justify-center hidden sm:flex absolute right-8 bottom-8 ">
+              <div className="p-4 lg:text-4xl md:text-3xl text-xl text-[#e9e9e9] font-satoshi font-medium tracking-normal">
                 Learn More
               </div>
               <Image
                 src={arrow}
-                alt="sparkle"
-                className="lg:p-2 animate-bob lg:-mt-3 p-4 -mt-10"
-              ></Image>
+                alt="arrow"
+                className="lg:w-12 lg:h-12  w-8 h-8 animate-bounce mt-2"
+              />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       <div className="relative z-[1]">
         <Image src={gradient} alt="Gradient Background" className=""></Image>
