@@ -219,7 +219,14 @@ const cards = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/katherine-frields-5672a6251/',
     content: () => {
-      return <p>UCI Data Science Major &amp; Regents&apos; Scholar</p>;
+      return (
+        <p>
+          Hello! My name is Katie Frields, I&apos;m a third year Data Science major,
+          and I&apos;m in the process of adding a double major in Earth System
+          Science. I like art, going to museums and bird watching :) I look
+          forward to getting to know you all!
+        </p>
+      );
     },
   },
   {
