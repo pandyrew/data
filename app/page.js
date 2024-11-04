@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import Navbar from '@/components/ui/navbar';
 import heroPicture from '/public/photos/data-alt.png';
 import sparkle from '/public/icons/sparkle.svg';
 import arrow from '/public/icons/arrow.svg';

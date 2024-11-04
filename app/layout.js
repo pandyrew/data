@@ -1,14 +1,10 @@
 import localFont from 'next/font/local';
-import { Inter } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/ui/navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
-import { IconHome, IconMessage, IconUser } from '@tabler/icons-react';
+import { IconUser } from '@tabler/icons-react';
 import Footer from '@/components/ui/footer';
 import Head from 'next/head';
 import icon from '/public/favicon.ico';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const anderson = localFont({
   src: [
@@ -65,11 +61,6 @@ export default function RootLayout({ children }) {
     {
       name: 'Contact',
       link: 'https://linktr.ee/DataAtUCIrvine',
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: 'Apply',
-      link: '/apply',
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
   ];
