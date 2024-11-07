@@ -1,20 +1,36 @@
 import React from 'react';
-import Cardsnew from '@/components/ui/cardsnew';
-import Cardsnewtwo from '@/components/ui/cardsnewtwo';
+import Cards from '@/components/ui/cards';
+import { leadershipData, internData } from '@/data/leadership';
 
 export default function MeetUs() {
   return (
-    <div className="w-full min-h-screen bg-white px-8 py-16 mt-[100px] border-b-2 border-gray-200">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">
-          Meet Our Leadership
-        </h1>
-        <div className="flex flex-wrap justify-between">
-          <div className="w-[48%]">
-            <Cardsnew />
+    <div className="relative w-full min-h-screen bg-white mt-[100px]">
+      <div className="w-full px-8 py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16">
+            <div className="flex justify-center w-full">
+              <div className="backdrop-blur-sm bg-white/50 px-8 py-4 rounded-2xl shadow-sm border border-gray-100">
+                <h1 className="text-4xl font-bold text-center">
+                  2024-2025 Leadership
+                </h1>
+              </div>
+            </div>
+            <div className="mt-12">
+              <Cards data={leadershipData} />
+            </div>
           </div>
-          <div className="w-[48%]">
-            <Cardsnewtwo />
+
+          <div className="mb-[150px] mt-[200px]">
+            <div className="flex justify-center w-full">
+              <div className="backdrop-blur-sm bg-white/50 px-8 py-4 rounded-2xl shadow-sm border border-gray-100">
+                <h2 className="text-4xl font-bold text-center">
+                  Board Interns
+                </h2>
+              </div>
+            </div>
+            <div className="mt-12">
+              <Cards data={internData} />
+            </div>
           </div>
         </div>
       </div>
