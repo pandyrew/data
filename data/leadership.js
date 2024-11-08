@@ -24,7 +24,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/elane-shane/',
     content:
-      'Hello! I&apos;m Elane Shane, a software engineering major at the University of California, Irvine, with a passion for using technology to drive innovation. My primary focus is on Machine Learning and Data Analysis, where I have honed my skills through coursework and hands-on projects.',
+      "Hello! I'm Elane Shane, a software engineering major at the University of California, Irvine, with a passion for using technology to drive innovation. My primary focus is on Machine Learning and Data Analysis, where I have honed my skills through coursework and hands-on projects.",
   },
   {
     description: 'VP of Community Development',
@@ -33,7 +33,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/kyle-huynh-093b8624b/',
     content:
-      'I am a third year data science student minoring in health informatics and bioinformatics. I love all thing computational biology and biotech! Feel free to come talk to me about anything I love getting to know other people&apos;s interests in and outside of data!',
+      "I am a third year data science student minoring in health informatics and bioinformatics. I love all thing computational biology and biotech! Feel free to come talk to me about anything I love getting to know other people's interests in and outside of data!",
   },
   {
     description: 'Co-Director of Marketing',
@@ -42,7 +42,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/jakelsilverman/',
     content:
-      'Hi, my name is Jake Silverman, and I&apos;m currently a full-time student at the University of California, Irvine pursuing a B.S in Data Science. I&apos;m passionate about the many problems an understanding of data can provide solutions to in many fields and disciplines.',
+      "Hi, my name is Jake Silverman, and I'm currently a full-time student at the University of California, Irvine pursuing a B.S in Data Science. I'm passionate about the many problems an understanding of data can provide solutions to in many fields and disciplines.",
   },
   {
     description: 'Co-President',
@@ -51,7 +51,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/katherine-frields-5672a6251/',
     content:
-      'Hello! My name is Katie Frields, I&apos;m a third year Data Science major, and I&apos;m in the process of adding a double major in Earth System Science. I like art, going to museums and bird watching :) I look forward to getting to know you all!',
+      "Hello! My name is Katie Frields, I'm a third year Data Science major, and I'm in the process of adding a double major in Earth System Science. I like art, going to museums and bird watching :) I look forward to getting to know you all!",
   },
   {
     description: 'Executive Internal Vice President',
@@ -60,7 +60,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/shreyashyam/',
     content:
-      'Hello! My name is Shreya Shyam. I&apos;m the Internal VP for Data @ UCI. I&apos;m a third-year Quantitative Economics and DS major. I love hanging out with friends and trying new restaurants in my free time. Excited to meet everyone at our events!',
+      "Hello! My name is Shreya Shyam. I'm the Internal VP for Data @ UCI. I'm a third-year Quantitative Economics and DS major. I love hanging out with friends and trying new restaurants in my free time. Excited to meet everyone at our events!",
   },
   {
     description: 'Vice President of Finance',
@@ -87,7 +87,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/meganthuyvanle/',
     content:
-      'I am a computer science student at UC Irvine, specializing in intelligent systems. Currently, I am working on categorizing plant specimen images in collaboration with New York Botanical Garden and Kaggle for Break Through Tech AI&apos;s private competition.',
+      "I am a computer science student at UC Irvine, specializing in intelligent systems. Currently, I am working on categorizing plant specimen images in collaboration with New York Botanical Garden and Kaggle for Break Through Tech AI's private competition.",
   },
   {
     description: 'Webmaster',
@@ -96,7 +96,7 @@ export const leadershipData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/andrew-hwang-78b375258/',
     content:
-      'Hey! Im Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!',
+      "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
   },
 ];
 
@@ -118,7 +118,7 @@ export const internData = [
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/',
     content:
-      'Hey guys, Im Suhani Khandelwal, a second year Biomedical Engineering student who loves trying new food and exploring different SoCal spots.',
+      "Hey guys, I'm Suhani Khandelwal, a second year Biomedical Engineering student who loves trying new food and exploring different SoCal spots.",
   },
   {
     description: 'Community Development Intern',
