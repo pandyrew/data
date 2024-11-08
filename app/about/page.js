@@ -5,8 +5,6 @@ import groupPhoto from '/public/photos/group.png';
 import gradient from '/public/gradients/about-gradient.png';
 import aboutWave from '/public/wave/about-wave.png';
 import juan from '/public/photos/juan.png';
-import Cards from '@/components/ui/cardsnew';
-import CardsTwo from '@/components/ui/cardsnewtwo';
 
 export default function About() {
   return (
