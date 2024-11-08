@@ -1,14 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import graph from '/public/wave/datathon-graph.png';
 import gradient from '/public/gradients/datathon-gradient.png';
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 import nathan from '/public/photos/nathan.png';
 import textbox from '/public/icons/textbox.png';
 import sparkle from '/public/icons/sparkle-black.svg';
 import { motion } from 'framer-motion';
-import datathonGraph from '/public/wave/datathon.svg';
 
 const AnimatedGraph = () => {
   return (
