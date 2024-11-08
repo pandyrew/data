@@ -63,7 +63,7 @@ export const leadershipData = [
       "Hello! My name is Shreya Shyam. I'm the Internal VP for Data @ UCI. I'm a third-year Quantitative Economics and DS major. I love hanging out with friends and trying new restaurants in my free time. Excited to meet everyone at our events!",
   },
   {
-    description: 'Vice President of Finance',
+    description: 'VP of Finance',
     title: 'Zeeshan Babul',
     src: '/meet-us/zeeshan.jpeg',
     ctaText: 'View',
