@@ -105,7 +105,7 @@ export const internData = [
   {
     description: 'Marketing Intern',
     title: 'Juan Muhirwe',
-    src: '/meet-us/juan.jpg',
+    src: '/meet-us/juan.jpeg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/',
     content:
