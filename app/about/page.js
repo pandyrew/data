@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import sparkleBlack from '/public/icons/sparkle-black.svg';
 import groupPhoto from '/public/photos/group.png';
@@ -10,27 +13,54 @@ export default function About() {
   return (
     <div className="lg:relative h-fit w-full">
       <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] h-screen lg:p-10 lg:pl-[70px] p-0 h-sm:h-auto h-md:h-80">
-        <div className="relative sm:top-[18%] flex gap-1 top-[20%]">
+        <motion.div
+          className="relative sm:top-[18%] flex gap-1 top-[20%]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="relative flex flex-col gap-2 justify-center items-center sm:justify-normal sm:items-start z-50">
-            <p className="text-[#5EA1FF] font-clash font-medium sm:text-3xl text-2xl">
+            <motion.p
+              className="text-[#5EA1FF] font-clash font-medium sm:text-3xl text-2xl"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               About us
-            </p>
-            <p className="font-clash sm:text-5xl text-3xl text-center">
+            </motion.p>
+            <motion.p
+              className="font-clash sm:text-5xl text-3xl text-center"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
               Together, we make sense of data
-            </p>
+            </motion.p>
           </div>
-          <Image
-            src={sparkleBlack}
-            alt="Sparkle Icon"
-            className="bottom-0 mt-8 hidden sm:block"
-          ></Image>
-        </div>
-        <div className="absolute sm:top-[33%] sm:right-12 top-[48%] z-1">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
+            <Image
+              src={sparkleBlack}
+              alt="Sparkle Icon"
+              className="bottom-0 mt-8 hidden sm:block"
+            />
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="absolute sm:top-[33%] sm:right-12 top-[48%] z-1"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+        >
           <Image
             src={groupPhoto}
             alt="Group Photo"
             className="relative border-4 border-[#9D9D9D] rounded-xl"
-          ></Image>
+          />
           <div
             className="absolute xl:p-10 lg:p-8 md:p-4 -bottom-[80px]  xl:w-[500px] lg:w-[300px] w-[200px] bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-md h-auto rounded-xl bg-white/20 ring-1 ring-black/5
    items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px] hidden lg:flex"
@@ -38,7 +68,7 @@ export default function About() {
             Regular meetups, hackathons, and seminars provide opportunities for
             members to collaborate, network, and learn from each other.
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="relative flex flex-col items-center z-[12] lg:h-full h-screen">
@@ -46,7 +76,7 @@ export default function About() {
           src={gradient}
           alt="Gradient Background"
           className="relative inset-0 h-full w-full object-cover"
-        ></Image>
+        />
         <div className="rounded-2xl bg-[#D4D4D4] p-8 lg:px-[300px] px-4 ring-1 ring-black/5 absolute top-[6%] bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-md shadow-md">
           <p className="font-clash lg:text-7xl text-3xl font-medium">
             Our Mission
@@ -58,7 +88,7 @@ export default function About() {
               src={juan}
               alt="Juan"
               className="rounded-2xl border-4 border-[#9D9D9D]"
-            ></Image>
+            />
           </div>
           <div className="flex-1 sm:p-10 p-5 font-satoshi lg:text-2xl flex flex-col gap-5 text-sm">
             <p>
@@ -87,7 +117,7 @@ export default function About() {
           src={aboutWave}
           alt="Wave Graphic"
           className="absolute bottom-0"
-        ></Image>
+        />
       </div>
     </div>
   );
