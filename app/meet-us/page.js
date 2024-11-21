@@ -1,6 +1,6 @@
 import React from 'react';
 import Cards from '@/components/ui/cards';
-import { leadershipData, internData } from '@/data/leadership';
+import { leadershipData, internData, facultyData } from '@/data/leadership';
 
 export default function MeetUs() {
   return (
@@ -20,7 +20,7 @@ export default function MeetUs() {
             </div>
           </div>
 
-          <div className="mb-[150px] mt-[200px]">
+          <div className="mb-16">
             <div className="flex justify-center w-full">
               <div className="backdrop-blur-sm bg-white/50 px-8 py-4 rounded-2xl shadow-sm border border-gray-100">
                 <h2 className="text-4xl font-bold text-center">
@@ -30,6 +30,19 @@ export default function MeetUs() {
             </div>
             <div className="mt-12">
               <Cards data={internData} />
+            </div>
+          </div>
+
+          <div className="mb-[150px]">
+            <div className="flex justify-center w-full">
+              <div className="backdrop-blur-sm bg-white/50 px-8 py-4 rounded-2xl shadow-sm border border-gray-100">
+                <h2 className="text-4xl font-bold text-center">
+                  Faculty Advisor
+                </h2>
+              </div>
+            </div>
+            <div className="mt-12">
+              <Cards data={facultyData} />
             </div>
           </div>
         </div>

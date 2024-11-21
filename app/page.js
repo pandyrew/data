@@ -13,7 +13,7 @@ import memories1 from '/public/photos/memories1.png';
 import memories2 from '/public/photos/memories2.png';
 import memories3 from '/public/photos/memories3.png';
 import memories4 from '/public/photos/memories4.png';
-import interviews from '/public/photos/mock_interviews.jpg';
+import tableauworkshop from '/public/photos/tableau_workshop.png';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -119,8 +119,8 @@ export default function Home() {
           </div>
           <div className="xl:w-full sm:w-[90%] w-full">
             <Image
-              src={interviews}
-              alt="Internship Search Strategies"
+              src={tableauworkshop}
+              alt="Tableau Workshop"
               className="object-cover rounded-2xl "
             ></Image>
           </div>

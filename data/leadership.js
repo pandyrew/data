@@ -139,3 +139,15 @@ export const internData = [
       'Hi, my name is Andrew! I am a third year Data Science major. I am from Huntington Beach, and I love to hoop, play chess, and read. Currently, I am part of a research team working on optimizing a machine learning algorithm for geospatial modeling. I am excited to connect, learn, and collaborate with you all!',
   },
 ];
+
+export const facultyData = [
+  {
+    description: 'Faculty Advisor',
+    title: 'Mine Dogucu',
+    src: '/meet-us/mine.jpg', // You'll need to add this image to your public folder
+    ctaText: 'View',
+    ctaLink: 'https://www.linkedin.com/in/minedogucu/',
+    content:
+      'I am Associate Professor of Teaching and Vice Chair for Undergraduate Studies in the Department of Statistics at University of California Irvine. I am an educator with an interest in statistics and data science education and I am an applied statistician with experience in educational research. In short, my educational work is in statistics and data science and my statistics and data science work is in education.',
+  },
+];
