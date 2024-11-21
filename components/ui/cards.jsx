@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 
+// TODO: Add a loading state
 export default function Cards({ data }) {
   const [active, setActive] = useState(null);
   const ref = useRef(null);
