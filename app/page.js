@@ -9,10 +9,8 @@ import arrow from '/public/icons/arrow.svg';
 import wave1 from '/public/wave/wave-1.png';
 import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
-import memories1 from '/public/photos/memories1.png';
-import memories2 from '/public/photos/memories2.png';
-import memories3 from '/public/photos/memories3.png';
-import memories4 from '/public/photos/memories4.png';
+import { testimonials } from '@/data/carousel';
+
 import tableauworkshop from '/public/photos/tableau_workshop.png';
 import { motion } from 'framer-motion';
 
@@ -143,33 +141,3 @@ export default function Home() {
     </div>
   );
 }
-
-const testimonials = [
-  {
-    id: 1,
-    image: memories1,
-    alt: 'Datathon Attendees',
-    description:
-      'A group of participants from the Atlantis 2024 Datathon posing together.',
-  },
-  {
-    id: 2,
-    image: memories2,
-    alt: 'Data@UCI Workshop Participants',
-    description:
-      'A group photo of Data@UCI members after an engaging workshop. These collaborative sessions help students develop practical skills in data science and analytics.',
-  },
-  {
-    id: 3,
-    image: memories3,
-    alt: 'Data@UCI Board Members',
-    description: 'A group photo of Data@UCI board members from last year.',
-  },
-  {
-    id: 4,
-    image: memories4,
-    alt: 'Data@UCI Workshop Participants',
-    description:
-      'Engaged learners at a recent Data@UCI workshop. These hands-on sessions provide valuable opportunities for students to enhance their data science skills and collaborate on real-world problems.',
-  },
-];
