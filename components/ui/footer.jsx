@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import arrow from '/public/icons/arrow-footer.svg';
 
-
 const FooterLink = memo(({ href, text }) => (
   <Link href={href}>
     <div className="group border-b-2 border-[#DEDEDE] items-end flex flex-1 pb-2 pr-2 justify-between cursor-pointer">
@@ -22,7 +21,6 @@ const FooterLink = memo(({ href, text }) => (
 ));
 
 FooterLink.displayName = 'FooterLink';
-
 
 const footerLinks = [
   {
@@ -60,9 +58,9 @@ export default function Footer() {
             <FooterLink key={link.text} href={link.href} text={link.text} />
           ))}
         </div>
-        <div className="text-right font-satoshi lg:text-lg text-sm text-[#373737] mt-2">
+        <div className="text-right font-satoshi lg:text-md text-sm text-[#6A6A6A] mt-2">
           <p>
-            <span className="font-sans">&copy;</span> 2024 Data@UCI. All Rights
+            <span className="font-sans ">&copy;</span> 2024 Data@UCI. All Rights
             Reserved.
           </p>
         </div>
