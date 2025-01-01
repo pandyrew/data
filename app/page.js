@@ -10,9 +10,11 @@ import wave1 from '/public/wave/wave-1.png';
 import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
 import { testimonials } from '@/data/carousel';
+import data from '/public/photos/data-alt.png';
 
-import tableauworkshop from '/public/photos/tableau_workshop.png';
 import { motion } from 'framer-motion';
+
+const UPCOMING_EVENT_EXISTS = false; // Set to true when you have an event image
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -116,11 +118,19 @@ export default function Home() {
             </p>
           </div>
           <div className="xl:w-full sm:w-[90%] w-full">
-            <Image
-              src={tableauworkshop}
-              alt="Tableau Workshop"
-              className="object-cover rounded-2xl "
-            ></Image>
+            {UPCOMING_EVENT_EXISTS ? (
+              <Image
+                src={data}
+                alt="Data@UCI"
+                className="object-cover rounded-2xl"
+              />
+            ) : (
+              <div className="w-full h-[400px] bg-gray-100 rounded-2xl flex items-center justify-center">
+                <p className="text-2xl text-gray-500 font-clash">
+                  New Events Coming Soon!
+                </p>
+              </div>
+            )}
           </div>
         </div>
         <div className="absolute bottom-0 z-[1] w-full hidden lg:block">
