@@ -11,10 +11,11 @@ import wave2 from '/public/wave/wave-2.png';
 import gradient from '/public/gradients/front-page-gradient-2.png';
 import { testimonials } from '@/data/carousel';
 import data from '/public/photos/data-alt.png';
+import schedule from '/public/photos/schedule.png';
 
 import { motion } from 'framer-motion';
 
-const UPCOMING_EVENT_EXISTS = false; // Set to true when you have an event image
+const UPCOMING_EVENT_EXISTS = true; // Set to true when you have an event image
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -120,7 +121,7 @@ export default function Home() {
           <div className="xl:w-full sm:w-[90%] w-full">
             {UPCOMING_EVENT_EXISTS ? (
               <Image
-                src={data}
+                src={schedule}
                 alt="Data@UCI"
                 className="object-cover rounded-2xl"
               />
