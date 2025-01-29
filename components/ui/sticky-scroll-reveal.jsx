@@ -59,7 +59,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
     >
       <div className="hidden lg:flex absolute sm:px-[300px] px-[20px] top-[60px] rounded-2xl bg-[#D4D4D4] p-8 ring-1 ring-black/5 bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blue-md shadow-md">
         <p className="lg:text-5xl xl:text-7xl text-xl font-clash font-medium">
-          Past Hackathons
+          Past Datathons
         </p>
       </div>
       <div className="div relative flex items-start px-4 w-full">
