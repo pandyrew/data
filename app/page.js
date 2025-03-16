@@ -31,6 +31,69 @@ export default function Home() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const companies = [
+    {
+      name: 'JPMorgan Chase',
+      size: 'large',
+      logo: '/companies/jpmc.webp',
+      website: 'https://www.jpmorganchase.com',
+    },
+    {
+      name: 'Tesla',
+      size: 'large',
+      logo: '/companies/tesla.png',
+      website: 'https://www.tesla.com',
+    },
+    {
+      name: 'Charles Schwab',
+      size: 'large',
+      logo: '/companies/charlesschwab.png',
+      website: 'https://www.schwab.com',
+    },
+    {
+      name: 'Atlassian',
+      size: 'large',
+      logo: '/companies/atlassian.png',
+      website: 'https://www.atlassian.com',
+    },
+    {
+      name: 'Deloitte',
+      size: 'medium',
+      logo: '/companies/deloitte.webp',
+      website: 'https://www.deloitte.com',
+    },
+    {
+      name: 'T-Mobile',
+      size: 'medium',
+      logo: '/companies/tmobile.avif',
+      website: 'https://www.t-mobile.com',
+    },
+    {
+      name: 'Edison',
+      size: 'small',
+      logo: '/companies/edison.webp',
+      website: 'https://www.sce.com',
+    },
+    {
+      name: 'Pacific Life',
+      size: 'small',
+      logo: '/companies/pacific life.jpg',
+      website: 'https://www.pacificlife.com',
+    },
+    {
+      name: 'Inari Medical',
+      size: 'small',
+      logo: '/companies/inary.png',
+      website: 'https://www.inarimedical.com',
+    },
+    {
+      name: 'First American',
+      size: 'small',
+      logo: '/companies/firstamerican.webp',
+      website: 'https://www.firstam.com',
+    },
+  ];
+
   return (
     <div className="relative h-fit">
       <div className="relative w-screen h-screen flex flex-col items-center p-10 z-[30]">
@@ -136,7 +199,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-0 z-[1] w-full hidden lg:block">
           <Image src={wave2} alt="Wave Graphic" className=""></Image>
-          <div className="relative w-full h-[550px]  bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 p-5 pb-20 items-center justify-center">
+          <div className="relative w-full h-[550px] bg-[#6BB5FF] text-white font-clash text-6xl flex flex-col gap-20 p-5 pb-20 items-center justify-center">
             <div>Memories from Data@UCI</div>
             <div className="">
               <InfiniteMovingCards
@@ -146,6 +209,42 @@ export default function Home() {
                 className=""
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-white py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-clash font-medium text-center mb-16">
+            Where Our Members Have Worked
+          </h2>
+
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+            {companies.map((company) => (
+              <a
+                key={company.name}
+                href={company.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`
+                  ${
+                    company.size === 'large'
+                      ? 'w-64 h-64 md:w-80 md:h-80'
+                      : 'w-48 h-48 md:w-64 md:h-64'
+                  }
+                  relative bg-white rounded-xl flex items-center justify-center p-4
+                  transition-transform hover:scale-105 cursor-pointer
+                `}
+              >
+                <Image
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="p-6"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>
