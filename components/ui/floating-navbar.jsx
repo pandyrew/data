@@ -18,6 +18,24 @@ export const FloatingNav = ({ navItems, className }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [hasAnnouncement, setHasAnnouncement] = useState(false);
+
+  useEffect(() => {
+    const checkAnnouncementStatus = () => {
+      setHasAnnouncement(document.body.classList.contains('has-announcement'));
+    };
+
+    checkAnnouncementStatus();
+
+    // Create a MutationObserver to watch for changes to body classes
+    const observer = new MutationObserver(checkAnnouncementStatus);
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useMotionValueEvent(scrollYProgress, 'change', (current) => {
     if (typeof current === 'number') {

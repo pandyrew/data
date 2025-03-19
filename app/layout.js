@@ -5,6 +5,7 @@ import { IconUser } from '@tabler/icons-react';
 import Footer from '@/components/ui/footer';
 import Head from 'next/head';
 import icon from '/public/favicon.ico';
+import AnnouncementBanner from '@/components/ui/AnnouncementBanner';
 
 const anderson = localFont({
   src: [
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${anderson.variable} font-anderson ${clash.variable} ${satoshi.variable}`}
       >
+        <AnnouncementBanner />
         <FloatingNav navItems={navItems}></FloatingNav>
         {children}
         <Footer></Footer>
