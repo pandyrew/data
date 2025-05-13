@@ -58,9 +58,21 @@ export default function Home() {
     },
     {
       name: 'Deloitte',
-      size: 'medium',
+      size: 'large',
       logo: '/companies/deloitte.webp',
       website: 'https://www.deloitte.com',
+    },
+    {
+      name: 'Square',
+      size: 'medium',
+      logo: '/companies/square.jpg',
+      website: 'https://www.square.com',
+    },
+    {
+      name: 'Resmed',
+      size: 'medium',
+      logo: '/companies/resmed.jpg',
+      website: 'https://www.resmed.com',
     },
     {
       name: 'T-Mobile',
@@ -69,10 +81,10 @@ export default function Home() {
       website: 'https://www.t-mobile.com',
     },
     {
-      name: 'Edison',
+      name: 'Skylar Capital Management',
       size: 'small',
-      logo: '/companies/edison.webp',
-      website: 'https://www.sce.com',
+      logo: '/companies/skylar.jpeg',
+      website: 'https://www.linkedin.com/company/skylarcap/',
     },
     {
       name: 'Pacific Life',
