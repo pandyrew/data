@@ -74,7 +74,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${anderson.variable} font-anderson ${clash.variable} ${satoshi.variable}`}
       >
-        <AnnouncementBanner />
         <FloatingNav navItems={navItems}></FloatingNav>
         {children}
         <Footer></Footer>
