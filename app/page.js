@@ -81,6 +81,12 @@ export default function Home() {
       website: 'https://www.t-mobile.com',
     },
     {
+      name: 'First American',
+      size: 'small',
+      logo: '/companies/firstamerican.webp',
+      website: 'https://www.firstam.com',
+    },
+    {
       name: 'Skylar Capital Management',
       size: 'small',
       logo: '/companies/skylar.jpeg',
@@ -97,12 +103,6 @@ export default function Home() {
       size: 'small',
       logo: '/companies/inary.png',
       website: 'https://www.inarimedical.com',
-    },
-    {
-      name: 'First American',
-      size: 'small',
-      logo: '/companies/firstamerican.webp',
-      website: 'https://www.firstam.com',
     },
   ];
 
