@@ -25,7 +25,7 @@ export function FloatingNav() {
       }`}
     >
       <div className="mx-auto w-full pl-6 pr-28 py-3.5 flex items-center justify-between">
-        <Link href="/public/icons/data-icon.svg" className="font-semibold">
+        <Link href="/" className="font-semibold">
           <LogoImage
             src={dataIcon}
             alt="Data @ UCI logo"
@@ -36,9 +36,9 @@ export function FloatingNav() {
 
         <ul className="flex gap-14 text-sm">
           {[
-            { name: "HOME", href: "/about" },
+            { name: "HOME", href: "/" },
             { name: "DATATHON", href: "/datathon" },
-            { name: "MEET US", href: "/meet-us" },
+            { name: "ABOUT US", href: "/meet-us" },
             { name: "CONTACT", href: "/contact" },
           ].map((l) => (
             <li key={l.href}>
