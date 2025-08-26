@@ -59,15 +59,18 @@ export default function Home() {
         </section>
 
         <section className="relative text-white py-[850px] px-6 md:px-12">
-          <div className="max-w-3xl mx-auto md:text-center">
+          <div className="max-w-2xl mx-auto md:text-center">
             <h2 className="text-4xl md:text-5xl font-clash font-bold mb-6">
-              About 
+              About Data at UCI
             </h2>
-            <p className="text-lg md:text-xl font-satoshi leading-relaxed mb-4">
-              text
-            </p>
-            <p className="text-lg md:text-xl font-satoshi leading-relaxed">
-              more
+            <p className="text-lg md:text-xl font-satoshi mb-4 ">
+            Data@UCI aims to nurture a community of Anteaters exploring their place
+            in an increasingly data-driven world. Through workshops, professional panels,
+            and speaker events, we provide resources and a network for students to grow 
+            their analytical skills and gain a deeper appreciation for data — helping them
+            to succeed in college and in their careers. We are a student-run organization 
+            ultimately dedicated to the UCI and larger Orange County communities.
+            Come find out if we are a fit for you!
             </p>
             <div className="mt-10">
               <button className="px-8 py-3 bg-white text-[#1D1B3F] font-bold rounded-full shadow hover:scale-105 transition-transform">
