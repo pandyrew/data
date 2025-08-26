@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Bg />
       <main style={{ minHeight: "300vh", position: "relative" }}>
-        <h1>Hello World</h1>
+        {/* <h1>Hello World</h1> */}
       </main>
     </>
   );
