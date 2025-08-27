@@ -1,4 +1,5 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" height="2416" preserveAspectRatio="xMidYMid slice" viewBox="0.0 0.0 1920.0 2166.0" width="1920">
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" height="2416" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 2416" width="1920">
   <ns0:defs>
     <ns0:linearGradient id="skyDusk" x1="0" x2="0" y1="0" y2="1">
       <ns0:stop offset="0%" stop-color="#97B4F8" />
@@ -1985,4 +1986,4 @@
       <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#92B2FF" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
     </ns0:g>
   </ns0:g>
-<rect x="0" y="2400" width="1920" height="16" fill="#6F88CA" /></ns0:svg>
+<rect x="0" y="2410" width="1920" height="6" fill="#6F88CA" /></ns0:svg>

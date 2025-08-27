@@ -1,4 +1,5 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" height="2416" preserveAspectRatio="xMidYMid slice" viewBox="0.0 0.0 1920.0 2166.0" width="1920">
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" height="2154" preserveAspectRatio="xMidYMid slice" viewBox="0.0 0.0 1920.0 2154.0" width="1920">
   <ns0:defs>
     <ns0:linearGradient id="skyDusk" x1="0" x2="0" y1="0" y2="1">
       <ns0:stop offset="0%" stop-color="#97B4F8" />
@@ -74,7 +75,7 @@
     <ns0:filter id="featherMedium" x="-2%" y="-2%" width="104%" height="104%">
       <ns0:feGaussianBlur stdDeviation="1.3" />
     </ns0:filter>
-    <ns0:linearGradient id="lowerSkyDarken3" gradientUnits="userSpaceOnUse" x1="0.0" y1="537.91" x2="0.0" y2="2416" color-interpolation="sRGB">
+    <ns0:linearGradient id="lowerSkyDarken3" gradientUnits="userSpaceOnUse" x1="0.0" y1="537.91" x2="0.0" y2="2404.0" color-interpolation="sRGB">
       <ns0:stop offset="0%" stop-color="#0E1138" stop-opacity="0.0" />
       <ns0:stop offset="3%" stop-color="#0D1037" stop-opacity="0.0173" />
       <ns0:stop offset="6%" stop-color="#0D1037" stop-opacity="0.0347" />
@@ -401,7 +402,7 @@
       <ns0:stop offset="98%" stop-color="#111A49" stop-opacity="0.8301" />
       <ns0:stop offset="99%" stop-color="#111A49" stop-opacity="0.8399" />
       <ns0:stop offset="99%" stop-color="#111A49" stop-opacity="0.8499" />
-      <ns0:stop offset="100%" stop-color="#111A49" stop-opacity="1" />
+      <ns0:stop offset="100%" stop-color="#111A49" stop-opacity="0.980" />
     </ns0:linearGradient>
   </ns0:defs>
   <ns0:rect id="lowerSkyBaseUnderlay" x="0.0" y="1080.0" width="1920.0" height="1376.0" fill="url(#lowerSkyLight)" />
@@ -1918,7 +1919,7 @@
       </ns0:g>
       <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#6A86DD" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
     </ns0:g>
-    <ns0:rect id="overlayOnTop" x="0.0" y="0" width="1920.0" height="2416" fill="url(#lowerSkyDarken3)" filter="url(#ditherNoise3)" mask="url(#maskTopBand)" />
+    <ns0:rect id="overlayOnTop" x="0.0" y="0.0" width="1920.0" height="2404.0" fill="url(#lowerSkyDarken3)" filter="url(#ditherNoise3)" mask="url(#maskTopBand)" />
     <ns0:g id="cloudBand_added_1_dup" opacity="1" fill-opacity="1" fill="#6073C1">
       <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
         <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
@@ -1985,4 +1986,4 @@
       <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#92B2FF" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
     </ns0:g>
   </ns0:g>
-<rect x="0" y="2400" width="1920" height="16" fill="#6F88CA" /></ns0:svg>
+</ns0:svg>

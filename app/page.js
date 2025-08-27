@@ -13,7 +13,10 @@ import { testimonials } from '@/data/carousel';
 import data from '/public/photos/data-alt.png';
 import schedule from '/public/photos/schedule.png';
 import Bg from '@/components/ui/bg';
+import Bg2 from '@/components/ui/bg2';
 import { motion } from 'framer-motion';
+import Link from "next/link";
+
 
 const UPCOMING_EVENT_EXISTS = true;
 
@@ -32,6 +35,7 @@ export default function Home() {
   return (
     <>
       <Bg />
+      <Bg2 />
       <main className="relative z-10">
         <section className="min-h-[300vh]grid">
           {isClient && (
@@ -72,11 +76,13 @@ export default function Home() {
             ultimately dedicated to the UCI and larger Orange County communities.
             Come find out if we are a fit for you!
             </p>
-            <div className="mt-10">
-              <button className="px-8 py-3 bg-white text-[#1D1B3F] font-bold rounded-full shadow hover:scale-105 transition-transform">
-                Learn More
+              <button>
+                <Link href="/about">
+                  <span className="px-8 py-3 bg-white text-[#1D1B3F] font-bold rounded-full shadow hover:scale-105 transition-transform">
+                    Learn More
+                  </span>
+                </Link>
               </button>
-            </div>
           </div>
         </section>
       </main>
