@@ -1,31 +1,15 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import heroPicture from '/public/photos/data-alt.png';
-import sparkle from '/public/icons/sparkle.svg';
-import arrow from '/public/icons/arrow.svg';
-import wave1 from '/public/wave/wave-1.png';
-import wave2 from '/public/wave/wave-2.png';
-import gradient from '/public/gradients/front-page-gradient-2.png';
-import { testimonials } from '@/data/carousel';
-import data from '/public/photos/data-alt.png';
-import schedule from '/public/photos/schedule.png';
-import Bg from '@/components/ui/bg';
-import Bg2 from '@/components/ui/bg2';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Link from "next/link";
+import BgStack from '@/components/ui/bg';
+import PhotoGallery from "@/components/ui/gallery";
 
-
-const UPCOMING_EVENT_EXISTS = true;
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  useEffect(() => setIsClient(true), []);
 
   const letterVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -33,13 +17,12 @@ export default function Home() {
   };
 
   return (
-    <>
-      <Bg />
-      <Bg2 />
+    <div className="relative">
+      <BgStack />
       <main className="relative z-10">
-        <section className="min-h-[300vh]grid">
+        <section className="min-h-[120vh] grid content-start pt-24">
           {isClient && (
-            <motion.div className="place-self-center justify-self-start py-[14%] pl-[22%] text-left font-clash font-bold text-white space-y-4">
+            <motion.div className="self-start justify-self-start py-[11%] pl-[19.2%] text-left font-clash font-bold text-white space-y-4">
               <motion.div
                 variants={letterVariants}
                 initial="hidden"
@@ -62,30 +45,66 @@ export default function Home() {
           )}
         </section>
 
-        <section className="relative text-white py-[850px] px-6 md:px-12">
+          <section className="relative text-white pt-[600px] px-6 md:px-12">
           <div className="max-w-2xl mx-auto md:text-center">
             <h2 className="text-4xl md:text-5xl font-clash font-bold mb-6">
               About Data at UCI
             </h2>
-            <p className="text-lg md:text-xl font-satoshi mb-4 ">
-            Data@UCI aims to nurture a community of Anteaters exploring their place
-            in an increasingly data-driven world. Through workshops, professional panels,
-            and speaker events, we provide resources and a network for students to grow 
-            their analytical skills and gain a deeper appreciation for data — helping them
-            to succeed in college and in their careers. We are a student-run organization 
-            ultimately dedicated to the UCI and larger Orange County communities.
-            Come find out if we are a fit for you!
+            <p className="text-lg md:text-xl font-satoshi mb-4">
+              Data@UCI aims to nurture a community of Anteaters exploring their place
+              in an increasingly data-driven world. Through workshops, professional panels,
+              and speaker events, we provide resources and a network for students to grow
+              their analytical skills and gain a deeper appreciation for data — helping them
+              to succeed in college and in their careers. We are a student-run organization
+              ultimately dedicated to the UCI and larger Orange County communities.
+              Come find out if we are a fit for you!
             </p>
-              <button>
-                <Link href="/about">
-                  <span className="px-8 py-3 bg-white text-[#1D1B3F] font-bold rounded-full shadow hover:scale-105 transition-transform">
-                    Learn More
-                  </span>
-                </Link>
-              </button>
+            <Link href="/about" className="inline-block py-[4%]">
+              <span className="px-8 py-4 bg-white text-[#1D1B3F] font-bold rounded-full shadow hover:scale-105 transition-transform">
+                Learn More
+              </span>
+            </Link>
+          </div>
+        </section>
+
+        <section className="relative pt-[200px] pb-[400px] text-white">
+          <div className="w-full max-w-screen-xl mx-auto px-10 md:px-30">
+            <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              <PhotoGallery
+                src="/carousel/memories1.png"
+                alt="Datathon Picture"
+                caption="Datathon Participants!"
+              />
+              <PhotoGallery
+                src="/carousel/memories2.png"
+                alt="Memories"
+                caption="More Datathon!"
+              />
+              <PhotoGallery
+                src="/carousel/memories3.png"
+                alt="Memories"
+                caption="Board"
+              />
+              <PhotoGallery
+                src="/carousel/memories4.png"
+                alt="Memories"
+                caption="Another memory!"
+              />
+              <PhotoGallery
+                src="/carousel/memories5.png"
+                alt="Memories"
+                caption="Another memory!"
+              />
+              <PhotoGallery
+                src="/carousel/memories6.png"
+                alt="Memories"
+                caption="Another memory!"
+              />
+
+            </div>
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
