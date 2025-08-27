@@ -56,7 +56,7 @@ const companies = [
       <main className="relative z-10">
         <section className="min-h-[120vh] grid content-start pt-24">
           {isClient && (
-            <motion.div className="self-start justify-self-start py-[11%] pl-[19.2%] text-left font-clash font-bold text-white space-y-4">
+            <motion.div className="self-start justify-self-start pt-[11%] pl-[19.2%] text-left font-clash font-bold text-white space-y-4">
               <motion.div
                 variants={letterVariants}
                 initial="hidden"
@@ -145,7 +145,7 @@ const companies = [
                 Where Our Members Have Worked
               </h2>
 
-              <div className="grid grid-cols-12 gap-4 md:gap-6">
+              <div className="grid grid-cols-12 gap-4 md:gap-6 pb-[12%]">
                 {companies.map((c) => (
                   <a
                     key={c.name}

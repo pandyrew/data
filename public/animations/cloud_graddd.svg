@@ -1,17 +1,17 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1920" height="1320" viewBox="0 0 1920 1320" preserveAspectRatio="xMidYMid slice">
   <ns0:defs>
     <ns0:clipPath id="topPadClip">
-      <ns0:rect x="0" y="0" width="1920" height="1080" />
+      <ns0:rect x="-400" y="0" width="2720" height="1080" />
     </ns0:clipPath>
     <ns0:clipPath id="gradientAreaClip">
-      <ns0:rect x="0" y="227" width="1920" height="853" />
+      <ns0:rect x="-400" y="227" width="2720" height="1093.0" />
     </ns0:clipPath>
 
     <ns0:linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1E2230" />
-      <ns0:stop offset="35%" stop-color="#3E54B8" />
-      <ns0:stop offset="70%" stop-color="#6492FF" />
-      <ns0:stop offset="100%" stop-color="#97B4F8" />
+      <ns0:stop offset="0%" stop-color="#97B4F8" />
+      <ns0:stop offset="35%" stop-color="#6492FF" />
+      <ns0:stop offset="70%" stop-color="#3E54B8" />
+      <ns0:stop offset="100%" stop-color="#1E2230" />
     </ns0:linearGradient>
 
     
@@ -97,7 +97,7 @@
     </ns0:defs>
 
   
-  <ns0:rect x="0" y="227" width="1920" height="853" fill="url(#bgGradient)" />
+  <ns0:rect x="0" y="227" width="1920" height="1093.0" fill="url(#bgGradient)" />
 
   
   <ns0:g id="stars" clip-path="url(#gradientAreaClip)" opacity="0.15">
@@ -505,13 +505,13 @@
           <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
           <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
           <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-        </ns0:g>
+        <ns0:ellipse cx="2500" cy="700" rx="380" ry="180" /><ns0:ellipse cx="2800" cy="710" rx="320" ry="160" /><ns0:ellipse cx="3120" cy="720" rx="300" ry="150" /><ns0:ellipse cx="3400" cy="730" rx="260" ry="140" /><ns0:ellipse cx="3300" cy="535" rx="320" ry="210" /><ns0:ellipse cx="3600" cy="545" rx="260" ry="190" /><ns0:ellipse cx="3600" cy="540" rx="500" ry="260" /><ns0:ellipse cx="4000" cy="560" rx="420" ry="220" /></ns0:g>
       </ns0:g>
     </ns0:g>
   </ns0:g>
 
   
-  <ns0:g id="cloudFrontGlowTop2" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0,-6) translate(-30,0) translate(1920,0) scale(-1,1)">
+  <ns0:g id="cloudFrontGlowTop2" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0,-6) translate(-30,0) translate(1920,0) scale(-1,1)" filter="url(#innerGlowBottom)">
     <ns0:g transform="translate(-30.0,-13.0)">
       <ns0:g filter="url(#innerGlowBottom)">
         <ns0:g filter="url(#solidifyFront)">
@@ -562,11 +562,11 @@
           <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
           <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
           <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-        </ns0:g>
+        <ns0:ellipse cx="-400" cy="560" rx="320" ry="160" /><ns0:ellipse cx="-800" cy="570" rx="300" ry="150" /><ns0:ellipse cx="-1200" cy="585" rx="280" ry="140" /><ns0:ellipse cx="-1600" cy="600" rx="260" ry="130" /><ns0:ellipse cx="-1200" cy="530" rx="300" ry="220" /><ns0:ellipse cx="-1600" cy="540" rx="260" ry="200" /><ns0:ellipse cx="3600" cy="550" rx="480" ry="250" /><ns0:ellipse cx="4000" cy="570" rx="420" ry="220" /></ns0:g>
       </ns0:g>
     </ns0:g>
   </ns0:g>
-<ns0:g id="cloudFrontGlow" clip-path="url(#topPadClip)" style="pointer-events:none">
+<ns0:g id="cloudFrontGlow" clip-path="url(#topPadClip)" style="pointer-events:none" filter="url(#innerGlowBottom)">
     <ns0:g transform="translate(50.0,13.0)">
       <ns0:g filter="url(#innerGlowBottom)">
         <ns0:g filter="url(#solidifyFront)">
@@ -617,11 +617,11 @@
           <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
           <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
           <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-        </ns0:g>
+        <ns0:ellipse cx="2450" cy="600" rx="300" ry="150" /><ns0:ellipse cx="2740" cy="615" rx="280" ry="140" /><ns0:ellipse cx="3030" cy="630" rx="260" ry="130" /><ns0:ellipse cx="3320" cy="645" rx="240" ry="120" /><ns0:ellipse cx="3200" cy="530" rx="300" ry="220" /><ns0:ellipse cx="3500" cy="540" rx="260" ry="200" /><ns0:ellipse cx="3600" cy="560" rx="460" ry="240" /><ns0:ellipse cx="4000" cy="580" rx="380" ry="200" /></ns0:g>
       </ns0:g>
     </ns0:g>
   </ns0:g>
-<ns0:g id="cloudFrontGlowTop" clip-path="url(#topPadClip)" style="pointer-events:none">
+<ns0:g id="cloudFrontGlowTop" clip-path="url(#topPadClip)" style="pointer-events:none" filter="url(#innerGlowBottom)">
     <ns0:g transform="translate(110.0,47.0)">
       <ns0:g filter="url(#innerGlowBottom)">
         <ns0:g filter="url(#solidifyFront)">
@@ -672,7 +672,7 @@
           <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
           <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
           <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-        </ns0:g>
+        <ns0:ellipse cx="2450" cy="640" rx="300" ry="150" /><ns0:ellipse cx="2740" cy="655" rx="280" ry="140" /><ns0:ellipse cx="3030" cy="670" rx="260" ry="130" /><ns0:ellipse cx="3320" cy="685" rx="240" ry="120" /><ns0:ellipse cx="3200" cy="550" rx="300" ry="220" /><ns0:ellipse cx="3500" cy="560" rx="260" ry="200" /><ns0:ellipse cx="3600" cy="590" rx="440" ry="230" /><ns0:ellipse cx="4000" cy="610" rx="360" ry="190" /></ns0:g>
       </ns0:g>
     </ns0:g>
   </ns0:g>
