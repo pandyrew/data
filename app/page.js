@@ -18,80 +18,36 @@ export default function Home() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const companies = [
-    {
-      name: 'JPMorgan Chase',
-      size: 'large',
-      logo: '/companies/jpmc.webp',
-      website: 'https://www.jpmorganchase.com',
-    },
-    {
-      name: 'Tesla',
-      size: 'large',
-      logo: '/companies/tesla.png',
-      website: 'https://www.tesla.com',
-    },
-    {
-      name: 'Charles Schwab',
-      size: 'large',
-      logo: '/companies/charlesschwab.png',
-      website: 'https://www.schwab.com',
-    },
-    {
-      name: 'Atlassian',
-      size: 'large',
-      logo: '/companies/atlassian.png',
-      website: 'https://www.atlassian.com',
-    },
-    {
-      name: 'Deloitte',
-      size: 'large',
-      logo: '/companies/deloitte.webp',
-      website: 'https://www.deloitte.com',
-    },
-    {
-      name: 'Square',
-      size: 'medium',
-      logo: '/companies/square.jpg',
-      website: 'https://www.square.com',
-    },
-    {
-      name: 'Resmed',
-      size: 'medium',
-      logo: '/companies/resmed.jpg',
-      website: 'https://www.resmed.com',
-    },
-    {
-      name: 'T-Mobile',
-      size: 'medium',
-      logo: '/companies/tmobile.avif',
-      website: 'https://www.t-mobile.com',
-    },
-    {
-      name: 'First American',
-      size: 'small',
-      logo: '/companies/firstamerican.webp',
-      website: 'https://www.firstam.com',
-    },
-    {
-      name: 'Skylar Capital Management',
-      size: 'small',
-      logo: '/companies/skylar.jpeg',
-      website: 'https://www.linkedin.com/company/skylarcap/',
-    },
-    {
-      name: 'Pacific Life',
-      size: 'small',
-      logo: '/companies/pacific life.jpg',
-      website: 'https://www.pacificlife.com',
-    },
-    {
-      name: 'Inari Medical',
-      size: 'small',
-      logo: '/companies/inary.png',
-      website: 'https://www.inarimedical.com',
-    },
-  ];
+const companies = [
+  { name: 'JPMorgan Chase', logo: '/companies/jpmc.webp', website: 'https://www.jpmorganchase.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-4' },
+  { name: 'Tesla', logo: '/companies/tesla.png', website: 'https://www.tesla.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-5' },
+  { name: 'Charles Schwab', logo: '/companies/charlesschwab.png', website: 'https://www.schwab.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+
+  { name: 'Atlassian', logo: '/companies/atlassian.png', website: 'https://www.atlassian.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-5' },
+  { name: 'Deloitte', logo: '/companies/deloitte.webp', website: 'https://www.deloitte.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-4' },
+  { name: 'Square', logo: '/companies/square.jpg', website: 'https://www.square.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+
+  { name: 'Resmed', logo: '/companies/resmed.jpg', website: 'https://www.resmed.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-6' },
+  { name: 'T-Mobile', logo: '/companies/tmobile.avif', website: 'https://www.t-mobile.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-6' },
+
+  { name: 'First American', logo: '/companies/firstamerican.webp', website: 'https://www.firstam.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  { name: 'Skylar Capital Management', logo: '/companies/skylar.jpeg', website: 'https://www.linkedin.com/company/skylarcap/',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  { name: 'Pacific Life', logo: '/companies/pacific-life.jpg', website: 'https://www.pacificlife.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  { name: 'Inari Medical', logo: '/companies/inary.png', website: 'https://www.inarimedical.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+];
+
 
 
   return (
@@ -184,40 +140,35 @@ export default function Home() {
 
         <section>
           <div className="w-full bg-transparent pt-[330px] px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-clash font-medium text-center mb-16 text-white">
-            Where Our Members Have Worked
-          </h2>
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-5xl md:text-6xl font-clash font-medium text-center mb-16 text-white">
+                Where Our Members Have Worked
+              </h2>
 
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
-            {companies.map((company) => (
-              <a
-                key={company.name}
-                href={company.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`
-                  ${
-                    company.size === 'large'
-                      ? 'w-64 h-64 md:w-80 md:h-80'
-                      : 'w-48 h-48 md:w-64 md:h-64'
-                  }
-                  relative bg-white rounded-xl flex items-center justify-center p-4
-                  transition-transform hover:scale-105 cursor-pointer
-                `}
-              >
-                <Image
-                  src={company.logo}
-                  alt={`${company.name} logo`}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  className="p-6"
-                />
-              </a>
-            ))}
+              <div className="grid grid-cols-12 gap-4 md:gap-6">
+                {companies.map((c) => (
+                  <a
+                    key={c.name}
+                    href={c.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${c.span} block min-w-0`}
+                  >
+                    <div className="relative h-24 md:h-28 bg-white rounded-[24px] shadow flex items-center justify-center transition-transform hover:scale-105">
+                      <Image
+                        src={c.logo}
+                        alt={`${c.name} logo`}
+                        fill
+                        sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 90vw"
+                        style={{ objectFit: 'contain' }}
+                        className="pointer-events-none"
+                      />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
         </section>
 
       </main>
