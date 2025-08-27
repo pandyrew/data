@@ -67,8 +67,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative pt-[200px] pb-[400px] text-white">
-          <div className="w-full max-w-screen-xl mx-auto px-10 md:px-30">
+        <section className="relative pt-[120px] pb-[400px] text-white">
+          <div className="w-full max-w-screen-xl mx-auto px-13 md:px-30">
             <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               <PhotoGallery
                 src="/carousel/memories1.png"
@@ -96,7 +96,7 @@ export default function Home() {
                 caption="Another memory!"
               />
               <PhotoGallery
-                src="/carousel/memories6.png"
+                src="/carousel/memories8.jpg"
                 alt="Memories"
                 caption="Another memory!"
               />
