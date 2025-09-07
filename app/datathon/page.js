@@ -130,21 +130,46 @@ export default function Datathon() {
       text:
         'Similar to hackathons, datathons let students explore data by tackling a real-world project.',
       className:
-        'w-[280px] lg:-top-[30px] lg:left-[200px] -top-[120px] left-[12px] z-10',
-      delay: 0.2,
+        'w-[300px] top-[10px] left-1/2 -translate-x-1/2 lg:top-[-80px] lg:left-[200px] lg:translate-x-0 z-10',
+      delay: 0.20,
     },
     {
-      text: 'Team up with mentors and peers to learn fast and build something meaningful.',
+      text:
+        'Team up with mentors and peers to learn fast and build something meaningful.',
       className:
-        'w-[260px] lg:top-[10px] lg:right-[12%] -top-[40px] right-[8%] z-10',
-      delay: 0.35,
+        'w-[300px] top-[110px] left-1/2 -translate-x-1/2 lg:top-[-40px] lg:left-auto lg:right-[12%] lg:translate-x-0 z-10',
+      delay: 0.30,
       flip: true,
     },
     {
-      text: 'Workshops, swag, prizes, and sponsors—plus a portfolio-ready project.',
+      text:
+        'Clean, explore, and model with Python/SQL/ML—ask mentors anytime.',
       className:
-        'w-[260px] lg:top-[100px] lg:left-[30%] top-[220px] left-[5%] z-10',
-      delay: 0.5,
+        'w-[320px] top-[210px] left-1/2 -translate-x-1/2 lg:top-[50px] lg:left-[30%] lg:translate-x-0 z-10',
+      delay: 0.40,
+    },
+    {
+      text:
+        'Submit a notebook + slides and present to judges.',
+      className:
+        'w-[300px] top-[310px] left-1/2 -translate-x-1/2 lg:top-[110px] lg:left-auto lg:right-[20%] lg:translate-x-0 z-10',
+      delay: 0.50,
+      flip: true,
+    },
+    {
+      text:
+        'Tracks span health, finance, and more—pick a challenge and dive in.',
+      className:
+        'w-[300px] top-[410px] left-1/2 -translate-x-1/2 lg:top-[190px] lg:left-[12%] lg:translate-x-0 z-10',
+      delay: 0.60,
+    },
+    {
+      text:
+        'Workshops, mentorship, prizes, food—and a portfolio-ready project.',
+      className:
+        'w-[320px] top-[490px] left-1/2 -translate-x-1/2 lg:top-[250px] lg:left-auto lg:right-[8%] lg:translate-x-0 z-10',
+      delay: 0.70,
+      flip: true,
     },
   ];
 
@@ -167,8 +192,16 @@ export default function Datathon() {
         </motion.p>
       </motion.div>
 
+      <section className="relative w-full flex justify-center mt-6 lg:mt-8 px-6">
+        <p className="max-w-3xl text-center text-white/95 leading-relaxed">
+          A datathon is a fast-paced, team-based event where you dig into real datasets,
+          uncover insights, and present your findings. Think hackathon—but focused on data
+          exploration, analysis, and storytelling with tools like Python, SQL, and ML.
+        </p>
+      </section>
+
       <motion.div
-        className="relative w-full h-[500px] flex flex-col justify-center items-center -mt-10"
+        className="relative w-full h-[520px] flex flex-col justify-center items-center mt-6 lg:mt-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
