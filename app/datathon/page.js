@@ -29,15 +29,17 @@ const AnimatedGraph = () => {
           <linearGradient
             id="paint0_linear_232_2"
             x1="1000"
-            y1="-357"
+            y1="0"
             x2="1000"
-            y2="526"
+            y2="583"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#5F9FFF" stopOpacity="1" />
-            <stop offset="1" stopColor="white" stopOpacity="1" />
+            <stop offset="0" stopColor="#CAD8E6" />
+            <stop offset="0.6" stopColor="#97B4F8" />
+            <stop offset="1" stopColor="#5A82E0" />
           </linearGradient>
         </defs>
+
         <mask
           id="mask0_232_2"
           style={{ maskType: 'alpha' }}
@@ -49,6 +51,7 @@ const AnimatedGraph = () => {
         >
           <rect width="2400" height="583" x="-200" fill="white" />
         </mask>
+
         <g mask="url(#mask0_232_2)">
           <motion.line
             x1="-200"
@@ -71,7 +74,7 @@ const AnimatedGraph = () => {
           />
           <motion.path
             d="M-200 583C-150 583 338.605 336.573 416.666 329.46C494.728 322.348 556.062 454.557 620.438 452.046C684.813 449.536 947.891 168.383 1075.12 168.383C1202.35 168.383 1195.25 324.858 1307.79 322.348C1420.32 319.837 1728 100 2200 -50"
-            stroke="#2E81FF"
+            stroke="#6492FF"
             strokeWidth="10"
             strokeLinecap="round"
             fill="none"
@@ -82,7 +85,7 @@ const AnimatedGraph = () => {
           <g transform="translate(1075.12, 168.383)">
             <motion.circle
               r="19"
-              fill="#5F9FFF"
+              fill="#6492FF"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 2 }}
@@ -101,9 +104,52 @@ const AnimatedGraph = () => {
   );
 };
 
-export default function Datathon() {
+const TextBubble = ({ text, className = '', delay = 0, flip = false }) => {
   return (
-    <div className="relative w-screen pt-[140px]">
+    <motion.div
+      className={`absolute ${className}`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay }}
+    >
+      <Image
+        alt="textbox"
+        src={textbox}
+        className={`hidden lg:block w-full h-auto ${flip ? '-scale-x-100' : ''}`}
+      />
+      <div className="absolute inset-0 flex items-start justify-start pt-10 px-6">
+        <p className="text-neutral-900 leading-snug">{text}</p>
+      </div>
+    </motion.div>
+  );
+};
+
+export default function Datathon() {
+  const bubbles = [
+    {
+      text:
+        'Similar to hackathons, datathons let students explore data by tackling a real-world project.',
+      className:
+        'w-[280px] lg:-top-[30px] lg:left-[200px] -top-[120px] left-[12px] z-10',
+      delay: 0.2,
+    },
+    {
+      text: 'Team up with mentors and peers to learn fast and build something meaningful.',
+      className:
+        'w-[260px] lg:top-[10px] lg:right-[12%] -top-[40px] right-[8%] z-10',
+      delay: 0.35,
+      flip: true,
+    },
+    {
+      text: 'Workshops, swag, prizes, and sponsors—plus a portfolio-ready project.',
+      className:
+        'w-[260px] lg:top-[100px] lg:left-[30%] top-[220px] left-[5%] z-10',
+      delay: 0.5,
+    },
+  ];
+
+  return (
+    <div className="relative w-screen min-h-screen pt-[140px] bg-gradient-to-b from-[#4E74D9] via-[#7FA1E6] to-[#CAD8E6]">
       <motion.div
         className="w-full h-auto relative"
         initial={{ opacity: 0, y: 20 }}
@@ -112,12 +158,12 @@ export default function Datathon() {
       >
         <AnimatedGraph />
         <motion.p
-          className="absolute  lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-[100px]"
+          className="absolute lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-[100px] text-white"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          What is a Datathon?
+          What is Datathon
         </motion.p>
       </motion.div>
 
@@ -127,56 +173,23 @@ export default function Datathon() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <div className="relative">
-          <motion.div
-            className="lg:w-[350px] w-[200px]"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
-            <Image
-              alt="Nathan"
-              src={nathan}
-              className="rounded-xl border-[#9D9D9D] border-4 hidden lg:flex"
+        <div className="relative w-full">
+          {bubbles.map((b, i) => (
+            <TextBubble
+              key={i}
+              text={b.text}
+              className={b.className}
+              delay={b.delay}
+              flip={!!b.flip}
             />
-          </motion.div>
-
-          <motion.div
-            className="sm:w-[300px] absolute lg:-top-[50px] -top-[150px] lg:left-[200px] w-[250px] -left-[10px]"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-          >
-            <Image
-              alt="textbox"
-              src={textbox}
-              className="hidden lg:flex"
-            ></Image>
-            <div className="absolute top-0 w-full p-6 flex items-center sm:font-normal">
-              <p className="">
-                Similar to hackathons, datathons provide students an opportunity
-                to explore the vast world of data by working on a data science
-                project related to a real-world issue.
-              </p>
-            </div>
-          </motion.div>
+          ))}
         </div>
-        <Image
-          alt="black sparkle"
-          src={sparkle}
-          className="absolute left-[6%] top-[9%]"
-        ></Image>
-        <Image
-          alt="black sparkle"
-          src={sparkle}
-          className="absolute lg:right-[16%] right-[14%] top-[60%]"
-        ></Image>
-        <Image
-          alt="black sparkle"
-          src={sparkle}
-          className="absolute left-[30%] top-[80%]"
-        ></Image>
+
+        <Image alt="black sparkle" src={sparkle} className="absolute left-[6%] top-[9%]" />
+        <Image alt="black sparkle" src={sparkle} className="absolute lg:right-[16%] right-[14%] top-[60%]" />
+        <Image alt="black sparkle" src={sparkle} className="absolute left-[30%] top-[80%]" />
       </motion.div>
+
       <div className="w-full h-fit relative flex-col items-center flex">
         <div className="h-full relative w-full flex justify-center items-center">
           <Image
@@ -184,14 +197,75 @@ export default function Datathon() {
             src={gradient}
             quality={100}
             sizes="100vw"
-            className="absolute bg-cover h-full w-full"
+            className="absolute bg-cover h-full w-full opacity-90"
           />
-          <StickyScroll content={content} className=""></StickyScroll>
+          <StickyScroll content={content} />
+        </div>
+      </div>
+
+      <div className="w-full bg-transparent pt-[100px] px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-clash font-medium text-left mb-16 text-white">
+            Past Sponsors
+          </h2>
+
+          <div className="grid grid-cols-12 gap-4 md:gap-6 pb-[12%]">
+            {companies.map((c) => (
+              <a
+                key={c.name}
+                href={c.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${c.span} block min-w-0`}
+              >
+                <div className="relative h-24 md:h-28 bg-white rounded-[24px] shadow flex items-center justify-center transition-transform hover:scale-105">
+                  <Image
+                    src={c.logo}
+                    alt={`${c.name} logo`}
+                    fill
+                    sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 90vw"
+                    style={{ objectFit: 'contain' }}
+                    className="pointer-events-none"
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+const companies = [
+  { name: 'JPMorgan Chase', logo: '/companies/jpmc.webp', website: 'https://www.jpmorganchase.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-4' },
+  { name: 'Tesla', logo: '/companies/tesla.png', website: 'https://www.tesla.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-5' },
+  { name: 'Charles Schwab', logo: '/companies/charlesschwab.png', website: 'https://www.schwab.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+
+  { name: 'Atlassian', logo: '/companies/atlassian.png', website: 'https://www.atlassian.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-5' },
+  { name: 'Deloitte', logo: '/companies/deloitte.webp', website: 'https://www.deloitte.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-4' },
+  { name: 'Square', logo: '/companies/square.jpg', website: 'https://www.square.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+
+  { name: 'Resmed', logo: '/companies/resmed.jpg', website: 'https://www.resmed.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-6' },
+  { name: 'T-Mobile', logo: '/companies/tmobile.avif', website: 'https://www.t-mobile.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-6' },
+
+  { name: 'First American', logo: '/companies/firstamerican.webp', website: 'https://www.firstam.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  { name: 'Skylar Capital Management', logo: '/companies/skylar.jpeg', website: 'https://www.linkedin.com/company/skylarcap/',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  { name: 'Pacific Life', logo: '/companies/pacific-life.jpg', website: 'https://www.pacificlife.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  { name: 'Inari Medical', logo: '/companies/inary.png', website: 'https://www.inarimedical.com',
+    span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+];
 
 const content = [
   {
