@@ -21,10 +21,11 @@ function FramedPhoto({
   aspect = 'aspect-square',
   insetPct = '14%',
   frameOutsetPct = '10%',
+  absolute = true,
 }) {
   return (
     <motion.div
-      className={`absolute ${className}`}
+      className={`${absolute ? 'absolute' : ''} ${className}`}
       initial={{ opacity: 0, scale: 0.95, y: 8 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
@@ -53,7 +54,6 @@ function FramedPhoto({
 
 const AnimatedGraph = () => {
   const WAVE_OFFSET = 54;
-
   return (
     <motion.div
       className="w-full h-[583px] relative"
@@ -78,11 +78,9 @@ const AnimatedGraph = () => {
             <stop offset="1" stopColor={BASE_BLUE} />
           </linearGradient>
         </defs>
-
         <mask id="mask0_232_2" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="-200" y="0" width="2400" height="583">
           <rect width="2400" height="583" x="-200" fill="white" />
         </mask>
-
         <g mask="url(#mask0_232_2)">
           <motion.line
             x1="-200"
@@ -96,7 +94,7 @@ const AnimatedGraph = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 2 }}
           />
-          <g transform={`translate(0 ${54})`}>
+          <g transform={`translate(0 ${WAVE_OFFSET})`}>
             <motion.path
               d="M-200 583C-150 583 338.605 336.573 416.666 329.46C494.728 322.348 556.062 454.557 620.438 452.046C684.813 449.536 947.891 168.383 1075.12 168.383C1202.35 168.383 1195.25 324.858 1307.79 322.348C1420.32 319.837 1728 100 2200 -50V583H-200Z"
               fill="url(#paint0_linear_232_2)"
@@ -160,18 +158,18 @@ const TextBubble = ({ text, className = '', delay = 0, flip = false, flipY = fal
 
 export default function Datathon() {
   const bubbles = [
-    { text: 'Similar to hackathons, datathons let students explore data by tackling a real-world project.', className: 'w-[300px] bottom-[10%]  z-1', delay: 0.2 },
-    { text: 'Clean, explore, and model with Python/SQL/ML—ask mentors anytime.', className: 'w-[230px] bottom-[16%] left-[85%] z-1', delay: 0.4 },
-    { text: 'Submit a notebook + slides and present to judges.', className: 'w-[250px] left-[50%] pt-[20%] z-1', delay: 0.5, flipY: true }
+    { text: 'Similar to hackathons, datathons let students explore data by tackling a real-world project.', className: 'w-[300px] bottom-[49%] z-1', delay: 0.2 },
+    { text: 'Clean, explore, and model with Python/SQL/ML—ask mentors anytime.', className: 'w-[230px] bottom-[50%] left-[85%] z-1', delay: 0.4 },
+    { text: 'Submit a notebook + slides and present to judges.', className: 'w-[250px] left-[50%] top-[78%] z-1', delay: 0.5, flipY: true }
   ];
 
   const framedPhotos = [
-    { src: nathan, alt: 'Nathan', className: 'w-[270px] pt-[14%] left-[23%] z-10', delay: 0.25 },
-    { src: '/photos/datathon1.png', alt: 'Datathon 1', className: 'w-[310px] right-[82%] z-10', delay: 0.35 },
-    { src: '/photos/datathon2.png', alt: 'Datathon 2', className: 'w-[320px] left-[80%] z-10', delay: 0.45 },
-    { src: '/photos/datathon3.png', alt: 'Datathon 3', className: 'w-[290px] left-[48%] z-10', delay: 0.55 },
-    { src: '/photos/datathon4.png', alt: 'Datathon 4', className: 'w-[275px]  bottom-[1%] left-[25%] z-10', delay: 0.65 },
-    { src: '/photos/datathon5.png', alt: 'Datathon 5', className: 'w-[290px] bottom-[18%] right-[22%] z-10', delay: 0.75 },
+    { src: nathan, alt: 'Nathan', className: 'w-[270px] top-[68%] left-[23%] z-10', delay: 0.25 },
+    { src: '/photos/datathon1.png', alt: 'Datathon 1', className: 'w-[310px] top-[50%] right-[82%] z-10', delay: 0.35 },
+    { src: '/photos/datathon2.png', alt: 'Datathon 2', className: 'w-[320px] top-[50%] left-[80%] z-10', delay: 0.45 },
+    { src: '/photos/datathon3.png', alt: 'Datathon 3', className: 'w-[290px] top-[50%] left-[48%] z-10', delay: 0.55 },
+    { src: '/photos/datathon4.png', alt: 'Datathon 4', className: 'w-[275px] top-[21%] left-[25%] z-10', delay: 0.65 },
+    { src: '/photos/datathon5.png', alt: 'Datathon 5', className: 'w-[290px] top-[19.5%] right-[22%] z-10', delay: 0.75 },
   ];
 
   return (
@@ -183,34 +181,48 @@ export default function Datathon() {
         </motion.p>
         <Image alt="white sparkle" src={sparkle} width={200} height={200} className="absolute left-[45%] bottom-[75%]" />
         <Image alt="white sparkle" src={sparkle} width={250} height={250} className="absolute lg:right-[4%] right-[14%] top-[34%]" />
-        <Image alt="white sparkle" src={sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />  
+        <Image alt="white sparkle" src={sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
             A datathon is a fast-paced, team-based event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
           </p>
-        <div className="mt-6 flex justify-left pt-2">
-          <Link href="/about" className="block w-fit">
-            <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
-              Datathon 2026
-            </span>
-          </Link>
-        </div>
+          <div className="mt-6 flex justify-left pt-2">
+            <Link href="/about" className="block w-fit">
+              <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
+                Datathon 2026
+              </span>
+            </Link>
+          </div>
         </motion.div>
       </motion.div>
 
-      <motion.div className="relative w-full h-[980px] flex flex-col justify-center items-center mt-6 lg:mt-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-        <div className="relative w-full max-w-[1280px] mx-auto">
+      <motion.div className="relative w-full flex flex-col justify-center items-center mt-6 lg:mt-8">
+        <div className="hidden lg:block relative w-full h-[980px] max-w-[1280px] mx-auto">
           {framedPhotos.map((p, i) => (
             <FramedPhoto key={i} src={p.src} alt={p.alt} className={p.className} delay={p.delay} />
           ))}
           {bubbles.map((b, i) => (
             <TextBubble key={i} text={b.text} className={b.className} delay={b.delay} flip={!!b.flip} flipY={!!b.flipY} />
           ))}
+          <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute right-[94%] top-[14%]" />
+          <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[99%] top-[45%]" />
+          <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[24%] top-[49%]" />
         </div>
-
-        <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[8%] top-[14%]" />
-        <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute lg:right-[4%] right-[14%] top-[45%]" />
-        <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[32%] top-[50%]" />  
+        <div className="lg:hidden grid grid-cols-1 gap-6 w-full px-6">
+          {framedPhotos.map((p, i) => (
+            <FramedPhoto key={i} src={p.src} alt={p.alt} className="w-full relative" delay={p.delay} absolute={false} />
+          ))}
+          {bubbles.map((b, i) => (
+            <div key={i} className="w-full">
+              <div className="relative w-full">
+                <Image alt="textbox" src={textbox} className="w-full h-auto" />
+                <div className="absolute inset-0 px-6 flex items-start pt-10">
+                  <p className="text-neutral-900 leading-snug">{b.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </motion.div>
 
       <div className="w-full h-fit relative flex-col items-center flex">
@@ -246,10 +258,8 @@ export default function Datathon() {
               </a>
             ))}
           </div>
-
         </div>
       </div>
-
     </div>
   );
 }
@@ -258,6 +268,5 @@ const content = [
   { title: 'Datathon 2024: Dive into Data', description: 'Join us for Datathon 2024, an exciting journey into the world of data science. This event challenges participants to explore diverse datasets and develop innovative solutions for real-world problems.', content: <div className="h-full w-full bg-[url('/photos/datathon3.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2024</div> },
   { title: 'Uncharted Territories', description: 'Datathon 2024 offers uncharted territories for data enthusiasts. Tackle complex problems across various domains, from healthcare to finance, using cutting-edge data analysis techniques and machine learning algorithms.', content: <div className="h-full w-full bg-[url('/photos/datathon4.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2024</div> },
   { title: 'Collaborate and Innovate', description: 'Immerse yourself in a collaborative environment at Datathon 2024. Network with fellow data scientists, domain experts, and industry professionals. Participate in workshops and mentorship sessions to enhance your skills.', content: <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2024</div> },
-  { title: 'Our First Datathon', description: 'From April 15th to April 16th, Data @ UCI hosted EMBARK, our very first Datathon! We were thrilled to see so many talented students participate and showcase their data analysis skills! Their enthusiasm and dedication brought a new level of energy to the event. ', content: <div className="h-full w-full bg-[url('/photos/datathon1.png')] bg-cover flex items-center justify-center text-white font-mono">Embark 2023</div> },
-  // { title: 'Sponsors', description: 'A special thank you to UCI Office of Data and Information Technology, Melissa Data, MathWorks, Stratascratch, Crowdstrike, UCI Antrepreneur Center, Guayaki, Notion, and Quokka for making this event a huge success.', content: <div className="h-full w-full bg-[url('/photos/datathon2.png')] bg-cover flex items-center justify-center text-white font-mono">Embark 2023</div> },
+  { title: 'Our First Datathon', description: 'From April 15th to April 16th, Data @ UCI hosted EMBARK, our very first Datathon! We were thrilled to see so many talented students participate and showcase their data analysis skills! Their enthusiasm and dedication brought a new level of energy to the event.', content: <div className="h-full w-full bg-[url('/photos/datathon1.png')] bg-cover flex items-center justify-center text-white font-mono">Embark 2023</div> },
 ];
