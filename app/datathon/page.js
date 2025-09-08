@@ -5,7 +5,8 @@ import gradient from '/public/gradients/datathon-gradient.png';
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 import nathan from '/public/photos/nathan.png';
 import textbox from '/public/icons/textbox.png';
-import sparkle from '/public/icons/sparkle-black.svg';
+import black_sparkle from '/public/icons/black_sparkle.svg';
+import sparkle from '/public/icons/white_sparkle.svg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import framePng from '/public/icons/pixel_frame.png';
@@ -201,13 +202,11 @@ export default function Datathon() {
           ))}
         </div>
 
-        <Image alt="black sparkle" src={sparkle} className="absolute left-[16%] top-[9%]" />
-        <Image alt="black sparkle" src={sparkle} className="absolute lg:right-[8%] right-[14%] top-[60%]" />
-        <Image alt="black sparkle" src={sparkle} className="absolute left-[40%] top-[80%]" />
-
-
-        
+        <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[8%] top-[14%]" />
+        <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute lg:right-[4%] right-[14%] top-[45%]" />
+        <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[32%] top-[50%]" />  
       </motion.div>
+
       <div className="w-full h-fit relative flex-col items-center flex">
         <div className="h-full relative w-full flex justify-center items-center">
           <Image alt="gradient" src={gradient} quality={100} sizes="100vw" className="absolute bg-cover h-full w-full opacity-90" />
