@@ -129,11 +129,15 @@ const companies = [
   { name: 'Melissa Education', logo: '/companies/melissa_logo.png', website: 'https://www.melissa.com/education/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.1 },
   { name: 'Merage', logo: '/companies/merage.png', website: 'https://merage.uci.edu', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .85 },
   { name: 'SPFB', logo: '/companies/spfb.png', website: 'https://asuci.uci.edu/president/spfb/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.6 },
-  { name: 'Strata Scratch', logo: '/companies/strata.png', website: 'https://stratascratch.com', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 1 },
-  { name: 'OIT', logo: '/companies/oit.png', website: 'https://www.oit.uci.edu/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.1 },
-  { name: 'Redbull', logo: '/companies/redbull.webp', website: 'https://www.redbull.com/us-en', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.1 },
-  { name: 'Monster', logo: '/companies/monster.webp', website: 'https://www.monsterenergy.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-6', scale: 1.6 },
-  { name: 'T-Mobile', logo: '/companies/tmobile.avif', website: 'https://www.t-mobile.com', span: 'col-span-12 sm:col-span-6 lg:col-span-6', scale: 1.3 },
+  { name: 'Strata Scratch', logo: '/companies/strata.png', website: 'https://stratascratch.com', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: .9 },
+  { name: 'OIT', logo: '/companies/oit.png', website: 'https://www.oit.uci.edu/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1 },
+  { name: 'Redbull', logo: '/companies/redbull.webp', website: 'https://www.redbull.com/us-en', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1 },
+  { name: 'Monster', logo: '/companies/monster.webp', website: 'https://www.monsterenergy.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.6 },
+  { name: 'CrowdStrike', logo: '/companies/crowdstrike.webp', website: 'https://www.crowdstrike.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 2 },
+  { name: 'Guayaki', logo: '/companies/guayaki.jpg', website: 'https://yerbamadre.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4 ', scale: 1.3 },
+  { name: 'Notion', logo: '/companies/notion.png', website: 'https://www.notion.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1 },
+  { name: 'Quokka', logo: '/companies/quokka.png', website: 'https://www.quokka.io/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1 },
+  { name: 'Mathworks', logo: '/companies/mathworks.webp', website: 'https://www.mathworks.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1 },
 ];
 
 const TextBubble = ({ text, className = '', delay = 0, flip = false, flipY = false }) => {
