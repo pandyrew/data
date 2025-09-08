@@ -7,6 +7,7 @@ import nathan from '/public/photos/nathan.png';
 import textbox from '/public/icons/textbox.png';
 import sparkle from '/public/icons/sparkle-black.svg';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import framePng from '/public/icons/pixel_frame.png';
 
 const BASE_BLUE = '#5A82E0';
@@ -154,18 +155,18 @@ const TextBubble = ({ text, className = '', delay = 0, flip = false, flipY = fal
 
 export default function Datathon() {
   const bubbles = [
-    { text: 'Similar to hackathons, datathons let students explore data by tackling a real-world project.', className: 'w-[300px] bottom-[10%]  z-20', delay: 0.2 },
-    { text: 'Clean, explore, and model with Python/SQL/ML—ask mentors anytime.', className: 'w-[230px] bottom-[16%] left-[85%] z-20', delay: 0.4 },
-    { text: 'Submit a notebook + slides and present to judges.', className: 'w-[250px] left-[50%] pt-[20%] z-20', delay: 0.5, flipY: true }
+    { text: 'Similar to hackathons, datathons let students explore data by tackling a real-world project.', className: 'w-[300px] bottom-[10%]  z-1', delay: 0.2 },
+    { text: 'Clean, explore, and model with Python/SQL/ML—ask mentors anytime.', className: 'w-[230px] bottom-[16%] left-[85%] z-1', delay: 0.4 },
+    { text: 'Submit a notebook + slides and present to judges.', className: 'w-[250px] left-[50%] pt-[20%] z-1', delay: 0.5, flipY: true }
   ];
 
   const framedPhotos = [
-    { src: nathan, alt: 'Nathan', className: 'w-[220px] pt-[15%] left-[26%] z-10', delay: 0.25 },
-    { src: '/photos/datathon1.png', alt: 'Datathon 1', className: 'w-[220px] z-10', delay: 0.35 },
-    { src: '/photos/datathon2.png', alt: 'Datathon 2', className: 'w-[230px] pt-0 right-[2%] z-10', delay: 0.45 },
-    { src: '/photos/datathon3.png', alt: 'Datathon 3', className: 'w-[250px] left-[48%] z-10', delay: 0.55 },
-    { src: '/photos/datathon4.png', alt: 'Datathon 4', className: 'w-[220px] bottom-[20%] left-[25%] z-10', delay: 0.65 },
-    { src: '/photos/datathon5.png', alt: 'Datathon 5', className: 'w-[220px] bottom-[18%] right-[22%] z-10', delay: 0.75 },
+    { src: nathan, alt: 'Nathan', className: 'w-[270px] pt-[14%] left-[23%] z-10', delay: 0.25 },
+    { src: '/photos/datathon1.png', alt: 'Datathon 1', className: 'w-[310px] right-[82%] z-10', delay: 0.35 },
+    { src: '/photos/datathon2.png', alt: 'Datathon 2', className: 'w-[320px] left-[80%] z-10', delay: 0.45 },
+    { src: '/photos/datathon3.png', alt: 'Datathon 3', className: 'w-[290px] left-[48%] z-10', delay: 0.55 },
+    { src: '/photos/datathon4.png', alt: 'Datathon 4', className: 'w-[275px]  bottom-[1%] left-[25%] z-10', delay: 0.65 },
+    { src: '/photos/datathon5.png', alt: 'Datathon 5', className: 'w-[290px] bottom-[18%] right-[22%] z-10', delay: 0.75 },
   ];
 
   return (
@@ -180,6 +181,13 @@ export default function Datathon() {
           <p className="text-white leading-relaxed font-mono">
             A datathon is a fast-paced, team-based event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
           </p>
+        <div className="mt-6 flex justify-left pt-2">
+          <Link href="/about" className="block w-fit">
+            <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
+              Datathon 2026
+            </span>
+          </Link>
+        </div>
         </motion.div>
       </motion.div>
 
