@@ -177,7 +177,9 @@ export default function Datathon() {
         <motion.p className="absolute lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-[100px] text-white" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
           What is Datathon
         </motion.p>
-
+        <Image alt="white sparkle" src={sparkle} width={200} height={200} className="absolute left-[45%] bottom-[75%]" />
+        <Image alt="white sparkle" src={sparkle} width={250} height={250} className="absolute lg:right-[4%] right-[14%] top-[34%]" />
+        <Image alt="white sparkle" src={sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />  
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
             A datathon is a fast-paced, team-based event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
