@@ -114,7 +114,72 @@
       <ns0:feBlend mode="soft-light" in="SourceGraphic" in2="faintNoise" result="blended" />
     </ns0:filter>
     <ns0:mask id="maskTopBand" maskUnits="userSpaceOnUse">
-      </ns0:mask>
+      <ns0:g id="cloudBandDuplicate" fill="#FFFFFF" transform="translate(0,-40) translate(0,-25)">
+        <ns0:g fill="#FFFFFF">
+          <ns0:g fill="#FFFFFF">
+            <ns0:ellipse cx="8.9" cy="755.0" fill="#FFFFFF" rx="239.9" ry="187.9" />
+            <ns0:ellipse cx="156.4" cy="771.9" fill="#FFFFFF" rx="172.3" ry="108.3" />
+            <ns0:ellipse cx="296.7" cy="772.9" fill="#FFFFFF" rx="172.1" ry="136.6" />
+            <ns0:ellipse cx="432.7" cy="755.0" fill="#FFFFFF" rx="161.0" ry="120.6" />
+            <ns0:ellipse cx="625.3" cy="765.0" fill="#FFFFFF" rx="182.3" ry="131.3" />
+            <ns0:ellipse cx="789.4" cy="755.5" fill="#FFFFFF" rx="191.7" ry="124.0" />
+            <ns0:ellipse cx="917.2" cy="777.6" fill="#FFFFFF" rx="214.2" ry="155.6" />
+            <ns0:ellipse cx="1162.1" cy="762.2" fill="#FFFFFF" rx="187.1" ry="126.0" />
+            <ns0:ellipse cx="1269.5" cy="772.1" fill="#FFFFFF" rx="153.6" ry="104.8" />
+            <ns0:ellipse cx="1443.9" cy="760.4" fill="#FFFFFF" rx="155.0" ry="113.9" />
+            <ns0:ellipse cx="1546.0" cy="768.3" fill="#FFFFFF" rx="166.8" ry="98.0" />
+            <ns0:ellipse cx="1724.9" cy="750.4" fill="#FFFFFF" rx="166.6" ry="121.7" />
+            <ns0:ellipse cx="1945.1" cy="761.1" fill="#FFFFFF" rx="211.7" ry="144.9" />
+            <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" fill="#FFFFFF" />
+            <ns0:ellipse cx="-345.66" cy="757.20" rx="226.57" ry="163.06" fill="#FFFFFF" />
+            <ns0:ellipse cx="-338.52" cy="764.00" rx="268.79" ry="193.44" fill="#FFFFFF" />
+            <ns0:ellipse cx="-297.60" cy="770.80" rx="226.57" ry="163.06" fill="#FFFFFF" />
+            <ns0:ellipse cx="-277.09" cy="777.60" rx="184.36" ry="132.68" fill="#FFFFFF" />
+          </ns0:g>
+          <ns0:g fill="#FFFFFF">
+            <ns0:ellipse cx="31.7" cy="805.4" fill="#FFFFFF" rx="158.2" ry="98.7" />
+            <ns0:ellipse cx="195.7" cy="819.6" fill="#FFFFFF" rx="159.6" ry="122.4" />
+            <ns0:ellipse cx="293.4" cy="800.2" fill="#FFFFFF" rx="142.6" ry="98.2" />
+            <ns0:ellipse cx="537.0" cy="814.7" fill="#FFFFFF" rx="166.7" ry="128.6" />
+            <ns0:ellipse cx="677.4" cy="782.7" fill="#FFFFFF" rx="162.4" ry="119.7" />
+            <ns0:ellipse cx="897.7" cy="778.6" fill="#FFFFFF" rx="146.1" ry="92.9" />
+            <ns0:ellipse cx="1043.9" cy="814.9" fill="#FFFFFF" rx="147.8" ry="87.2" />
+            <ns0:ellipse cx="1269.6" cy="815.2" fill="#FFFFFF" rx="185.3" ry="109.1" />
+            <ns0:ellipse cx="1367.6" cy="784.8" fill="#FFFFFF" rx="196.1" ry="119.1" />
+            <ns0:ellipse cx="1526.2" cy="786.7" fill="#FFFFFF" rx="186.8" ry="116.5" />
+            <ns0:ellipse cx="1803.5" cy="790.6" fill="#FFFFFF" rx="176.3" ry="109.7" />
+            <ns0:ellipse cx="1895.0" cy="815.1" fill="#FFFFFF" rx="202.3" ry="128.1" />
+            <ns0:ellipse cx="-224.60" cy="778.60" rx="178.37" ry="124.66" fill="#FFFFFF" />
+            <ns0:ellipse cx="-237.43" cy="788.85" rx="219.21" ry="153.20" fill="#FFFFFF" />
+            <ns0:ellipse cx="-230.52" cy="799.10" rx="260.05" ry="181.74" fill="#FFFFFF" />
+            <ns0:ellipse cx="-190.93" cy="809.35" rx="219.21" ry="153.20" fill="#FFFFFF" />
+            <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" fill="#FFFFFF" />
+          </ns0:g>
+        </ns0:g>
+        <ns0:g fill="#FFFFFF" />
+        <ns0:g fill="#FFFFFF">
+          <ns0:g fill="#FFFFFF">
+            <ns0:ellipse cx="6.4" cy="748.7" fill="#FFFFFF" rx="240.1" ry="143.6" />
+            <ns0:ellipse cx="196.4" cy="748.3" fill="#FFFFFF" rx="174.7" ry="138.2" />
+            <ns0:ellipse cx="364.3" cy="764.7" fill="#FFFFFF" rx="231.1" ry="138.7" />
+            <ns0:ellipse cx="523.8" cy="745.3" fill="#FFFFFF" rx="186.7" ry="128.1" />
+            <ns0:ellipse cx="814.7" cy="771.0" fill="#FFFFFF" rx="174.9" ry="119.1" />
+            <ns0:ellipse cx="957.8" cy="770.7" fill="#FFFFFF" rx="155.4" ry="96.2" />
+            <ns0:ellipse cx="1102.2" cy="759.5" fill="#FFFFFF" rx="239.5" ry="140.0" />
+            <ns0:ellipse cx="1401.3" cy="745.9" fill="#FFFFFF" rx="211.3" ry="165.2" />
+            <ns0:ellipse cx="1495.8" cy="736.0" fill="#FFFFFF" rx="173.8" ry="114.7" />
+            <ns0:ellipse cx="1724.8" cy="749.1" fill="#FFFFFF" rx="192.7" ry="114.6" />
+            <ns0:ellipse cx="1904.7" cy="755.6" fill="#FFFFFF" rx="236.7" ry="140.7" />
+            <ns0:ellipse cx="-347.10" cy="736.00" rx="206.19" ry="147.87" fill="#FFFFFF" />
+            <ns0:ellipse cx="-361.94" cy="744.75" rx="253.40" ry="181.73" fill="#FFFFFF" />
+            <ns0:ellipse cx="-353.94" cy="753.50" rx="300.61" ry="215.59" fill="#FFFFFF" />
+            <ns0:ellipse cx="-308.18" cy="762.25" rx="253.40" ry="181.73" fill="#FFFFFF" />
+            <ns0:ellipse cx="-285.25" cy="771.00" rx="206.19" ry="147.87" fill="#FFFFFF" />
+          </ns0:g>
+        </ns0:g>
+        <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#6A86DD" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
+      </ns0:g>
+    </ns0:mask>
     <ns0:linearGradient id="grad_E_deepest2" gradientUnits="userSpaceOnUse" x1="0.0" y1="1308.6200000000001" x2="0.0" y2="3558.2999999999997" color-interpolation="linearRGB">
       <ns0:stop offset="0%" stop-color="#111A49" stop-opacity="0.2400" />
       <ns0:stop offset="0%" stop-color="#111A49" stop-opacity="0.2400" />
@@ -338,58 +403,6 @@
       <ns0:stop offset="99%" stop-color="#111A49" stop-opacity="0.8499" />
       <ns0:stop offset="100%" stop-color="#111A49" stop-opacity="1" />
     </ns0:linearGradient>
-    <ns0:clipPath id="topPadClip">
-      <ns0:rect x="-400" y="0" width="2720" height="1080" />
-    </ns0:clipPath>
-    <ns0:filter id="solidifyFront" x="-10%" y="-40%" width="120%" height="180%" color-interpolation-filters="sRGB">
-      <ns0:feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur" />
-      <ns0:feColorMatrix in="blur" type="matrix" values="1 0 0 0 0                 0 1 0 0 0                 0 0 1 0 0                 0 0 0 30 -15" result="thresh" />
-      <ns0:feFlood flood-color="#88A6FF" result="fillColor" />
-      <ns0:feComposite in="fillColor" in2="thresh" operator="in" result="colored" />
-      <ns0:feGaussianBlur in="colored" stdDeviation="0.25" result="soft" />
-      <ns0:feMerge>
-        <ns0:feMergeNode in="soft" />
-      </ns0:feMerge>
-    </ns0:filter>
-    <ns0:filter id="solidifyBack" x="-10%" y="-40%" width="120%" height="180%" color-interpolation-filters="sRGB">
-      <ns0:feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur" />
-      <ns0:feColorMatrix in="blur" type="matrix" values="1 0 0 0 0                 0 1 0 0 0                 0 0 1 0 0                 0 0 0 30 -15" result="thresh" />
-      <ns0:feFlood flood-color="#88A6FF" result="fillColor" />
-      <ns0:feComposite in="fillColor" in2="thresh" operator="in" result="colored" />
-      <ns0:feGaussianBlur in="colored" stdDeviation="0.25" result="soft" />
-      <ns0:feMerge>
-        <ns0:feMergeNode in="soft" />
-      </ns0:feMerge>
-    </ns0:filter>
-    <filter id="innerGlowBottom" x="-20%" y="-20%" width="140%" height="160%" color-interpolation-filters="sRGB">
-      <feMorphology in="SourceAlpha" operator="erode" radius="8" result="shrink" />
-      <feGaussianBlur in="shrink" stdDeviation="6" result="blurInner" />
-      <feOffset in="blurInner" dy="8" result="offsetInner" />
-      <feComposite in="offsetInner" in2="SourceAlpha" operator="in" result="innerOnly" />
-      <feFlood flood-color="#AFC6FF" flood-opacity="0.42" result="glowColorSoft" />
-      <feComposite in="glowColorSoft" in2="innerOnly" operator="in" result="softInner" />
-      <feMorphology in="SourceAlpha" operator="erode" radius="3" result="shrinkEdge" />
-      <feGaussianBlur in="shrinkEdge" stdDeviation="1.6" result="blurEdge" />
-      <feOffset in="blurEdge" dy="5" result="offsetEdge" />
-      <feComposite in="offsetEdge" in2="SourceAlpha" operator="in" result="edgeInside" />
-      <feFlood flood-color="#BFD2FF" flood-opacity="0.70" result="glowColorEdge" />
-      <feComposite in="glowColorEdge" in2="edgeInside" operator="in" result="edgeInner" />
-      <feMerge>
-        <feMergeNode in="softInner" />
-        <feMergeNode in="edgeInner" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-    <ns0:filter id="solidifyFrontMicro" x="-10%" y="-40%" width="120%" height="180%" color-interpolation-filters="sRGB">
-      <ns0:feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur" />
-      <ns0:feColorMatrix in="blur" type="matrix" values="1 0 0 0 0                 0 1 0 0 0                 0 0 1 0 0                 0 0 0 30 -15" result="thresh" />
-      <ns0:feFlood flood-color="#88A2FC" result="fillColor" />
-      <ns0:feComposite in="fillColor" in2="thresh" operator="in" result="colored" />
-      <ns0:feGaussianBlur in="colored" stdDeviation="0.25" result="soft" />
-      <ns0:feMerge>
-        <ns0:feMergeNode in="soft" />
-      </ns0:feMerge>
-    </ns0:filter>
   </ns0:defs>
   <ns0:rect id="lowerSkyBaseUnderlay" x="0.0" y="1080.0" width="1920.0" height="1376.0" fill="url(#lowerSkyLight)" />
   <ns0:rect fill="url(#skyDusk)" filter="url(#grain)" height="1080" width="1920" />
@@ -1705,225 +1718,271 @@
     <ns0:circle cx="640.3" cy="132.7" fill="#FFF7EB" opacity="0.94" r="1.5">
       <ns0:animate attributeName="opacity" begin="4.06s" dur="5.30s" repeatCount="indefinite" values="0.6;1;0.6" />
     </ns0:circle>
+    <ns0:g id="cloudBandsImported">
+      <ns0:g>
+        <ns0:g filter="url(#blurSofter)" opacity="0.17">
+          <ns0:ellipse cx="8.9" cy="755.0" fill="url(#bandFillTop)" rx="239.9" ry="187.9" />
+          <ns0:ellipse cx="156.4" cy="771.9" fill="url(#bandFillTop)" rx="172.3" ry="108.3" />
+          <ns0:ellipse cx="296.7" cy="772.9" fill="url(#bandFillTop)" rx="172.1" ry="136.6" />
+          <ns0:ellipse cx="432.7" cy="755.0" fill="url(#bandFillTop)" rx="161.0" ry="120.6" />
+          <ns0:ellipse cx="625.3" cy="765.0" fill="url(#bandFillTop)" rx="182.3" ry="131.3" />
+          <ns0:ellipse cx="789.4" cy="755.5" fill="url(#bandFillTop)" rx="191.7" ry="124.0" />
+          <ns0:ellipse cx="917.2" cy="777.6" fill="url(#bandFillTop)" rx="214.2" ry="155.6" />
+          <ns0:ellipse cx="1162.1" cy="762.2" fill="url(#bandFillTop)" rx="187.1" ry="126.0" />
+          <ns0:ellipse cx="1269.5" cy="772.1" fill="url(#bandFillTop)" rx="153.6" ry="104.8" />
+          <ns0:ellipse cx="1443.9" cy="760.4" fill="url(#bandFillTop)" rx="155.0" ry="113.9" />
+          <ns0:ellipse cx="1546.0" cy="768.3" fill="url(#bandFillTop)" rx="166.8" ry="98.0" />
+          <ns0:ellipse cx="1724.9" cy="750.4" fill="url(#bandFillTop)" rx="166.6" ry="121.7" />
+          <ns0:ellipse cx="1945.1" cy="761.1" fill="url(#bandFillTop)" rx="211.7" ry="144.9" />
+          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" fill="url(#bandFillTop)" />
+          <ns0:ellipse cx="-345.66" cy="757.20" rx="226.57" ry="163.06" fill="url(#bandFillTop)" />
+          <ns0:ellipse cx="-338.52" cy="764.00" rx="268.79" ry="193.44" fill="url(#bandFillTop)" />
+          <ns0:ellipse cx="-297.60" cy="770.80" rx="226.57" ry="163.06" fill="url(#bandFillTop)" />
+          <ns0:ellipse cx="-277.09" cy="777.60" rx="184.36" ry="132.68" fill="url(#bandFillTop)" />
+        </ns0:g>
+        <ns0:g filter="url(#blurSofter)" opacity="0.16">
+          <ns0:ellipse cx="31.7" cy="805.4" fill="url(#bandFillBottom)" rx="158.2" ry="98.7" />
+          <ns0:ellipse cx="195.7" cy="819.6" fill="url(#bandFillBottom)" rx="159.6" ry="122.4" />
+          <ns0:ellipse cx="293.4" cy="800.2" fill="url(#bandFillBottom)" rx="142.6" ry="98.2" />
+          <ns0:ellipse cx="537.0" cy="814.7" fill="url(#bandFillBottom)" rx="166.7" ry="128.6" />
+          <ns0:ellipse cx="677.4" cy="782.7" fill="url(#bandFillBottom)" rx="162.4" ry="119.7" />
+          <ns0:ellipse cx="897.7" cy="778.6" fill="url(#bandFillBottom)" rx="146.1" ry="92.9" />
+          <ns0:ellipse cx="1043.9" cy="814.9" fill="url(#bandFillBottom)" rx="147.8" ry="87.2" />
+          <ns0:ellipse cx="1269.6" cy="815.2" fill="url(#bandFillBottom)" rx="185.3" ry="109.1" />
+          <ns0:ellipse cx="1367.6" cy="784.8" fill="url(#bandFillBottom)" rx="196.1" ry="119.1" />
+          <ns0:ellipse cx="1526.2" cy="786.7" fill="url(#bandFillBottom)" rx="186.8" ry="116.5" />
+          <ns0:ellipse cx="1803.5" cy="790.6" fill="url(#bandFillBottom)" rx="176.3" ry="109.7" />
+          <ns0:ellipse cx="1895.0" cy="815.1" fill="url(#bandFillBottom)" rx="202.3" ry="128.1" />
+          <ns0:ellipse cx="-224.60" cy="778.60" rx="178.37" ry="124.66" fill="url(#bandFillBottom)" />
+          <ns0:ellipse cx="-237.43" cy="788.85" rx="219.21" ry="153.20" fill="url(#bandFillBottom)" />
+          <ns0:ellipse cx="-230.52" cy="799.10" rx="260.05" ry="181.74" fill="url(#bandFillBottom)" />
+          <ns0:ellipse cx="-190.93" cy="809.35" rx="219.21" ry="153.20" fill="url(#bandFillBottom)" />
+          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" fill="url(#bandFillBottom)" />
+        </ns0:g>
+      </ns0:g>
+      <ns0:g />
+      <ns0:g>
+        <ns0:g filter="url(#blurSofter)" opacity="0.19">
+          <ns0:ellipse cx="6.4" cy="748.7" fill="url(#bandFillRight)" rx="240.1" ry="143.6" />
+          <ns0:ellipse cx="196.4" cy="748.3" fill="url(#bandFillRight)" rx="174.7" ry="138.2" />
+          <ns0:ellipse cx="364.3" cy="764.7" fill="url(#bandFillRight)" rx="231.1" ry="138.7" />
+          <ns0:ellipse cx="523.8" cy="745.3" fill="url(#bandFillRight)" rx="186.7" ry="128.1" />
+          <ns0:ellipse cx="814.7" cy="771.0" fill="url(#bandFillRight)" rx="174.9" ry="119.1" />
+          <ns0:ellipse cx="957.8" cy="770.7" fill="url(#bandFillRight)" rx="155.4" ry="96.2" />
+          <ns0:ellipse cx="1102.2" cy="759.5" fill="url(#bandFillRight)" rx="239.5" ry="140.0" />
+          <ns0:ellipse cx="1401.3" cy="745.9" fill="url(#bandFillRight)" rx="211.3" ry="165.2" />
+          <ns0:ellipse cx="1495.8" cy="736.0" fill="url(#bandFillRight)" rx="173.8" ry="114.7" />
+          <ns0:ellipse cx="1724.8" cy="749.1" fill="url(#bandFillRight)" rx="192.7" ry="114.6" />
+          <ns0:ellipse cx="1904.7" cy="755.6" fill="url(#bandFillRight)" rx="236.7" ry="140.7" />
+          <ns0:ellipse cx="-347.10" cy="736.00" rx="206.19" ry="147.87" fill="url(#bandFillRight)" />
+          <ns0:ellipse cx="-361.94" cy="744.75" rx="253.40" ry="181.73" fill="url(#bandFillRight)" />
+          <ns0:ellipse cx="-353.94" cy="753.50" rx="300.61" ry="215.59" fill="url(#bandFillRight)" />
+          <ns0:ellipse cx="-308.18" cy="762.25" rx="253.40" ry="181.73" fill="url(#bandFillRight)" />
+          <ns0:ellipse cx="-285.25" cy="771.00" rx="206.19" ry="147.87" fill="url(#bandFillRight)" />
+        </ns0:g>
+      </ns0:g>
+      <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="10s" repeatCount="indefinite" begin="0s" fill="freeze" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" />
+    </ns0:g>
     <ns0:path d="M 0 1210 L 0 787.5 Q 106.7 787.5 213.3 742.3 Q 320.0 742.3 426.7 701.0 Q 533.3 701.0 640.0 771.6 Q 746.7 771.6 853.3 806.6 Q 960.0 806.6 1066.7 853.5 Q 1173.3 853.5 1280.0 856.4 Q 1386.7 856.4 1493.3 776.0 Q 1600.0 776.0 1706.7 747.9 Q 1813.3 747.9 1920.0 713.4 L 1920 1155  L 1920 1210 L 0 1210 Z" fill="url(#g399)" opacity="0.9" />
     <ns0:path d="M 0 1210 L 0 888.3 Q 120.0 888.3 240.0 824.2 Q 360.0 824.2 480.0 824.0 Q 600.0 824.0 720.0 820.7 Q 840.0 820.7 960.0 961.0 Q 1080.0 961.0 1200.0 973.4 Q 1320.0 973.4 1440.0 926.5 Q 1560.0 926.5 1680.0 914.3 Q 1800.0 914.3 1920.0 810.3 L 1920 1155  L 1920 1210 L 0 1210 Z" fill="url(#g64750)" opacity="0.82" />
   </ns0:g>
   <ns0:rect id="lowerSkyVariant_E_deepest2" x="0.0" y="1080" width="1920.0" height="1378" fill="url(#grad_E_deepest2)" />
-  <rect x="0" y="2400" width="1920" height="16" fill="#6F88CA" />
-  <ns0:g id="cloudBack" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0.0,950.0)">
-    <ns0:g transform="translate(-70,7)">
-      <ns0:animateTransform attributeName="transform" type="translate" dur="14.96s" values="-117.6 7; -78.4 7; -117.6 7" repeatCount="indefinite" />
-      <ns0:g transform="scale(1,1.10) translate(0,-540)" filter="url(#solidifyBack)" opacity="0.95">
-        <ns0:g fill="#000" opacity="1">
-          <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-          <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-          <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-          <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-          <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-          <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-          <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-          <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-          <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-          <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-          <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-          <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-          <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-          <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="2500" cy="700" rx="380" ry="180" />
-          <ns0:ellipse cx="2800" cy="710" rx="320" ry="160" />
-          <ns0:ellipse cx="3120" cy="720" rx="300" ry="150" />
-          <ns0:ellipse cx="3400" cy="730" rx="260" ry="140" />
-          <ns0:ellipse cx="3300" cy="535" rx="320" ry="210" />
-          <ns0:ellipse cx="3600" cy="545" rx="260" ry="190" />
-          <ns0:ellipse cx="3600" cy="540" rx="500" ry="260" />
-          <ns0:ellipse cx="4000" cy="560" rx="420" ry="220" />
+  <ns0:g id="insertedCloudWrapper" transform="translate(0.0,460.0)">
+    <ns0:g id="cloudBand_added_1" fill="#6A8DFF" opacity="1" fill-opacity="1">
+      <ns0:g fill="#6A8DFF" opacity="1" fill-opacity="1">
+        <ns0:g opacity="1" fill="#6A8DFF" fill-opacity="1">
+          <ns0:ellipse cx="8.9" cy="755.0" fill="#6A8DFF" rx="239.9" ry="187.9" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="156.4" cy="771.9" fill="#6A8DFF" rx="172.3" ry="108.3" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="296.7" cy="772.9" fill="#6A8DFF" rx="172.1" ry="136.6" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="432.7" cy="755.0" fill="#6A8DFF" rx="161.0" ry="120.6" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="625.3" cy="765.0" fill="#6A8DFF" rx="182.3" ry="131.3" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="789.4" cy="755.5" fill="#6A8DFF" rx="191.7" ry="124.0" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="917.2" cy="777.6" fill="#6A8DFF" rx="214.2" ry="155.6" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1162.1" cy="762.2" fill="#6A8DFF" rx="187.1" ry="126.0" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1269.5" cy="772.1" fill="#6A8DFF" rx="153.6" ry="104.8" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1443.9" cy="760.4" fill="#6A8DFF" rx="155.0" ry="113.9" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1546.0" cy="768.3" fill="#6A8DFF" rx="166.8" ry="98.0" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1724.9" cy="750.4" fill="#6A8DFF" rx="166.6" ry="121.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1945.1" cy="761.1" fill="#6A8DFF" rx="211.7" ry="144.9" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-345.66" cy="757.20" rx="226.57" ry="163.06" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-338.52" cy="764.00" rx="268.79" ry="193.44" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-297.60" cy="770.80" rx="226.57" ry="163.06" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-277.09" cy="777.60" rx="184.36" ry="132.68" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+        </ns0:g>
+        <ns0:g opacity="1" fill="#6A8DFF" fill-opacity="1">
+          <ns0:ellipse cx="31.7" cy="805.4" fill="#6A8DFF" rx="158.2" ry="98.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="195.7" cy="819.6" fill="#6A8DFF" rx="159.6" ry="122.4" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="293.4" cy="800.2" fill="#6A8DFF" rx="142.6" ry="98.2" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="537.0" cy="814.7" fill="#6A8DFF" rx="166.7" ry="128.6" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="677.4" cy="782.7" fill="#6A8DFF" rx="162.4" ry="119.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="897.7" cy="778.6" fill="#6A8DFF" rx="146.1" ry="92.9" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1043.9" cy="814.9" fill="#6A8DFF" rx="147.8" ry="87.2" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1269.6" cy="815.2" fill="#6A8DFF" rx="185.3" ry="109.1" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1367.6" cy="784.8" fill="#6A8DFF" rx="196.1" ry="119.1" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1526.2" cy="786.7" fill="#6A8DFF" rx="186.8" ry="116.5" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1803.5" cy="790.6" fill="#6A8DFF" rx="176.3" ry="109.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1895.0" cy="815.1" fill="#6A8DFF" rx="202.3" ry="128.1" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-224.60" cy="778.60" rx="178.37" ry="124.66" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-237.43" cy="788.85" rx="219.21" ry="153.20" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-230.52" cy="799.10" rx="260.05" ry="181.74" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-190.93" cy="809.35" rx="219.21" ry="153.20" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
         </ns0:g>
       </ns0:g>
-    </ns0:g>
-  </ns0:g>
-  <ns0:g id="cloudFrontGlowTop2" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0.0,944.0)" filter="url(#innerGlowBottom)">
-    <ns0:g transform="translate(-30.0,-13.0)">
-      <ns0:g filter="url(#innerGlowBottom)">
-        <ns0:g filter="url(#solidifyFront)">
-          <ns0:g transform="translate(0,-553)" opacity="1">
-            <ns0:g fill="#000">
-              <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-              <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-              <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-              <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-              <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-              <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-              <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-              <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-              <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-              <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-              <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-              <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-              <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-              <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-              <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-              <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-            </ns0:g>
-          </ns0:g>
+      <ns0:g fill="#6A8DFF" opacity="1" fill-opacity="1" />
+      <ns0:g fill="#6A8DFF" opacity="1" fill-opacity="1">
+        <ns0:g opacity="1" fill="#6A8DFF" fill-opacity="1">
+          <ns0:ellipse cx="6.4" cy="748.7" fill="#6A8DFF" rx="240.1" ry="143.6" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="196.4" cy="748.3" fill="#6A8DFF" rx="174.7" ry="138.2" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="364.3" cy="764.7" fill="#6A8DFF" rx="231.1" ry="138.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="523.8" cy="745.3" fill="#6A8DFF" rx="186.7" ry="128.1" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="814.7" cy="771.0" fill="#6A8DFF" rx="174.9" ry="119.1" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="957.8" cy="770.7" fill="#6A8DFF" rx="155.4" ry="96.2" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1102.2" cy="759.5" fill="#6A8DFF" rx="239.5" ry="140.0" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1401.3" cy="745.9" fill="#6A8DFF" rx="211.3" ry="165.2" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1495.8" cy="736.0" fill="#6A8DFF" rx="173.8" ry="114.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1724.8" cy="749.1" fill="#6A8DFF" rx="192.7" ry="114.6" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="1904.7" cy="755.6" fill="#6A8DFF" rx="236.7" ry="140.7" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-347.10" cy="736.00" rx="206.19" ry="147.87" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-361.94" cy="744.75" rx="253.40" ry="181.73" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-353.94" cy="753.50" rx="300.61" ry="215.59" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-308.18" cy="762.25" rx="253.40" ry="181.73" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
+          <ns0:ellipse cx="-285.25" cy="771.00" rx="206.19" ry="147.87" fill="#6A8DFF" opacity="1" fill-opacity="1.0" />
         </ns0:g>
       </ns0:g>
+      <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#6A8DFF" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
     </ns0:g>
-  </ns0:g>
-  <ns0:g id="cloudFrontTop2" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0.0,944.0)">
-    <ns0:g transform="translate(-30.0,-13.0)">
-      <ns0:animateTransform attributeName="transform" type="translate" dur="9.52s" values="47.6 7; 92.4 7; 47.6 7" repeatCount="indefinite" />
-      <ns0:g transform="translate(0,-553)" filter="url(#solidifyFrontMicro)" opacity="0.98">
-        <ns0:g fill="#000" opacity="1">
-          <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-          <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-          <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-          <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-          <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-          <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-          <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-          <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-          <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-          <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-          <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-          <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-          <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-          <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="-400" cy="560" rx="320" ry="160" />
-          <ns0:ellipse cx="-800" cy="570" rx="300" ry="150" />
-          <ns0:ellipse cx="-1200" cy="585" rx="280" ry="140" />
-          <ns0:ellipse cx="-1600" cy="600" rx="260" ry="130" />
-          <ns0:ellipse cx="-1200" cy="530" rx="300" ry="220" />
-          <ns0:ellipse cx="-1600" cy="540" rx="260" ry="200" />
-          <ns0:ellipse cx="3600" cy="550" rx="480" ry="250" />
-          <ns0:ellipse cx="4000" cy="570" rx="420" ry="220" />
+    <ns0:g id="cloudBandDuplicate" opacity="1" fill-opacity="1" fill="#6478C7" transform="translate(0,-40) translate(0,-25)" filter="url(#featherMedium)">
+      <ns0:g opacity="1" fill-opacity="1" fill="#6A86DD">
+        <ns0:g opacity="1" fill-opacity="1" fill="#6A86DD">
+          <ns0:ellipse cx="8.9" cy="755.0" fill="#6478C7" rx="239.9" ry="187.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="156.4" cy="771.9" fill="#6478C7" rx="172.3" ry="108.3" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="296.7" cy="772.9" fill="#6478C7" rx="172.1" ry="136.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="432.7" cy="755.0" fill="#6478C7" rx="161.0" ry="120.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="625.3" cy="765.0" fill="#6478C7" rx="182.3" ry="131.3" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="789.4" cy="755.5" fill="#6478C7" rx="191.7" ry="124.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="917.2" cy="777.6" fill="#6478C7" rx="214.2" ry="155.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1162.1" cy="762.2" fill="#6478C7" rx="187.1" ry="126.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1269.5" cy="772.1" fill="#6478C7" rx="153.6" ry="104.8" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1443.9" cy="760.4" fill="#6478C7" rx="155.0" ry="113.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1546.0" cy="768.3" fill="#6478C7" rx="166.8" ry="98.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1724.9" cy="750.4" fill="#6478C7" rx="166.6" ry="121.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1945.1" cy="761.1" fill="#6478C7" rx="211.7" ry="144.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-345.66" cy="757.20" rx="226.57" ry="163.06" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-338.52" cy="764.00" rx="268.79" ry="193.44" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-297.60" cy="770.80" rx="226.57" ry="163.06" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-277.09" cy="777.60" rx="184.36" ry="132.68" fill="#6478C7" opacity="1" fill-opacity="1" />
+        </ns0:g>
+        <ns0:g opacity="1" fill-opacity="1" fill="#6A86DD">
+          <ns0:ellipse cx="31.7" cy="805.4" fill="#6478C7" rx="158.2" ry="98.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="195.7" cy="819.6" fill="#6478C7" rx="159.6" ry="122.4" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="293.4" cy="800.2" fill="#6478C7" rx="142.6" ry="98.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="537.0" cy="814.7" fill="#6478C7" rx="166.7" ry="128.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="677.4" cy="782.7" fill="#6478C7" rx="162.4" ry="119.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="897.7" cy="778.6" fill="#6478C7" rx="146.1" ry="92.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1043.9" cy="814.9" fill="#6478C7" rx="147.8" ry="87.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1269.6" cy="815.2" fill="#6478C7" rx="185.3" ry="109.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1367.6" cy="784.8" fill="#6478C7" rx="196.1" ry="119.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1526.2" cy="786.7" fill="#6478C7" rx="186.8" ry="116.5" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1803.5" cy="790.6" fill="#6478C7" rx="176.3" ry="109.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1895.0" cy="815.1" fill="#6478C7" rx="202.3" ry="128.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-224.60" cy="778.60" rx="178.37" ry="124.66" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-237.43" cy="788.85" rx="219.21" ry="153.20" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-230.52" cy="799.10" rx="260.05" ry="181.74" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-190.93" cy="809.35" rx="219.21" ry="153.20" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" fill="#6478C7" opacity="1" fill-opacity="1" />
         </ns0:g>
       </ns0:g>
-    </ns0:g>
-  </ns0:g>
-  <ns0:g id="cloudFrontGlow" clip-path="url(#topPadClip)" style="pointer-events:none" filter="url(#innerGlowBottom)" transform="translate(0.0,950.0)">
-    <ns0:g transform="translate(50.0,13.0)">
-      <ns0:g filter="url(#innerGlowBottom)">
-        <ns0:g filter="url(#solidifyFront)">
-          <ns0:g transform="translate(0,-553)" opacity="1">
-            <ns0:g fill="#000">
-              <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-              <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-              <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-              <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-              <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-              <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-              <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-              <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-              <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-              <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-              <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-              <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-              <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-              <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-              <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-              <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-            </ns0:g>
-          </ns0:g>
+      <ns0:g opacity="1" fill-opacity="1" fill="#6A86DD" />
+      <ns0:g opacity="1" fill-opacity="1" fill="#6A86DD">
+        <ns0:g opacity="1" fill-opacity="1" fill="#6A86DD">
+          <ns0:ellipse cx="6.4" cy="748.7" fill="#6478C7" rx="240.1" ry="143.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="196.4" cy="748.3" fill="#6478C7" rx="174.7" ry="138.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="364.3" cy="764.7" fill="#6478C7" rx="231.1" ry="138.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="523.8" cy="745.3" fill="#6478C7" rx="186.7" ry="128.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="814.7" cy="771.0" fill="#6478C7" rx="174.9" ry="119.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="957.8" cy="770.7" fill="#6478C7" rx="155.4" ry="96.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1102.2" cy="759.5" fill="#6478C7" rx="239.5" ry="140.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1401.3" cy="745.9" fill="#6478C7" rx="211.3" ry="165.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1495.8" cy="736.0" fill="#6478C7" rx="173.8" ry="114.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1724.8" cy="749.1" fill="#6478C7" rx="192.7" ry="114.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1904.7" cy="755.6" fill="#6478C7" rx="236.7" ry="140.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-347.10" cy="736.00" rx="206.19" ry="147.87" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-361.94" cy="744.75" rx="253.40" ry="181.73" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-353.94" cy="753.50" rx="300.61" ry="215.59" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-308.18" cy="762.25" rx="253.40" ry="181.73" fill="#6478C7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-285.25" cy="771.00" rx="206.19" ry="147.87" fill="#6478C7" opacity="1" fill-opacity="1" />
         </ns0:g>
       </ns0:g>
+      <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#6A86DD" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
     </ns0:g>
-  </ns0:g>
-  <ns0:g id="cloudFront" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0.0,950.0)">
-    <ns0:g transform="translate(50.0,13.0)">
-      <ns0:animateTransform attributeName="transform" type="translate" dur="9.52s" values="47.6 7; 92.4 7; 47.6 7" repeatCount="indefinite" />
-      <ns0:g transform="translate(0,-553)" filter="url(#solidifyFront)" opacity="0.98">
-        <ns0:g fill="#000" opacity="1">
-          <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-          <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-          <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-          <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-          <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-          <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-          <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-          <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-          <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-          <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-          <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-          <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-          <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-          <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="2450" cy="600" rx="300" ry="150" />
-          <ns0:ellipse cx="2740" cy="615" rx="280" ry="140" />
-          <ns0:ellipse cx="3030" cy="630" rx="260" ry="130" />
-          <ns0:ellipse cx="3320" cy="645" rx="240" ry="120" />
-          <ns0:ellipse cx="3200" cy="530" rx="300" ry="220" />
-          <ns0:ellipse cx="3500" cy="540" rx="260" ry="200" />
-          <ns0:ellipse cx="3600" cy="560" rx="460" ry="240" />
-          <ns0:ellipse cx="4000" cy="580" rx="380" ry="200" />
+    <ns0:rect id="overlayOnTop" x="0.0" y="0" width="1920.0" height="2416" fill="url(#lowerSkyDarken3)" filter="url(#ditherNoise3)" mask="url(#maskTopBand)" />
+    <ns0:g id="cloudBand_added_1_dup" opacity="1" fill-opacity="1" fill="#6073C1">
+      <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
+        <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
+          <ns0:ellipse cx="8.9" cy="755.0" fill="#6073C1" rx="239.9" ry="187.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="156.4" cy="771.9" fill="#6073C1" rx="172.3" ry="108.3" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="296.7" cy="772.9" fill="#6073C1" rx="172.1" ry="136.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="432.7" cy="755.0" fill="#6073C1" rx="161.0" ry="120.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="625.3" cy="765.0" fill="#6073C1" rx="182.3" ry="131.3" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="789.4" cy="755.5" fill="#6073C1" rx="191.7" ry="124.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="917.2" cy="777.6" fill="#6073C1" rx="214.2" ry="155.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1162.1" cy="762.2" fill="#6073C1" rx="187.1" ry="126.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1269.5" cy="772.1" fill="#6073C1" rx="153.6" ry="104.8" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1443.9" cy="760.4" fill="#6073C1" rx="155.0" ry="113.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1546.0" cy="768.3" fill="#6073C1" rx="166.8" ry="98.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1724.9" cy="750.4" fill="#6073C1" rx="166.6" ry="121.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1945.1" cy="761.1" fill="#6073C1" rx="211.7" ry="144.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-345.66" cy="757.20" rx="226.57" ry="163.06" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-338.52" cy="764.00" rx="268.79" ry="193.44" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-297.60" cy="770.80" rx="226.57" ry="163.06" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-277.09" cy="777.60" rx="184.36" ry="132.68" fill="#6073C1" opacity="1" fill-opacity="1" />
+        </ns0:g>
+        <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
+          <ns0:ellipse cx="31.7" cy="805.4" fill="#6073C1" rx="158.2" ry="98.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="195.7" cy="819.6" fill="#6073C1" rx="159.6" ry="122.4" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="293.4" cy="800.2" fill="#6073C1" rx="142.6" ry="98.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="537.0" cy="814.7" fill="#6073C1" rx="166.7" ry="128.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="677.4" cy="782.7" fill="#6073C1" rx="162.4" ry="119.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="897.7" cy="778.6" fill="#6073C1" rx="146.1" ry="92.9" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1043.9" cy="814.9" fill="#6073C1" rx="147.8" ry="87.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1269.6" cy="815.2" fill="#6073C1" rx="185.3" ry="109.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1367.6" cy="784.8" fill="#6073C1" rx="196.1" ry="119.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1526.2" cy="786.7" fill="#6073C1" rx="186.8" ry="116.5" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1803.5" cy="790.6" fill="#6073C1" rx="176.3" ry="109.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1895.0" cy="815.1" fill="#6073C1" rx="202.3" ry="128.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-224.60" cy="778.60" rx="178.37" ry="124.66" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-237.43" cy="788.85" rx="219.21" ry="153.20" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-230.52" cy="799.10" rx="260.05" ry="181.74" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-190.93" cy="809.35" rx="219.21" ry="153.20" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" fill="#6073C1" opacity="1" fill-opacity="1" />
         </ns0:g>
       </ns0:g>
-    </ns0:g>
-  </ns0:g>
-  <ns0:g id="cloudFrontGlowTop" clip-path="url(#topPadClip)" style="pointer-events:none" filter="url(#innerGlowBottom)" transform="translate(0.0,950.0)">
-    <ns0:g transform="translate(110.0,47.0)">
-      <ns0:g filter="url(#innerGlowBottom)">
-        <ns0:g filter="url(#solidifyFront)">
-          <ns0:g transform="translate(0,-553)" opacity="1">
-            <ns0:g fill="#000">
-              <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-              <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-              <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-              <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-              <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-              <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-              <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-              <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-              <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-              <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-              <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-              <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-              <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-              <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-              <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-              <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-            </ns0:g>
-          </ns0:g>
+      <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF" />
+      <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
+        <ns0:g opacity="1" fill-opacity="1" fill="#92B2FF">
+          <ns0:ellipse cx="6.4" cy="748.7" fill="#6073C1" rx="240.1" ry="143.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="196.4" cy="748.3" fill="#6073C1" rx="174.7" ry="138.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="364.3" cy="764.7" fill="#6073C1" rx="231.1" ry="138.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="523.8" cy="745.3" fill="#6073C1" rx="186.7" ry="128.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="814.7" cy="771.0" fill="#6073C1" rx="174.9" ry="119.1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="957.8" cy="770.7" fill="#6073C1" rx="155.4" ry="96.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1102.2" cy="759.5" fill="#6073C1" rx="239.5" ry="140.0" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1401.3" cy="745.9" fill="#6073C1" rx="211.3" ry="165.2" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1495.8" cy="736.0" fill="#6073C1" rx="173.8" ry="114.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1724.8" cy="749.1" fill="#6073C1" rx="192.7" ry="114.6" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="1904.7" cy="755.6" fill="#6073C1" rx="236.7" ry="140.7" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-347.10" cy="736.00" rx="206.19" ry="147.87" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-361.94" cy="744.75" rx="253.40" ry="181.73" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-353.94" cy="753.50" rx="300.61" ry="215.59" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-308.18" cy="762.25" rx="253.40" ry="181.73" fill="#6073C1" opacity="1" fill-opacity="1" />
+          <ns0:ellipse cx="-285.25" cy="771.00" rx="206.19" ry="147.87" fill="#6073C1" opacity="1" fill-opacity="1" />
         </ns0:g>
       </ns0:g>
+      <ns0:animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="50 0" dur="12s" repeatCount="indefinite" begin="0s" fill="#92B2FF" additive="sum" values="0 0; 50 0; 0 0" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" opacity="1" fill-opacity="1" />
     </ns0:g>
   </ns0:g>
-  <ns0:g id="cloudFrontTop" clip-path="url(#topPadClip)" style="pointer-events:none" transform="translate(0.0,950.0)">
-    <ns0:g transform="translate(110.0,47.0)">
-      <ns0:animateTransform attributeName="transform" type="translate" dur="9.52s" values="47.6 7; 92.4 7; 47.6 7" repeatCount="indefinite" />
-      <ns0:g transform="translate(0,-553)" filter="url(#solidifyFront)" opacity="0.98">
-        <ns0:g fill="#000" opacity="1">
-          <ns0:ellipse cx="8.9" cy="755.0" rx="239.9" ry="187.9" />
-          <ns0:ellipse cx="156.4" cy="771.9" rx="172.3" ry="108.3" />
-          <ns0:ellipse cx="296.7" cy="772.9" rx="172.1" ry="136.6" />
-          <ns0:ellipse cx="432.7" cy="755.0" rx="161.0" ry="120.6" />
-          <ns0:ellipse cx="625.3" cy="765.0" rx="182.3" ry="131.3" />
-          <ns0:ellipse cx="789.4" cy="755.5" rx="191.7" ry="124.0" />
-          <ns0:ellipse cx="917.2" cy="777.6" rx="214.2" ry="155.6" />
-          <ns0:ellipse cx="1162.1" cy="762.2" rx="187.1" ry="126.0" />
-          <ns0:ellipse cx="1269.5" cy="772.1" rx="153.6" ry="104.8" />
-          <ns0:ellipse cx="1443.9" cy="760.4" rx="155.0" ry="113.9" />
-          <ns0:ellipse cx="1546.0" cy="768.3" rx="166.8" ry="98.0" />
-          <ns0:ellipse cx="1724.9" cy="750.4" rx="166.6" ry="121.7" />
-          <ns0:ellipse cx="1945.1" cy="761.1" rx="211.7" ry="144.9" />
-          <ns0:ellipse cx="-332.40" cy="750.40" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="-171.09" cy="819.60" rx="178.37" ry="124.66" />
-          <ns0:ellipse cx="-27.00" cy="777.60" rx="184.36" ry="132.68" />
-          <ns0:ellipse cx="2450" cy="640" rx="300" ry="150" />
-          <ns0:ellipse cx="2740" cy="655" rx="280" ry="140" />
-          <ns0:ellipse cx="3030" cy="670" rx="260" ry="130" />
-          <ns0:ellipse cx="3320" cy="685" rx="240" ry="120" />
-          <ns0:ellipse cx="3200" cy="550" rx="300" ry="220" />
-          <ns0:ellipse cx="3500" cy="560" rx="260" ry="200" />
-          <ns0:ellipse cx="3600" cy="590" rx="440" ry="230" />
-          <ns0:ellipse cx="4000" cy="610" rx="360" ry="190" />
-        </ns0:g>
-      </ns0:g>
-    </ns0:g>
-  </ns0:g>
-</ns0:svg>
+<rect x="0" y="2400" width="1920" height="16" fill="#6F88CA" /></ns0:svg>
