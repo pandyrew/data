@@ -2,123 +2,224 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import React from 'react';
+import Cards from '@/components/ui/cards';
+import { leadershipData, internData, facultyData } from '@/data/leadership';
 
-import sparkleBlack from '/public/icons/sparkle-black.svg';
-import groupPhoto from '/public/photos/group.png';
-import gradient from '/public/gradients/about-gradient.png';
-import aboutWave from '/public/wave/about-wave.png';
-import juan from '/public/photos/juan.png';
+const PALETTE = {
+  bluePale: '#CAD8E6',
+  blueLight: '#E0E7F8',
+  blueMid: '#97B4F8',
+  blueStrong: '#6492FF',
+};
+
+const GALLERY = [
+  { src: '/photos/events/cans.jpg', alt: 'Can sculpture', span: 'col-span-3 row-span-4' },
+  { src: '/photos/events/checkin.jpg', alt: 'Check-in table', span: 'col-span-3 row-span-3' },
+  { src: '/photos/events/hallway.jpg', alt: 'Hallway crew', span: 'col-span-2 row-span-2' },
+  { src: '/photos/events/posters.jpg', alt: 'Poster browsing', span: 'col-span-2 row-span-2' },
+  // { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
+  // { src: '/photos/events/panel.jpg', alt: 'Speaker panel', span: 'col-span-4 row-span-3' },
+  // { src: '/photos/events/cereal.jpg', alt: 'Cereal raffle', span: 'col-span-3 row-span-2' },
+  // { src: '/photos/events/dog.jpg', alt: 'Pup therapy', span: 'col-span-3 row-span-3' },
+  // { src: '/photos/events/alumni.jpg', alt: 'Alumni panel group', span: 'col-span-3 row-span-2' },
+  // { src: '/photos/events/winners.jpg', alt: 'Winners row', span: 'col-span-3 row-span-3' },
+  // { src: '/photos/events/selfie.jpg', alt: 'Friends selfie', span: 'col-span-2 row-span-2' },
+];
 
 export default function About() {
   return (
-    <div className="lg:relative h-fit w-full">
-      <div className="relative bg-[url('/gradients/front-page-gradient-png.png')] h-screen lg:p-10 lg:pl-[70px] p-0 h-sm:h-auto h-md:h-80">
-        <motion.div
-          className="relative sm:top-[18%] flex gap-1 top-[20%]"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="relative flex flex-col gap-2 justify-center items-center sm:justify-normal sm:items-start z-50">
-            <motion.p
-              className="text-[#5EA1FF] font-clash font-medium sm:text-3xl text-2xl"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              About us
-            </motion.p>
-            <motion.p
-              className="font-clash sm:text-5xl text-3xl text-center"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              Together, we make sense of data
-            </motion.p>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-          >
-            <Image
-              src={sparkleBlack}
-              alt="Sparkle Icon"
-              className="bottom-0 mt-8 hidden sm:block"
-            />
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="absolute sm:top-[33%] sm:right-12 top-[48%] z-1"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-        >
-          <Image
-            src={groupPhoto}
-            alt="Group Photo"
-            className="relative border-4 border-[#9D9D9D] rounded-xl"
-          />
-          <div
-            className="absolute xl:p-10 lg:p-8 md:p-4 -bottom-[80px]  xl:w-[500px] lg:w-[300px] w-[200px] bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-md h-auto rounded-xl bg-white/20 ring-1 ring-black/5
-   items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px] hidden lg:flex"
-          >
-            Regular meetups, hackathons, and seminars provide opportunities for
-            members to collaborate, network, and learn from each other.
-          </div>
-        </motion.div>
-      </div>
-
-      <div className="relative flex flex-col items-center z-[12] lg:h-full h-screen">
+    <div className="w-full bg-white">
+      <section
+        className="relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(180deg,
+            ${PALETTE.blueStrong} 0%,
+            ${PALETTE.blueStrong} 24%,
+            ${PALETTE.blueMid} 56%,
+            ${PALETTE.blueLight} 100%
+          )`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <Image
-          src={gradient}
-          alt="Gradient Background"
-          className="relative inset-0 h-full w-full object-cover"
+          src="/gradients/dots-overlay-4k.png"
+          alt=""
+          fill
+          priority
+          className="pointer-events-none select-none object-cover"
         />
-        <div className="rounded-2xl bg-[#D4D4D4] p-8 lg:px-[300px] px-4 ring-1 ring-black/5 absolute top-[6%] bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-md shadow-md">
-          <p className="font-clash lg:text-7xl text-3xl font-medium">
-            Our Mission
-          </p>
-        </div>
-        <div className="sm:flex-row flex-col px-10  absolute top-[19%] w-full flex">
-          <div className="flex-1">
-            <Image
-              src={juan}
-              alt="Juan"
-              className="rounded-2xl border-4 border-[#9D9D9D]"
-            />
-          </div>
-          <div className="flex-1 sm:p-10 p-5 font-satoshi lg:text-2xl flex flex-col gap-5 text-sm">
-            <p>
-              Data@UCI aims to nurture a community of Anteaters exploring their
-              place in an increasingly data-driven world. Through workshops,
-              professional panels, and speaker events, we provide resources and
-              a network for students to grow their analytical skills and gain a
-              deeper appreciation for data — helping them to succeed in college
-              and in their careers.{' '}
-            </p>
-            <p className="hidden sm:flex">
-              We are a student-run organization ultimately dedicated to the UCI
-              and larger Orange County communities.{' '}
-            </p>
-          </div>
-          <div>
-            <div
-              className="absolute xl:p-10 lg:p-8 md:p-4 -bottom-[80px]  xl:w-[500px] lg:w-[300px] w-[200px] bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-md h-auto rounded-xl bg-white/20 ring-1 ring-black/5
-     items-center font-satoshi xl:text-xl shadow-md xl:right-[700px] right-[600px] hidden lg:flex"
-            >
-              Photo taken from a Data Science Applications in Finance panel.
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: 'url(/gradients/noise-alpha-64.png)',
+            backgroundRepeat: 'repeat',
+            opacity: 0.06,
+          }}
+        />
+        <div className="max-w-7xl pl-[16%] pt-[12%] pb-[28%]">
+          <div className="flex items-start gap-4">
+            <div className="flex flex-col gap-3">
+              <motion.p
+                className="text-2xl sm:text-7xl font-medium font-clash text-white"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                About Data
+              </motion.p>
+              <motion.div
+                className="absolute left-[5%] max-w-[750px] pt-[6.5%] pl-[7.5%] z-10"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                <p className="text-white leading-relaxed font-mono">
+                  Data@UCI nurtures a community of Anteaters exploring their place in an increasingly data-driven world.
+                  Through workshops, professional panels, and speaker events, we help students grow analytical skills and
+                  develop a deeper appreciation for data — empowering success in college and beyond.
+                </p>
+              </motion.div>
+              <motion.h1
+                className="font-quicksand text-3xl sm:text-5xl leading-tight text-neutral-900"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              />
             </div>
           </div>
         </div>
-        <Image
-          src={aboutWave}
-          alt="Wave Graphic"
-          className="absolute bottom-0"
+      </section>
+
+      <section
+        className="relative"
+        style={{
+          backgroundImage: `linear-gradient(180deg,
+            ${PALETTE.blueLight} 0%,
+            ${PALETTE.blueMid} 10%,
+            ${PALETTE.blueStrong} 32%,
+            ${PALETTE.blueStrong} 100%
+          )`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'top center',
+        }}
+      >
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: 'url(/gradients/noise-alpha-64.png)',
+            backgroundRepeat: 'repeat',
+            opacity: 0.04,
+          }}
         />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10 pt-24 pb-16 lg:pt-40 lg:pb-24">
+          <div className="mx-auto flex flex-col gap-10">
+            <div className="text-white text-sm lg:text-lg">
+              <div className="py-4 mb-6">
+                <h2 className="text-4xl md:text-5xl font-clash font-bold mb-6 text-white">Our Club</h2>
+              </div>
+              <div className="flex flex-col gap-5 leading-relaxed">
+                <p className="text-white/95 font-mono">
+                  As UCI’s only Data Science club, we’re building a welcoming, project-driven community where students
+                  from any major can explore data together. Whether in or outside of school, we hope to unite people with 
+                  a common interest of data, seeking to build a culture of advancing one another's skills, finding our 
+                  people, and creating memories that stick. We’re a student-run organization dedicated to UCI and the broader 
+                  Orange County community.
+                </p>
+              </div>
+            </div>
+            <div className="pt-2">
+              <MosaicGallery items={GALLERY} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+          <div className="mb-16">
+            <HeaderBadge>2024–2025 Leadership</HeaderBadge>
+            <div className="mt-10">
+              <Cards data={leadershipData} />
+            </div>
+          </div>
+          <div className="mb-16">
+            <HeaderBadge>Board Interns</HeaderBadge>
+            <div className="mt-10">
+              <Cards data={internData} />
+            </div>
+          </div>
+          <div className="mb-24">
+            <HeaderBadge>Faculty Advisor</HeaderBadge>
+            <div className="mt-10">
+              <Cards data={facultyData} />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function HeaderBadge({ children }) {
+  return (
+    <div className="flex justify-center">
+      <div
+        className="rounded-2xl border px-8 py-4 shadow-sm backdrop-blur-sm bg-white/70"
+        style={{ borderColor: PALETTE.blueMid }}
+      >
+        <h2 className="font-quicksand text-3xl sm:text-4xl text-center" style={{ color: PALETTE.blueStrong }}>
+          {children}
+        </h2>
       </div>
     </div>
+  );
+}
+
+function MosaicGallery({ items }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: '-20% 0px -10% 0px' }}
+      variants={{
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { staggerChildren: 0.06 } },
+      }}
+      className="relative"
+    >
+      <div className="mb-4 ml-1 text-xs tracking-widest uppercase text-white/70">Snapshots from our events</div>
+      <div className="grid grid-cols-6 sm:auto-rows-[7.5rem] auto-rows-[6.5rem] gap-2 sm:gap-3 lg:gap-4">
+        {items.map((it, i) => (
+          <Tile key={i} src={it.src} alt={it.alt} span={it.span} />
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function Tile({ src, alt, span }) {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 12 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+      }}
+      whileHover={{ scale: 1.02 }}
+      className={`${span} relative overflow-hidden rounded-xl lg:rounded-2xl ring-1 ring-white/10 bg-white/5`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover select-none"
+        sizes="(max-width: 1024px) 100vw, 560px"
+        priority={false}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+    </motion.div>
   );
 }

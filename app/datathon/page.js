@@ -232,7 +232,7 @@ export default function Datathon() {
         </div>
       </div>
 
-      <div className="w-full bg-transparent pt-[100px] px-8">
+      <div className="w-full bg-gradient-to-b from-[#CAD8E6] via-[#97B4F8] to-[#4E74D9] pt-[100px] px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-clash font-medium text-left mb-16 text-white">Past Sponsors</h2>
           <div className="grid grid-cols-12 gap-4 md:gap-6 pb-[12%]">

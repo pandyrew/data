@@ -38,7 +38,7 @@ export function FloatingNav() {
           {[
             { name: "HOME", href: "/" },
             { name: "DATATHON", href: "/datathon" },
-            { name: "ABOUT US", href: "/meet-us" },
+            { name: "ABOUT US", href: "/about" },
             { name: "CONTACT", href: "/contact" },
           ].map((l) => (
             <li key={l.href}>
