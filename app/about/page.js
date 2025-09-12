@@ -145,12 +145,12 @@ export default function About() {
               <Cards data={leadershipData} />
             </div>
           </div>
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <HeaderBadge>Interns</HeaderBadge>
             <div className="mt-10">
               <Cards data={internData} colsMD={2} colsLg={2} />
             </div>
-          </div>
+          </div> */}
           <div className="mb-24">
             <HeaderBadge>Faculty Advisor</HeaderBadge>
             <div className="mt-10">
