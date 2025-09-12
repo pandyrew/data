@@ -14,10 +14,12 @@ const PALETTE = {
 };
 
 const GALLERY = [
-  { src: '/photos/events/cans.jpg', alt: 'Can sculpture', span: 'col-span-3 row-span-4' },
-  { src: '/photos/events/checkin.jpg', alt: 'Check-in table', span: 'col-span-3 row-span-4' },
-  { src: '/photos/events/hallway.jpg', alt: 'Hallway crew', span: 'col-span-2 row-span-2' },
-  { src: '/photos/events/posters.jpg', alt: 'Poster browsing', span: 'col-span-2 row-span-2' },
+  { src: '/photos/events/cans.jpg', alt: 'Can sculpture', span: 'col-span-2 row-span-2' },
+  { src: '/photos/events/checkin.jpg', alt: 'Check-in table', span: 'col-span-1 row-span-2' },
+  { src: '/photos/events/hallway.jpg', alt: 'Hallway crew', span: 'col-span-2 row-span-1' },
+  { src: '/photos/events/posters.jpg', alt: 'Poster browsing', span: 'col-span-2 row-span-1' },
+  { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
+  { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
   { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
 ];
 
@@ -133,17 +135,20 @@ export default function About() {
       </section>
 
       <section className="w-full bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <p className="max-w-2xl mx-auto md:text-center font-quicksand text-4xl sm:text-5xl tracking-tight text-neutral-900 py-16">
+            Our Team
+          </p>
           <div className="mb-16">
-            <HeaderBadge>2024–2025 Leadership</HeaderBadge>
+            <HeaderBadge>Executive Board</HeaderBadge>
             <div className="mt-10">
               <Cards data={leadershipData} />
             </div>
           </div>
           <div className="mb-16">
-            <HeaderBadge>Board Interns</HeaderBadge>
+            <HeaderBadge>Interns</HeaderBadge>
             <div className="mt-10">
-              <Cards data={internData} />
+              <Cards data={internData} colsMD={2} colsLg={2} />
             </div>
           </div>
           <div className="mb-24">
@@ -162,10 +167,9 @@ function HeaderBadge({ children }) {
   return (
     <div className="flex justify-center">
       <div
-        className="rounded-2xl border px-8 py-4 shadow-sm backdrop-blur-sm bg-white/70"
-        style={{ borderColor: PALETTE.blueMid }}
+        className="px-8 py-4"
       >
-        <h2 className="font-quicksand text-3xl sm:text-4xl text-center" style={{ color: PALETTE.blueStrong }}>
+        <h2 className="font-satoshi text-3xl sm:text-4xl text-center">
           {children}
         </h2>
       </div>
