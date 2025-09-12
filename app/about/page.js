@@ -15,16 +15,10 @@ const PALETTE = {
 
 const GALLERY = [
   { src: '/photos/events/cans.jpg', alt: 'Can sculpture', span: 'col-span-3 row-span-4' },
-  { src: '/photos/events/checkin.jpg', alt: 'Check-in table', span: 'col-span-3 row-span-3' },
+  { src: '/photos/events/checkin.jpg', alt: 'Check-in table', span: 'col-span-3 row-span-4' },
   { src: '/photos/events/hallway.jpg', alt: 'Hallway crew', span: 'col-span-2 row-span-2' },
   { src: '/photos/events/posters.jpg', alt: 'Poster browsing', span: 'col-span-2 row-span-2' },
-  // { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
-  // { src: '/photos/events/panel.jpg', alt: 'Speaker panel', span: 'col-span-4 row-span-3' },
-  // { src: '/photos/events/cereal.jpg', alt: 'Cereal raffle', span: 'col-span-3 row-span-2' },
-  // { src: '/photos/events/dog.jpg', alt: 'Pup therapy', span: 'col-span-3 row-span-3' },
-  // { src: '/photos/events/alumni.jpg', alt: 'Alumni panel group', span: 'col-span-3 row-span-2' },
-  // { src: '/photos/events/winners.jpg', alt: 'Winners row', span: 'col-span-3 row-span-3' },
-  // { src: '/photos/events/selfie.jpg', alt: 'Friends selfie', span: 'col-span-2 row-span-2' },
+  { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
 ];
 
 export default function About() {
@@ -56,7 +50,7 @@ export default function About() {
           style={{
             backgroundImage: 'url(/gradients/noise-alpha-64.png)',
             backgroundRepeat: 'repeat',
-            opacity: 0.06,
+            opacity: 0.05,
           }}
         />
         <div className="max-w-7xl pl-[16%] pt-[12%] pb-[28%]">
@@ -94,7 +88,7 @@ export default function About() {
       </section>
 
       <section
-        className="relative"
+        className="relative -mt-px"
         style={{
           backgroundImage: `linear-gradient(180deg,
             ${PALETTE.blueLight} 0%,
@@ -112,7 +106,7 @@ export default function About() {
           style={{
             backgroundImage: 'url(/gradients/noise-alpha-64.png)',
             backgroundRepeat: 'repeat',
-            opacity: 0.04,
+            opacity: 0.05,
           }}
         />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-10 pt-24 pb-16 lg:pt-40 lg:pb-24">
@@ -192,7 +186,7 @@ function MosaicGallery({ items }) {
       className="relative"
     >
       <div className="mb-4 ml-1 text-xs tracking-widest uppercase text-white/70">Snapshots from our events</div>
-      <div className="grid grid-cols-6 sm:auto-rows-[7.5rem] auto-rows-[6.5rem] gap-2 sm:gap-3 lg:gap-4">
+      <div className="grid grid-cols-6 auto-rows-[6.5rem] sm:auto-rows-[7.5rem] grid-flow-dense gap-2 sm:gap-3 lg:gap-4">
         {items.map((it, i) => (
           <Tile key={i} src={it.src} alt={it.alt} span={it.span} />
         ))}
