@@ -20,7 +20,7 @@ export const leadershipData = [
   {
     description: 'Internal Vice President',
     title: 'Zeeshan Babul',
-    src: '/meet-us/zeeshan.jpeg',
+    src: '/meet-us/zeeshan.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/zeeshanbabul/',
     content:
@@ -38,7 +38,7 @@ export const leadershipData = [
   {
     description: 'VP of Finance',
     title: 'Surabhi Honnavalli',
-    src: '/meet-us/jake.jpg',
+    src: '/meet-us/Surabhi.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/jakelsilverman/',
     content:
@@ -56,7 +56,7 @@ export const leadershipData = [
   {
     description: 'Co-Director of Marketing',
     title: 'Andrew Hwang',
-    src: '/meet-us/andy.jpeg',
+    src: '/meet-us/andy.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/andrew-hwang-78b375258/',
     content:
@@ -74,7 +74,7 @@ export const leadershipData = [
   {
     description: 'VP of Community Development',
     title: 'Sai Samatham',
-    src: '/meet-us/sai.jpeg',
+    src: '/meet-us/sai.jpg',
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/',
     content:
@@ -92,9 +92,9 @@ export const leadershipData = [
   {
     description: 'Webmaster',
     title: 'Andrew Sou',
-    src: '/meet-us/andy.jpeg',
+    src: '/meet-us/drew.jpg',
     ctaText: 'View',
-    ctaLink: 'https://www.linkedin.com/in/andrew-hwang-78b375258/',
+    ctaLink: 'https://www.linkedin.com/in/andrewsou/',
     content:
       "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
   },
