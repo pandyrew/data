@@ -40,7 +40,7 @@ export const leadershipData = [
     title: 'Surabhi Honnavalli',
     src: '/meet-us/Surabhi.jpg',
     ctaText: 'View',
-    ctaLink: 'https://www.linkedin.com/in/jakelsilverman/',
+    ctaLink: 'https://www.linkedin.com/in/surabhi-honnavalli-27a954275/',
     content:
       "Hi, my name is Jake Silverman, and I'm currently a full-time student at the University of California, Irvine pursuing a B.S in Data Science. I'm passionate about the many problems an understanding of data can provide solutions to in many fields and disciplines.",
   },
@@ -49,7 +49,7 @@ export const leadershipData = [
       title: 'Suhani Khandelwal',
       src: '/meet-us/suhani.jpg',
       ctaText: 'View',
-      ctaLink: 'https://www.linkedin.com/',
+      ctaLink: 'https://www.linkedin.com/in/suhanikhandelwal/',
       content:
         "Hey guys, I'm Suhani Khandelwal, a second year Biomedical Engineering student who loves trying new food and exploring different SoCal spots.",
   },
@@ -76,7 +76,7 @@ export const leadershipData = [
     title: 'Sai Samatham',
     src: '/meet-us/sai.jpg',
     ctaText: 'View',
-    ctaLink: 'https://www.linkedin.com/',
+    ctaLink: 'https://www.linkedin.com/in/saisamatham/',
     content:
       "Hey guys, my name is Sai Samatham and I'm a second year BME major minoring in CS. I'm interested in applying data science techniques to BME. In my free time I love to play basketball, watch movies, and try new foods. I'm really excited to be a part of Data@UCI this year!",
   },
@@ -85,7 +85,7 @@ export const leadershipData = [
     title: 'Andrew Liu',
     src: '/meet-us/andrew.jpg',
     ctaText: 'View',
-    ctaLink: 'https://www.linkedin.com/in/andrew-hwang-78b375258/',
+    ctaLink: 'https://www.linkedin.com/in/andrewliu333/',
     content:
       'Hi, my name is Andrew! I am a third year Data Science major. I am from Huntington Beach, and I love to hoop, play chess, and read. Currently, I am part of a research team working on optimizing a machine learning algorithm for geospatial modeling. I am excited to connect, learn, and collaborate with you all!',
   },
