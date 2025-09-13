@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import BgStack from '@/components/ui/bg';
-import PhotoGallery from "@/components/ui/gallery";
+import PhotoGallery from '@/components/ui/gallery';
 import Image from 'next/image';
 
 export default function Home() {
@@ -16,19 +16,20 @@ export default function Home() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const companies = [
-    { name: 'JPMorgan Chase', logo: '/companies/jpmc.webp', website: 'https://www.jpmorganchase.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4' },
-    { name: 'Tesla', logo: '/companies/tesla.png', website: 'https://www.tesla.com', span: 'col-span-12 sm:col-span-6 lg:col-span-5' },
-    { name: 'Charles Schwab', logo: '/companies/charlesschwab.png', website: 'https://www.schwab.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
-    { name: 'Atlassian', logo: '/companies/atlassian.png', website: 'https://www.atlassian.com', span: 'col-span-12 sm:col-span-6 lg:col-span-5' },
-    { name: 'Deloitte', logo: '/companies/deloitte.webp', website: 'https://www.deloitte.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4' },
-    { name: 'Square', logo: '/companies/square.jpg', website: 'https://www.square.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
-    { name: 'Resmed', logo: '/companies/resmed.jpg', website: 'https://www.resmed.com', span: 'col-span-12 sm:col-span-6 lg:col-span-6' },
-    { name: 'T-Mobile', logo: '/companies/tmobile.avif', website: 'https://www.t-mobile.com', span: 'col-span-12 sm:col-span-6 lg:col-span-6' },
-    { name: 'First American', logo: '/companies/firstamerican.webp', website: 'https://www.firstam.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
-    { name: 'Skylar Capital Management', logo: '/companies/skylar.jpeg', website: 'https://www.linkedin.com/company/skylarcap/', span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
-    { name: 'Pacific Life', logo: '/companies/pacific-life.jpg', website: 'https://www.pacificlife.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
-    { name: 'Inari Medical', logo: '/companies/inary.png', website: 'https://www.inarimedical.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3' },
+  const sponsors = [
+    { name: 'JPMorgan Chase', logo: '/companies/jpmc.webp', website: 'https://www.jpmorganchase.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 2 },
+    { name: 'Google', logo: '/companies/google.png', website: 'https://www.google.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.8 },
+    { name: 'Snowflake', logo: '/companies/snowflake.svg', website: 'https://www.snowflake.com/en/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: .8 },
+    { name: 'NVIDIA', logo: '/companies/nvidia.png', website: 'https://www.nvidia.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .65 },
+    { name: 'Charles Schwab', logo: '/companies/charlesschwab.png', website: 'https://www.schwab.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.1 },
+    { name: 'Microsoft', logo: '/companies/microsoft.jpg', website: 'https://www.microsoft.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 1.1 },
+    { name: 'Capital One', logo: '/companies/cap1.png', website: 'https://www.capitalone.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.5 },
+    { name: 'Skylar Capital Management', logo: '/companies/skylar.jpeg', website: 'https://www.linkedin.com/company/skylarcap/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 1 },
+    { name: 'Atlassian', logo: '/companies/atlassian.png', website: 'https://www.atlassian.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.7 },
+    { name: 'Deloitte', logo: '/companies/deloitte.webp', website: 'https://www.deloitte.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.7 },
+    { name: 'Square', logo: '/companies/square.jpg', website: 'https://www.square.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.9 },
+    // { name: 'Resmed', logo: '/companies/resmed.jpg', website: 'https://www.resmed.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.95 },
+    { name: 'Meta', logo: '/companies/meta.png', website: 'https://www.meta.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .9 },
   ];
 
   return (
@@ -68,13 +69,10 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-clash font-bold mb-6">
               About Data at UCI
             </h2>
-            <p className="text-base md:text-lg font-mono mb-4 text-bold">
-              Data@UCI is UCI’s premier Data Science club—the only one on campus, open to all majors.
-              We run hands-on workshops, speaker panels, project teams, and an annual Datathon—think
-              hackathon but with Data Science. Whether you’re brand new or building advanced ML, you’ll
-              find mentorship, resume/portfolio support, and real projects that make an impact on the world.
+            <p className="text-base md:text-lg font-mono mb-4">
+              Data@UCI is UCI’s premier Data Science club—the only one on campus, open to all majors. We run hands-on workshops, speaker panels, project teams, and an annual Datathon—think hackathon but with Data Science. Whether you’re brand new or building advanced ML, you’ll find mentorship, resume/portfolio support, and real projects that make an impact on the world.
             </p>
-            <p className="text-base md:text-lg font-mono mb-4 text-medium">
+            <p className="text-base md:text-lg font-mono mb-4">
               → Learn what we do, meet the team, and see how you can get involved.
             </p>
             <Link href="/about" className="inline-block py-[4%]">
@@ -99,13 +97,13 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="w-full bg-transparent pt-[360px] px-8">
+          <div className="w-full pt-[390px] px-8">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-5xl md:text-6xl font-clash font-medium text-center mb-16 text-white">
-                Where Our Members Have Worked
+              <h2 className="text-5xl md:text-6xl font-clash font-medium text-left mb-8 text-white">
+                Where We Have Worked
               </h2>
               <div className="grid grid-cols-12 gap-4 md:gap-6 pb-[12%]">
-                {companies.map((c) => (
+                {sponsors.map((c) => (
                   <a
                     key={c.name}
                     href={c.website}
@@ -113,14 +111,15 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className={`${c.span} block min-w-0`}
                   >
-                    <div className="relative h-24 md:h-28 bg-white rounded-[24px] shadow flex items-center justify-center transition-transform hover:scale-105">
+                    <div className="relative h-24 md:h-28 bg-white rounded-[24px] shadow overflow-hidden flex items-center justify-center transition-transform hover:scale-105">
                       <Image
                         src={c.logo}
                         alt={`${c.name} logo`}
-                        fill
+                        width={600}
+                        height={300}
                         sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 90vw"
-                        style={{ objectFit: 'contain' }}
-                        className="pointer-events-none"
+                        className="object-contain"
+                        style={{ maxHeight: '82%', maxWidth: '88%', transform: `scale(${c.scale ?? 1})` }}
                       />
                     </div>
                   </a>
