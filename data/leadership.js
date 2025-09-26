@@ -117,7 +117,7 @@ export const facultyData = [
   {
     description: 'Faculty Advisor',
     title: 'Mine Dogucu',
-    src: '/meet-us/mine.jpg', // You'll need to add this image to your public folder
+    src: '/meet-us/mine.jpg', 
     ctaText: 'View',
     ctaLink: 'https://www.linkedin.com/in/minedogucu/',
     content:

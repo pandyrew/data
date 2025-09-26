@@ -28,7 +28,6 @@ export default function Home() {
     { name: 'Atlassian', logo: '/companies/atlassian.png', website: 'https://www.atlassian.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.7 },
     { name: 'Deloitte', logo: '/companies/deloitte.webp', website: 'https://www.deloitte.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.7 },
     { name: 'Square', logo: '/companies/square.jpg', website: 'https://www.square.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.9 },
-    // { name: 'Resmed', logo: '/companies/resmed.jpg', website: 'https://www.resmed.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.95 },
     { name: 'Meta', logo: '/companies/meta.png', website: 'https://www.meta.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .9 },
   ];
 

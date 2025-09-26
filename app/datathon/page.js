@@ -6,7 +6,7 @@ import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 import nathan from '/public/photos/nathan.png';
 import textbox from '/public/icons/textbox.png';
 import black_sparkle from '/public/icons/black_sparkle.svg';
-import sparkle from '/public/icons/white_sparkle.svg';
+import white_sparkle from '/public/icons/white_sparkle.svg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import framePng from '/public/icons/pixel_frame.png';
@@ -179,19 +179,19 @@ export default function Datathon() {
         <motion.p className="absolute lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-[100px] text-white" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
           What is Datathon
         </motion.p>
-        <Image alt="white sparkle" src={sparkle} width={200} height={200} className="absolute left-[45%] bottom-[75%]" />
-        <Image alt="white sparkle" src={sparkle} width={250} height={250} className="absolute lg:right-[4%] right-[14%] top-[34%]" />
-        <Image alt="white sparkle" src={sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />
+        <Image alt="white sparkle" src={white_sparkle} width={200} height={200} className="absolute left-[45%] bottom-[75%]" />
+        <Image alt="white sparkle" src={white_sparkle} width={250} height={250} className="absolute lg:right-[4%] right-[14%] top-[34%]" />
+        <Image alt="white sparkle" src={white_sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
             A datathon is a fast-paced, team-based event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
           </p>
-          <div className="mt-6 flex justify-left pt-2">
-            <Link href="/about" className="block w-fit">
+          <div className="mt-4 flex justify-left pt-2">
+            {/* <Link href="/about" className="block w-fit"> */}
               <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
-                Datathon 2026
+                Datathon 2026 Coming Soon
               </span>
-            </Link>
+            {/* </Link> */}
           </div>
         </motion.div>
       </motion.div>
@@ -204,9 +204,9 @@ export default function Datathon() {
           {bubbles.map((b, i) => (
             <TextBubble key={i} text={b.text} className={b.className} delay={b.delay} flip={!!b.flip} flipY={!!b.flipY} />
           ))}
-          <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute right-[94%] top-[14%]" />
-          <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[99%] top-[45%]" />
-          <Image alt="black sparkle" src={black_sparkle} width={240} height={240} className="absolute left-[24%] top-[49%]" />
+          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute right-[94%] top-[14%]" />
+          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute left-[99%] top-[45%]" />
+          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute left-[24%] top-[49%]" />
         </div>
         <div className="lg:hidden grid grid-cols-1 gap-6 w-full px-6">
           {framedPhotos.map((p, i) => (
