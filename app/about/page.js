@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Cards from '@/components/ui/cards';
 import { leadershipData, internData, facultyData } from '@/data/leadership';
+import nathan from '/public/photos/nathan.png';
 
 const PALETTE = {
   bluePale: '#CAD8E6',
@@ -55,6 +56,25 @@ export default function About() {
             opacity: 0.05,
           }}
         />
+
+        <motion.div
+          className="hidden md:block absolute right-[17%] pt-[15%] z-20 w-[32%] max-w-[320px]"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="relative aspect-[4/5]">
+            <Image
+              src={nathan}
+              alt="About illustration"
+              fill
+              className="object-cover rounded-2xl shadow-xl ring-1 ring-white/20"
+              priority
+              sizes="(max-width: 924px) 30vw, 220px"
+            />
+          </div>
+        </motion.div>
+
         <div className="max-w-7xl pl-[16%] pt-[12%] pb-[28%]">
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-3">
@@ -121,7 +141,7 @@ export default function About() {
                 <p className="text-white/95 font-mono">
                   As UCI’s only Data Science club, we’re building a welcoming, project-driven community where students
                   from any major can explore data together. Whether in or outside of school, we hope to unite people with 
-                  a common interest of data, seeking to build a culture of advancing one another's skills, finding our 
+                  a common interest of data, seeking to build a culture of advancing one another’s skills, finding our 
                   people, and creating memories that stick. We’re a student-run organization dedicated to UCI and the broader 
                   Orange County community.
                 </p>

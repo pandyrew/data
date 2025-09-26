@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import BgStack from '@/components/ui/bg';
 import PhotoGallery from '@/components/ui/gallery';
 import Image from 'next/image';
+import nathan from '/public/photos/nathan.png';
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
+  const [showSchedule, setShowSchedule] = useState(false);
+
   useEffect(() => setIsClient(true), []);
 
   const letterVariants = {
@@ -19,8 +22,8 @@ export default function Home() {
   const sponsors = [
     { name: 'JPMorgan Chase', logo: '/companies/jpmc.webp', website: 'https://www.jpmorganchase.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 2 },
     { name: 'Google', logo: '/companies/google.png', website: 'https://www.google.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.8 },
-    { name: 'Snowflake', logo: '/companies/snowflake.svg', website: 'https://www.snowflake.com/en/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: .8 },
-    { name: 'NVIDIA', logo: '/companies/nvidia.png', website: 'https://www.nvidia.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .65 },
+    { name: 'Snowflake', logo: '/companies/snowflake.svg', website: 'https://www.snowflake.com/en/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 0.8 },
+    { name: 'NVIDIA', logo: '/companies/nvidia.png', website: 'https://www.nvidia.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.65 },
     { name: 'Charles Schwab', logo: '/companies/charlesschwab.png', website: 'https://www.schwab.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.1 },
     { name: 'Microsoft', logo: '/companies/microsoft.jpg', website: 'https://www.microsoft.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 1.1 },
     { name: 'Capital One', logo: '/companies/cap1.png', website: 'https://www.capitalone.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.5 },
@@ -28,7 +31,7 @@ export default function Home() {
     { name: 'Atlassian', logo: '/companies/atlassian.png', website: 'https://www.atlassian.com', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.7 },
     { name: 'Deloitte', logo: '/companies/deloitte.webp', website: 'https://www.deloitte.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.7 },
     { name: 'Square', logo: '/companies/square.jpg', website: 'https://www.square.com', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.9 },
-    { name: 'Meta', logo: '/companies/meta.png', website: 'https://www.meta.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .9 },
+    { name: 'Meta', logo: '/companies/meta.png', website: 'https://www.meta.com/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.9 },
   ];
 
   return (
@@ -37,26 +40,82 @@ export default function Home() {
       <main className="relative z-10">
         <section className="min-h-[120vh] grid content-start pt-24">
           {isClient && (
-            <motion.div className="self-start justify-self-start pt-[11%] pl-[19.2%] text-left font-clash font-bold text-white space-y-4">
-              <motion.div
-                variants={letterVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-6xl lg:text-8xl font-clash"
-              >
-                Data @
-              </motion.div>
-              <motion.div
-                variants={letterVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="text-6xl lg:text-8xl font-clash"
-              >
-                UCI
-              </motion.div>
-            </motion.div>
+            <div className="self-start justify-self-start pt-[11%] pl-[19.2%] text-left text-white">
+              <div className="relative inline-block align-top h-[40vh] md:h-[52vh]">
+                <motion.div
+                  variants={letterVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="text-6xl lg:text-8xl font-clash font-bold leading-none"
+                >
+                  Data @
+                </motion.div>
+                <motion.div
+                  variants={letterVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="text-6xl lg:text-8xl font-clash font-bold leading-none"
+                >
+                  UCI
+                </motion.div>
+
+                <div className="mt-5">
+                  <button
+                    type="button"
+                    onClick={() => setShowSchedule((s) => !s)}
+                    aria-expanded={showSchedule}
+                    aria-controls="event-schedule"
+                    className="inline-flex items-center gap-2 rounded-full bg-white text-[#1D1B3F] font-bold px-6 py-3 shadow hover:scale-[1.03] active:scale-[0.99] transition-transform"
+                  >
+                    {showSchedule ? 'Hide Schedule' : 'View Event Schedule'}
+
+                    <svg
+                      className={`h-5 w-5 transition-transform ${showSchedule ? 'rotate-90' : 'rotate-0'}`}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M7.293 14.707a1 1 0 0 1 0-1.414L10.586 10 7.293 6.707a1 1 0 1 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <AnimatePresence initial={false}>
+                  {showSchedule && (
+                    <motion.div
+                      id="event-schedule"
+                      key="schedule"
+                      initial={{ opacity: 0, x: 12 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 12 }}
+                      transition={{ duration: 0.25 }}
+                      className="
+                        relative mt-4 w-full max-w-[min(100vw-2rem,820px)]
+                        sm:mt-0 sm:absolute sm:top-[-40px] sm:left-[calc(100%-3rem)]
+                        sm:w-[min(70vw,820px)]
+                        md:top-[5] md:left-[calc(100%-4.5rem)]
+                        lg:top-[5] lg:left-[calc(100%-6rem)]
+                        xl:top-[10] xl:left-[calc(110%-8rem)]
+                      "
+                    >
+                      <div className="relative w-full rounded-xl overflow-hidden">
+                        <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
+                          <Image
+                            src={nathan}
+                            alt="Event schedule"
+                            fill
+                            className="object-contain"
+                            sizes="(min-width:1024px) 820px, (min-width:640px) 70vw, 100vw"
+                          />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
           )}
         </section>
 

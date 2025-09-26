@@ -7,7 +7,7 @@ export default function BgStack() {
       className="pointer-events-none absolute inset-0 -z-10 bg-[#0B1035]"
     >
       <Image
-        src="/animations/sky_bg_grouped_final.svg"
+        src="/animations/sky_bg_grouped_final_blended.svg"
         alt=""
         width={0}
         height={0}
