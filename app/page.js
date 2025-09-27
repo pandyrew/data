@@ -148,11 +148,11 @@ export default function Home() {
           <div className="w-full max-w-screen-xl mx-auto px-13 md:px-30">
             <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               <PhotoGallery src="/photos/datathon1.png" alt="Datathon Picture" caption="Datathon Participants!" />
-              <PhotoGallery src="/carousel/memories3.png" alt="Memories" caption="More Datathon!" />
-              <PhotoGallery src="/photos/datafun1.jpg" alt="Memories" caption="Board" />
-              <PhotoGallery src="/carousel/memories4.png" alt="Memories" caption="Another memory!" />
-              <PhotoGallery src="/carousel/memories5.png" alt="Memories" caption="Another memory!" />
-              <PhotoGallery src="/photos/datafun5.jpg" alt="Memories" caption="Another memory!" />
+              <PhotoGallery src="/carousel/memories3.png" alt="Board" caption="Board Picture" />
+              <PhotoGallery src="/photos/datafun1.jpg" alt="Working" caption="Hard at work!" />
+              <PhotoGallery src="/carousel/memories4.png" alt="Closing ceremony" caption="Closing Ceremony" />
+              <PhotoGallery src="/carousel/memories5.png" alt="Guest Speakers" caption="Guest Speakers!" />
+              <PhotoGallery src="/photos/datafun5.jpg" alt="Memories" caption="Datathon memories!" />
             </div>
           </div>
         </section>
