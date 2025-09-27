@@ -103,7 +103,7 @@ export default function Home() {
                       <div className="relative w-full rounded-xl overflow-hidden">
                         <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
                           <Image
-                            src={nathan}
+                            src=""
                             alt="Event schedule"
                             fill
                             className="object-contain"
@@ -144,12 +144,12 @@ export default function Home() {
         <section className="relative pt-[120px] pb-[380px] text-white">
           <div className="w-full max-w-screen-xl mx-auto px-13 md:px-30">
             <div className="grid gap-x-8 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              <PhotoGallery src="/carousel/memories1.png" alt="Datathon Picture" caption="Datathon Participants!" />
-              <PhotoGallery src="/carousel/memories2.png" alt="Memories" caption="More Datathon!" />
-              <PhotoGallery src="/carousel/memories3.png" alt="Memories" caption="Board" />
+              <PhotoGallery src="/photos/datathon1.png" alt="Datathon Picture" caption="Datathon Participants!" />
+              <PhotoGallery src="/carousel/memories3.png" alt="Memories" caption="More Datathon!" />
+              <PhotoGallery src="/photos/datafun1.jpg" alt="Memories" caption="Board" />
               <PhotoGallery src="/carousel/memories4.png" alt="Memories" caption="Another memory!" />
               <PhotoGallery src="/carousel/memories5.png" alt="Memories" caption="Another memory!" />
-              <PhotoGallery src="/carousel/memories8.jpg" alt="Memories" caption="Another memory!" />
+              <PhotoGallery src="/photos/datafun5.jpg" alt="Memories" caption="Another memory!" />
             </div>
           </div>
         </section>
@@ -179,8 +179,8 @@ export default function Home() {
                         className="object-contain"
                         style={{ maxHeight: '82%', maxWidth: '88%', transform: `scale(${c.scale ?? 1})` }}
                       />
-                    </div>
-                  </a>
+                </div>
+                </a>
                 ))}
               </div>
             </div>

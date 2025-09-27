@@ -5,7 +5,6 @@ import gradient from '/public/gradients/datathon-gradient.png';
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 import nathan from '/public/photos/nathan.png';
 import textbox from '/public/icons/textbox.png';
-import black_sparkle from '/public/icons/black_sparkle.svg';
 import white_sparkle from '/public/icons/white_sparkle.svg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -22,6 +21,7 @@ function FramedPhoto({
   insetPct = '14%',
   frameOutsetPct = '10%',
   absolute = true,
+  desktopWidthPx = 320,
 }) {
   return (
     <motion.div
@@ -29,12 +29,24 @@ function FramedPhoto({
       initial={{ opacity: 0, scale: 0.95, y: 8 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
-      whileHover={{ rotate: -1.5, scale: 1.02 }}
-      style={{ filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.35))' }}
+      whileHover={{ rotate: -1.2, scale: 1.015 }}
+      style={{ filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.35))', willChange: 'transform', transform: 'translateZ(0)' }}
     >
       <div className={`relative ${aspect} w-full`}>
         <div className="absolute" style={{ top: insetPct, right: insetPct, bottom: insetPct, left: insetPct }}>
-          <Image src={src} alt={alt} fill sizes="220px" className="object-cover" />
+          <Image
+            src={src}
+            alt={alt ?? ''}
+            fill
+            className="object-cover"
+            quality={85}
+            sizes={`(min-width:1536px) ${desktopWidthPx}px,
+                    (min-width:1280px) ${Math.round(desktopWidthPx * 0.95)}px,
+                    (min-width:1024px) ${Math.round(desktopWidthPx * 0.9)}px,
+                    (min-width:640px) 50vw,
+                    90vw`}
+            priority={false}
+          />
         </div>
         <div
           className="absolute z-20 pointer-events-none"
@@ -45,7 +57,19 @@ function FramedPhoto({
             left: `-${frameOutsetPct}`,
           }}
         >
-          <Image src={framePng} alt="" fill sizes="240px" className="object-contain" />
+          <Image
+            src={framePng}
+            alt=""
+            fill
+            className="object-contain"
+            quality={92}
+            sizes={`(min-width:1536px) ${desktopWidthPx + 64}px,
+                    (min-width:1280px) ${desktopWidthPx + 48}px,
+                    (min-width:1024px) ${desktopWidthPx + 32}px,
+                    (min-width:640px) 55vw,
+                    95vw`}
+            priority={false}
+          />
         </div>
       </div>
     </motion.div>
@@ -125,9 +149,9 @@ const AnimatedGraph = () => {
 
 const companies = [
   { name: 'Melissa Education', logo: '/companies/melissa_logo.png', website: 'https://www.melissa.com/education/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.1 },
-  { name: 'Merage', logo: '/companies/merage.png', website: 'https://merage.uci.edu', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: .85 },
+  { name: 'Merage', logo: '/companies/merage.png', website: 'https://merage.uci.edu', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 0.85 },
   { name: 'SPFB', logo: '/companies/spfb.png', website: 'https://asuci.uci.edu/president/spfb/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1.6 },
-  { name: 'Strata Scratch', logo: '/companies/strata.png', website: 'https://stratascratch.com', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: .9 },
+  { name: 'Strata Scratch', logo: '/companies/strata.png', website: 'https://stratascratch.com', span: 'col-span-12 sm:col-span-6 lg:col-span-5', scale: 0.9 },
   { name: 'OIT', logo: '/companies/oit.png', website: 'https://www.oit.uci.edu/', span: 'col-span-12 sm:col-span-6 lg:col-span-4', scale: 1 },
   { name: 'Redbull', logo: '/companies/redbull.webp', website: 'https://www.redbull.com/us-en', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1 },
   { name: 'Monster', logo: '/companies/monster.webp', website: 'https://www.monsterenergy.com/en-us/', span: 'col-span-12 sm:col-span-6 lg:col-span-3', scale: 1.6 },
@@ -164,12 +188,12 @@ export default function Datathon() {
   ];
 
   const framedPhotos = [
-    { src: nathan, alt: 'Nathan', className: 'w-[270px] top-[68%] left-[23%] z-10', delay: 0.25 },
-    { src: '/photos/datathon1.png', alt: 'Datathon 1', className: 'w-[310px] top-[50%] right-[82%] z-10', delay: 0.35 },
-    { src: '/photos/datathon2.png', alt: 'Datathon 2', className: 'w-[320px] top-[50%] left-[80%] z-10', delay: 0.45 },
-    { src: '/photos/datathon3.png', alt: 'Datathon 3', className: 'w-[290px] top-[50%] left-[48%] z-10', delay: 0.55 },
-    { src: '/photos/datathon4.png', alt: 'Datathon 4', className: 'w-[275px] top-[21%] left-[25%] z-10', delay: 0.65 },
-    { src: '/photos/datathon5.png', alt: 'Datathon 5', className: 'w-[290px] top-[19.5%] right-[22%] z-10', delay: 0.75 },
+    { src: '/photos/datafun7.jpg', alt: 'Nathan', className: 'w-[270px] top-[68%] left-[23%] z-10', delay: 0.25, desktopWidthPx: 270 },
+    { src: '/photos/workshop.jpg', alt: 'Datathon 1', className: 'w-[310px] top-[50%] right-[82%] z-10', delay: 0.35, desktopWidthPx: 310 },
+    { src: '/photos/datafun1.jpg', alt: 'Datathon 2', className: 'w-[320px] top-[50%] left-[80%] z-10', delay: 0.45, desktopWidthPx: 320 },
+    { src: '/photos/datathon2.png', alt: 'Datathon 3', className: 'w-[290px] top-[50%] left-[48%] z-10', delay: 0.55, desktopWidthPx: 290 },
+    { src: '/photos/datafun5.jpg', alt: 'Datathon 4', className: 'w-[275px] top-[21%] left-[25%] z-10', delay: 0.65, desktopWidthPx: 275 },
+    { src: '/photos/datafun6.jpg', alt: 'Datathon 5', className: 'w-[290px] top-[19.5%] right-[22%] z-10', delay: 0.75, desktopWidthPx: 290 },
   ];
 
   return (
@@ -184,14 +208,12 @@ export default function Datathon() {
         <Image alt="white sparkle" src={white_sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
-            A datathon is a fast-paced, team-based event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
+            A datathon is a fast-paced, team-based or individual event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
           </p>
           <div className="mt-4 flex justify-left pt-2">
-            {/* <Link href="/about" className="block w-fit"> */}
-              <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
-                Datathon 2026 Coming Soon
-              </span>
-            {/* </Link> */}
+            <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
+              Datathon 2026 Coming Soon
+            </span>
           </div>
         </motion.div>
       </motion.div>
@@ -199,7 +221,7 @@ export default function Datathon() {
       <motion.div className="relative w-full flex flex-col justify-center items-center mt-6 lg:mt-8">
         <div className="hidden lg:block relative w-full h-[980px] max-w-[1280px] mx-auto">
           {framedPhotos.map((p, i) => (
-            <FramedPhoto key={i} src={p.src} alt={p.alt} className={p.className} delay={p.delay} />
+            <FramedPhoto key={i} src={p.src} alt={p.alt} className={p.className} delay={p.delay} desktopWidthPx={p.desktopWidthPx} />
           ))}
           {bubbles.map((b, i) => (
             <TextBubble key={i} text={b.text} className={b.className} delay={b.delay} flip={!!b.flip} flipY={!!b.flipY} />
@@ -210,7 +232,7 @@ export default function Datathon() {
         </div>
         <div className="lg:hidden grid grid-cols-1 gap-6 w-full px-6">
           {framedPhotos.map((p, i) => (
-            <FramedPhoto key={i} src={p.src} alt={p.alt} className="w-full relative" delay={p.delay} absolute={false} />
+            <FramedPhoto key={i} src={p.src} alt={p.alt} className="w-full relative" delay={p.delay} absolute={false} desktopWidthPx={360} />
           ))}
           {bubbles.map((b, i) => (
             <div key={i} className="w-full">
@@ -268,7 +290,5 @@ const content = [
   { title: 'Datathon 2026: Coming Soon', description: 'Stay tuned for Datathon 2026! This will be our fourth iteration of the event and we are excited to bring you something exciting and new!', content: <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2026</div> },
   { title: 'Datathon 2025: Soar into Data', description: 'Inspired by the Seven Wonders of the World, Soar into Data invited participants to embark on a journey of discovery through data—much like how explorers uncovered the mysteries of these magnificent monuments.', content: <div className="h-full w-full bg-[url('/photos/datathon3.png')] bg-cover flex items-center justify-center text-white font-mono">Soar 2025</div> },
   { title: 'Datathon 2024: Dive into Data', description: 'Our 2024 datathon, Atlantis, served as a beacon guiding us towards uncharted waters of discovery. Like the fabled city lost to the depths of time, our datasets harbored untold stories waiting to be unveiled. Together, we unraveled the mysteries, decoded the patterns, and charedt a course towards new horizons of knowledge and understanding.', content: <div className="h-full w-full bg-[url('/photos/datathon4.png')] bg-cover flex items-center justify-center text-white font-mono">Dive 2024</div> },
-  // { title: 'Uncharted Territories', description: 'Datathon 2024 offers uncharted territories for data enthusiasts. Tackle complex problems across various domains, from healthcare to finance, using cutting-edge data analysis techniques and machine learning algorithms.', content: <div className="h-full w-full bg-[url('/photos/datathon4.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2024</div> },
-  // { title: 'Collaborate and Innovate', description: 'Immerse yourself in a collaborative environment at Datathon 2024. Network with fellow data scientists, domain experts, and industry professionals. Participate in workshops and mentorship sessions to enhance your skills.', content: <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2024</div> },
   { title: 'Datathon 2023: Embark', description: 'In 2023, we introduced our first Datathon as Embark—a theme that reflected our commitment to new adventures and continued growth. We carried this spirit forward, as it was all about trying something new and finding more ways to support our data community. We hoped participants would also discover something through the event that would fascinate them for years to come.', content: <div className="h-full w-full bg-[url('/photos/datathon1.png')] bg-cover flex items-center justify-center text-white font-mono">Embark 2023</div> },
 ];
