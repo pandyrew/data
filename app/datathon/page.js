@@ -188,12 +188,12 @@ export default function Datathon() {
   ];
 
   const framedPhotos = [
-    { src: '/photos/datafun7.jpg', alt: 'Nathan', className: 'w-[270px] top-[68%] left-[23%] z-10', delay: 0.25, desktopWidthPx: 270 },
-    { src: '/photos/workshop.jpg', alt: 'Datathon 1', className: 'w-[310px] top-[50%] right-[82%] z-10', delay: 0.35, desktopWidthPx: 310 },
-    { src: '/photos/datafun1.jpg', alt: 'Datathon 2', className: 'w-[320px] top-[50%] left-[80%] z-10', delay: 0.45, desktopWidthPx: 320 },
-    { src: '/photos/datathon2.png', alt: 'Datathon 3', className: 'w-[290px] top-[50%] left-[48%] z-10', delay: 0.55, desktopWidthPx: 290 },
-    { src: '/photos/datafun5.jpg', alt: 'Datathon 4', className: 'w-[275px] top-[21%] left-[25%] z-10', delay: 0.65, desktopWidthPx: 275 },
-    { src: '/photos/datafun6.jpg', alt: 'Datathon 5', className: 'w-[290px] top-[19.5%] right-[22%] z-10', delay: 0.75, desktopWidthPx: 290 },
+    { src: '/photos/datafun7.jpg', alt: 'Friends', className: 'w-[270px] top-[68%] left-[23%] z-10', delay: 0.25, desktopWidthPx: 270 },
+    { src: '/photos/workshop.JPG', alt: 'Workshop', className: 'w-[310px] top-[50%] right-[82%] z-10', delay: 0.35, desktopWidthPx: 310 },
+    { src: '/photos/datafun1.jpg', alt: 'Deep discussion', className: 'w-[320px] top-[50%] left-[80%] z-10', delay: 0.45, desktopWidthPx: 320 },
+    { src: '/photos/datathon2.png', alt: 'Besties', className: 'w-[290px] top-[50%] left-[48%] z-10', delay: 0.55, desktopWidthPx: 290 },
+    { src: '/photos/datafun5.jpg', alt: 'Board', className: 'w-[275px] top-[21%] left-[25%] z-10', delay: 0.65, desktopWidthPx: 275 },
+    { src: '/photos/datafun6.jpg', alt: 'Free drinks!', className: 'w-[290px] top-[19.5%] right-[22%] z-10', delay: 0.75, desktopWidthPx: 290 },
   ];
 
   return (
