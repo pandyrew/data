@@ -8,6 +8,8 @@ import PhotoGallery from '@/components/ui/gallery';
 import Image from 'next/image';
 import nathan from '/public/photos/nathan.png';
 
+const SCHEDULE_LINK = "https://www.instagram.com/p/DO87JEUidpJ/";
+
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);
@@ -92,18 +94,19 @@ export default function Home() {
                       exit={{ opacity: 0, x: 12 }}
                       transition={{ duration: 0.25 }}
                       className="
-                        relative mt-4 w-full max-w-[min(100vw-2rem,820px)]
-                        sm:mt-0 sm:absolute sm:top-[-40px] sm:left-[calc(100%-3rem)]
-                        sm:w-[min(70vw,820px)]
-                        md:top-[5] md:left-[calc(100%-4.5rem)]
-                        lg:top-[5] lg:left-[calc(100%-6rem)]
-                        xl:top-[10] xl:left-[calc(110%-8rem)]
+                        relative mt-4 w-full max-w-[min(100vw-2rem,940px)]
+                        max-[639px]:w-[96vw] max-[639px]:max-w-none
+                        sm:mt-0 sm:absolute sm:top-[-40px] sm:left-[calc(100%-5rem)]
+                        sm:w-[min(90vw,940px)]
+                        md:top-[5] md:left-[calc(100%-5rem)]
+                        lg:top-[5] lg:left-[calc(100%-5rem)]
+                        xl:top-[10] xl:left-[calc(100%-6.5rem)]
                       "
                     >
                       <div className="relative w-full rounded-xl overflow-hidden">
                         <div className="relative w-full" style={{ aspectRatio: '16 / 9' }}>
                           <Image
-                            src=""
+                            src="/photos/schedule.png"
                             alt="Event schedule"
                             fill
                             className="object-contain"
@@ -148,7 +151,7 @@ export default function Home() {
               <PhotoGallery src="/carousel/memories3.png" alt="Memories" caption="More Datathon!" />
               <PhotoGallery src="/photos/datafun1.jpg" alt="Memories" caption="Board" />
               <PhotoGallery src="/carousel/memories4.png" alt="Memories" caption="Another memory!" />
-              <PhotoGallery src="/carousel/memories5_extended.png" alt="Memories" caption="Another memory!" />
+              <PhotoGallery src="/carousel/memories5.png" alt="Memories" caption="Another memory!" />
               <PhotoGallery src="/photos/datafun5.jpg" alt="Memories" caption="Another memory!" />
             </div>
           </div>

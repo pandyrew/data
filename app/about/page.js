@@ -28,7 +28,7 @@ export default function About() {
   return (
     <div className="w-full bg-white">
       <section
-        className="relative overflow-hidden"
+        className="relative overflow-visible md:overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(180deg,
             ${PALETTE.blueStrong} 0%,
@@ -65,7 +65,7 @@ export default function About() {
         >
           <div className="relative aspect-[6/4]">
             <Image
-              src='/photos/board.jpg'
+              src="/photos/board.jpg"
               alt="Board Picture"
               fill
               className="object-cover rounded-2xl shadow-xl ring-1 ring-white/20"
@@ -74,7 +74,7 @@ export default function About() {
           </div>
         </motion.div>
 
-        <div className="max-w-7xl pl-[16%] pt-[12%] pb-[28%]">
+        <div className="max-w-7xl pl-6 md:pl-[16%] pt-16 md:pt-[12%] pb-24 md:pb-[28%]">
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-3">
               <motion.p
@@ -86,15 +86,16 @@ export default function About() {
                 About Data
               </motion.p>
               <motion.div
-                className="absolute left-[5%] max-w-[750px] pt-[6.5%] pl-[7.5%] z-10"
+                className="relative md:absolute md:left-[5%] max-w-[min(90vw,750px)] md:pt-[6.5%] md:pl-[7.5%] px-6 z-10"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                <p className="text-white leading-relaxed font-mono">
+                <p className="text-white leading-relaxed font-mono break-words">
                   Data@UCI nurtures a community of Anteaters exploring their place in an increasingly data-driven world.
                   Through workshops, professional panels, and speaker events, we help students grow analytical skills and
                   develop a deeper appreciation for data — empowering success in college and beyond.
+                  Join us at meetings on Wednesdays 6:30 PM - 7:30 PM in DBH 6011.
                 </p>
               </motion.div>
               <motion.h1
@@ -164,12 +165,6 @@ export default function About() {
               <Cards data={leadershipData} />
             </div>
           </div>
-          {/* <div className="mb-16">
-            <HeaderBadge>Interns</HeaderBadge>
-            <div className="mt-10">
-              <Cards data={internData} colsMD={2} colsLg={2} />
-            </div>
-          </div> */}
           <div className="mb-24">
             <HeaderBadge>Faculty Advisor</HeaderBadge>
             <div className="mt-10">
@@ -185,9 +180,7 @@ export default function About() {
 function HeaderBadge({ children }) {
   return (
     <div className="flex justify-center">
-      <div
-        className="px-8 py-4"
-      >
+      <div className="px-8 py-4">
         <h2 className="font-satoshi text-3xl sm:text-4xl text-center">
           {children}
         </h2>

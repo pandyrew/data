@@ -183,7 +183,7 @@ const TextBubble = ({ text, className = '', delay = 0, flip = false, flipY = fal
 export default function Datathon() {
   const bubbles = [
     { text: 'Similar to hackathons, datathons let students explore data by tackling a real-world project.', className: 'w-[300px] bottom-[49%] z-1', delay: 0.2 },
-    { text: 'Clean, explore, and model with Python/SQL/ML—ask mentors anytime.', className: 'w-[230px] bottom-[50%] left-[85%] z-1', delay: 0.4 },
+    { text: 'Clean, explore, and model—ask mentors for help at anytime.', className: 'w-[230px] bottom-[50%] left-[85%] z-1', delay: 0.4 },
     { text: 'Submit a notebook + slides and present to judges.', className: 'w-[250px] left-[50%] top-[78%] z-1', delay: 0.5, flipY: true }
   ];
 
@@ -208,7 +208,7 @@ export default function Datathon() {
         <Image alt="white sparkle" src={white_sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
-            A datathon is a fast-paced, team-based or individual event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling with tools like Python, SQL, and ML.
+            A datathon is a fast-paced, team-based or individual event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling.
           </p>
           <div className="mt-4 flex justify-left pt-2">
             <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
