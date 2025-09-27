@@ -15,13 +15,13 @@ const PALETTE = {
 };
 
 const GALLERY = [
-  { src: '/photos/events/cans.jpg', alt: 'Can sculpture', span: 'col-span-2 row-span-2' },
-  { src: '/photos/events/checkin.jpg', alt: 'Check-in table', span: 'col-span-1 row-span-2' },
-  { src: '/photos/events/hallway.jpg', alt: 'Hallway crew', span: 'col-span-2 row-span-1' },
-  { src: '/photos/events/posters.jpg', alt: 'Poster browsing', span: 'col-span-2 row-span-1' },
-  { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
-  { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
-  { src: '/photos/events/shipping.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
+  { src: '/photos/presduo.jpg', alt: 'Check-in table', span: 'col-span-1 row-span-2' },
+  { src: '/photos/data-alt.png', alt: 'Can sculpture', span: 'col-span-3 row-span-2' },
+  { src: '/carousel/memories2.png', alt: 'Hallway crew', span: 'col-span-2 row-span-2' },
+  { src: '/photos/datathon3.png', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
+  { src: '/photos/datafun7.jpg', alt: 'Logistics team', span: 'col-span-2 row-span-2' },
+  { src: '/photos/datafun3.jpg', alt: 'Logistics team', span: 'col-span-1 row-span-2' },
+  { src: '/photos/datafun2.jpg', alt: 'Logistics team', span: 'col-span-1 row-span-2' },
 ];
 
 export default function About() {
@@ -58,19 +58,18 @@ export default function About() {
         />
 
         <motion.div
-          className="hidden md:block absolute right-[17%] pt-[15%] z-20 w-[32%] max-w-[320px]"
+          className="hidden md:block absolute right-[12%] pt-[15%] z-20 w-[32%] max-w-[620px]"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="relative aspect-[4/5]">
+          <div className="relative aspect-[6/4]">
             <Image
-              src={nathan}
-              alt="About illustration"
+              src='/photos/board.jpg'
+              alt="Board Picture"
               fill
               className="object-cover rounded-2xl shadow-xl ring-1 ring-white/20"
               priority
-              sizes="(max-width: 924px) 30vw, 220px"
             />
           </div>
         </motion.div>

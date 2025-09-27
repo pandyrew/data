@@ -148,7 +148,7 @@ export default function Home() {
               <PhotoGallery src="/carousel/memories3.png" alt="Memories" caption="More Datathon!" />
               <PhotoGallery src="/photos/datafun1.jpg" alt="Memories" caption="Board" />
               <PhotoGallery src="/carousel/memories4.png" alt="Memories" caption="Another memory!" />
-              <PhotoGallery src="/carousel/memories5.png" alt="Memories" caption="Another memory!" />
+              <PhotoGallery src="/carousel/memories5_extended.png" alt="Memories" caption="Another memory!" />
               <PhotoGallery src="/photos/datafun5.jpg" alt="Memories" caption="Another memory!" />
             </div>
           </div>
