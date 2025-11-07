@@ -54,15 +54,6 @@ export const leadershipData = [
         "Hey guys, I'm Suhani Khandelwal, a second year Biomedical Engineering student who loves trying new food and exploring different SoCal spots.",
   },
   {
-    description: 'Co-Director of Marketing',
-    title: 'Andrew Hwang',
-    src: '/meet-us/andy.jpg',
-    ctaText: 'View',
-    ctaLink: 'https://www.linkedin.com/in/andrew-hwang-78b375258/',
-    content:
-      "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
-  },
-  {
     description: 'Director of Community Development',
     title: 'Kyle Huynh',
     src: '/meet-us/kyle.jpg',
