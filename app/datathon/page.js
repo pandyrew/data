@@ -171,7 +171,7 @@ const TextBubble = ({ text, className = '', delay = 0, flip = false, flipY = fal
       transition={{ duration: 0.6, delay }}
     >
       <div className={`relative w-full ${flip ? '-scale-x-100' : ''} ${flipY ? 'scale-y-[-1]' : ''}`}>
-        <Image alt="textbox" src={textbox} className="hidden lg:block w-full h-auto" />
+        <Image alt="textbox" src={textbox} className="hidden lg:block w-full h-auto pointer-events-none" />
         <div className={`absolute inset-0 px-6 ${flipY ? 'flex items-end pb-10 scale-y-[-1]' : 'flex items-start pt-10'}`}>
           <p className="text-neutral-900 leading-snug">{text}</p>
         </div>
@@ -197,15 +197,15 @@ export default function Datathon() {
   ];
 
   return (
-    <div className="relative w-screen min-h-screen pt-[140px] bg-gradient-to-b from-[#4E74D9] via-[#7FA1E6] to-[#CAD8E6]">
+    <div className="relative w-full min-h-dvh pt-[140px] overflow-x-clip bg-gradient-to-b from-[#4E74D9] via-[#7FA1E6] to-[#CAD8E6]">
       <motion.div className="w-full h-auto relative" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         <AnimatedGraph />
         <motion.p className="absolute lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-[100px] text-white" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
           What is Datathon
         </motion.p>
-        <Image alt="white sparkle" src={white_sparkle} width={200} height={200} className="absolute left-[45%] bottom-[75%]" />
-        <Image alt="white sparkle" src={white_sparkle} width={250} height={250} className="absolute lg:right-[4%] right-[14%] top-[34%]" />
-        <Image alt="white sparkle" src={white_sparkle} width={210} height={210} className="absolute left-[48%] top-[50%]" />
+        <Image alt="white sparkle" src={white_sparkle} width={200} height={200} className="absolute left-[45%] bottom-[75%] pointer-events-none" />
+        <Image alt="white sparkle" src={white_sparkle} width={250} height={250} className="absolute lg:right-[4%] right-[14%] top-[34%] pointer-events-none" />
+        <Image alt="white sparkle" src={white_sparkle} width={210} height={210} className="absolute left-[48%] top-[50%] pointer-events-none" />
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
             A datathon is a fast-paced, team-based or individual event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling.
@@ -219,16 +219,16 @@ export default function Datathon() {
       </motion.div>
 
       <motion.div className="relative w-full flex flex-col justify-center items-center mt-6 lg:mt-8">
-        <div className="hidden lg:block relative w-full h-[980px] max-w-[1280px] mx-auto">
+        <div className="hidden lg:block relative w-full h-[980px] max-w-[1280px] mx-auto overflow-visible">
           {framedPhotos.map((p, i) => (
             <FramedPhoto key={i} src={p.src} alt={p.alt} className={p.className} delay={p.delay} desktopWidthPx={p.desktopWidthPx} />
           ))}
           {bubbles.map((b, i) => (
             <TextBubble key={i} text={b.text} className={b.className} delay={b.delay} flip={!!b.flip} flipY={!!b.flipY} />
           ))}
-          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute right-[94%] top-[14%]" />
-          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute left-[99%] top-[45%]" />
-          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute left-[24%] top-[49%]" />
+          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute right-[94%] top-[14%] pointer-events-none" />
+          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute left-[99%] top-[45%] pointer-events-none" />
+          <Image alt="white sparkle" src={white_sparkle} width={240} height={240} className="absolute left-[24%] top-[49%] pointer-events-none" />
         </div>
         <div className="lg:hidden grid grid-cols-1 gap-6 w-full px-6">
           {framedPhotos.map((p, i) => (
@@ -237,7 +237,7 @@ export default function Datathon() {
           {bubbles.map((b, i) => (
             <div key={i} className="w-full">
               <div className="relative w-full">
-                <Image alt="textbox" src={textbox} className="w-full h-auto" />
+                <Image alt="textbox" src={textbox} className="w-full h-auto pointer-events-none" />
                 <div className="absolute inset-0 px-6 flex items-start pt-10">
                   <p className="text-neutral-900 leading-snug">{b.text}</p>
                 </div>
@@ -248,8 +248,8 @@ export default function Datathon() {
       </motion.div>
 
       <div className="w-full h-fit relative flex-col items-center flex">
-        <div className="h-full relative w-full flex justify-center items-center">
-          <Image alt="gradient" src={gradient} quality={100} sizes="100vw" className="absolute bg-cover h-full w-full opacity-90" />
+        <div className="h-full relative w-full flex justify-center items-center overflow-x-clip">
+          <Image alt="gradient" src={gradient} quality={100} sizes="100vw" className="absolute bg-cover h-full w-full opacity-90 pointer-events-none" />
           <StickyScroll content={content} />
         </div>
       </div>
