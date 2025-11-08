@@ -197,7 +197,7 @@ export default function Datathon() {
   ];
 
   return (
-    <div className="relative w-full min-h-dvh pt-[140px] overflow-x-clip bg-gradient-to-b from-[#4E74D9] via-[#7FA1E6] to-[#CAD8E6]">
+    <div className="relative w-full min-h-dvh pt-[140px] overflow-x-hidden supports-[overflow:clip]:overflow-x-clip bg-gradient-to-b from-[#4E74D9] via-[#7FA1E6] to-[#CAD8E6]">
       <motion.div className="w-full h-auto relative" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         <AnimatedGraph />
         <motion.p className="absolute lg:top-[7%] left-[5%] font-clash lg:text-7xl text-4xl font-medium w-fit top-[100px] text-white" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
@@ -248,7 +248,7 @@ export default function Datathon() {
       </motion.div>
 
       <div className="w-full h-fit relative flex-col items-center flex">
-        <div className="h-full relative w-full flex justify-center items-center overflow-x-clip">
+        <div className="h-full relative w-full flex justify-center items-center overflow-x-hidden supports-[overflow:clip]:overflow-x-clip">
           <Image alt="gradient" src={gradient} quality={100} sizes="100vw" className="absolute bg-cover h-full w-full opacity-90 pointer-events-none" />
           <StickyScroll content={content} />
         </div>
