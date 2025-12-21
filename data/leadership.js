@@ -93,15 +93,33 @@ export const leadershipData = [
 
 // Add this at the bottom of the file, after leadershipData
 export const internData = [
-  // {
-  //   description: 'Marketing Intern',
-  //   title: 'Juan Muhirwe',
-  //   src: '/meet-us/juan.jpeg',
-  //   ctaText: 'View',
-  //   ctaLink: 'https://www.linkedin.com/',
-  //   content:
-  //     "I am a second-year data science major who loves art, specifically drawing and painting, and I'm like an encyclopedia for sitcoms.",
-  // },
+  {
+    description: 'Digital Media Intern',
+    title: 'Anshika Govada',
+    src: '/meet-us/anshika.jpg',
+    ctaText: 'View',
+    ctaLink: 'https://www.linkedin.com/in/anshika-govada-a71239283/',
+    content:
+      "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
+  },
+  {
+    description: 'Graphic Design Intern',
+    title: 'Maanya Chhajer',
+    src: '/meet-us/maanya.jpg',
+    ctaText: 'View',
+    ctaLink: 'https://www.linkedin.com/in/maanya-chhajer/',
+    content:
+      "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
+  },
+  {
+    description: 'Social Media Intern',
+    title: 'Rithika Yalla',
+    src: '/meet-us/rithika.jpg',
+    ctaText: 'View',
+    ctaLink: 'https://www.linkedin.com/in/rithika-yalla-96a490328/',
+    content:
+      "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
+  },
 ];
 
 export const facultyData = [

@@ -166,6 +166,12 @@ export default function About() {
             </div>
           </div>
           <div className="mb-24">
+            <HeaderBadge>Board Interns</HeaderBadge>
+            <div className="mt-10">
+              <Cards data={internData} />
+            </div>
+          </div>
+          <div className="mb-24">
             <HeaderBadge>Faculty Advisor</HeaderBadge>
             <div className="mt-10">
               <Cards data={facultyData} />
