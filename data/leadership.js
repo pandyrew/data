@@ -94,7 +94,7 @@ export const leadershipData = [
 // Add this at the bottom of the file, after leadershipData
 export const internData = [
   {
-    description: 'Digital Media Intern',
+    description: 'Social Media Intern',
     title: 'Anshika Govada',
     src: '/meet-us/anshika.jpg',
     ctaText: 'View',
@@ -112,7 +112,7 @@ export const internData = [
       "Hey! I'm Andrew and I am the Webmaster for Data @ UCI. I am a second year Data Science major. I love studying at cafes and learning new instruments. Excited to see you all at our events!",
   },
   {
-    description: 'Social Media Intern',
+    description: 'Digital Media Intern',
     title: 'Rithika Yalla',
     src: '/meet-us/rithika.jpg',
     ctaText: 'View',
