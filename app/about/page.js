@@ -95,7 +95,7 @@ export default function About() {
                   Data@UCI nurtures a community of Anteaters exploring their place in an increasingly data-driven world.
                   Through workshops, professional panels, and speaker events, we help students grow analytical skills and
                   develop a deeper appreciation for data — empowering success in college and beyond.
-                  Join us at meetings on Wednesdays 6:30 PM - 7:30 PM in DBH 6011.
+                  Join us at meetings on Tuesdays 6:30 PM - 7:30 PM in DBH 6011.
                 </p>
               </motion.div>
               <motion.h1
