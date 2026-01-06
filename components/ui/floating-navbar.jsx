@@ -8,6 +8,7 @@ import dataIcon from "/public/icons/data-icon.svg";
 const NAV_ITEMS = [
   { name: "HOME", href: "/" },
   { name: "DATATHON", href: "/datathon" },
+  { name: "MENTORSHIP PROGRAM", href: "/mentorship" },
   { name: "ABOUT US", href: "/about" },
   { name: "CONTACT", href: "https://linktr.ee/DataAtUCIrvine" },
 ];

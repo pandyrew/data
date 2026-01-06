@@ -55,8 +55,8 @@ export default function RootLayout({ children }) {
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: 'Meet Us',
-      link: '/meet-us',
+      name: 'Mentorship Program',
+      link: '/mentorship',
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
