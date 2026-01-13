@@ -15,77 +15,15 @@ const PALETTE = {
   blueStrong: '#6492FF',
 };
 
-function FramedPhoto({
-  src,
-  alt,
-  className = '',
-  delay = 0,
-  aspect = 'aspect-square',
-  insetPct = '14%',
-  frameOutsetPct = '10%',
-  absolute = true,
-  desktopWidthPx = 320,
-}) {
-  return (
-    <motion.div
-      className={`${absolute ? 'absolute' : ''} ${className}`}
-      initial={{ opacity: 0, scale: 0.95, y: 8 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={{ rotate: -1.2, scale: 1.015 }}
-      style={{
-        filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.35))',
-        willChange: 'transform',
-        transform: 'translateZ(0)',
-      }}
-    >
-      <div className={`relative ${aspect} w-full`}>
-        <div
-          className="absolute"
-          style={{ top: insetPct, right: insetPct, bottom: insetPct, left: insetPct }}
-        >
-          <Image
-            src={src}
-            alt={alt ?? ''}
-            fill
-            className="object-cover"
-            quality={85}
-            sizes={`(min-width:1536px) ${desktopWidthPx}px,
-                    (min-width:1280px) ${Math.round(desktopWidthPx * 0.95)}px,
-                    (min-width:1024px) ${Math.round(desktopWidthPx * 0.9)}px,
-                    (min-width:640px) 50vw,
-                    90vw`}
-            priority={false}
-          />
-        </div>
-
-        <div
-          className="absolute z-20 pointer-events-none"
-          style={{
-            top: `-${frameOutsetPct}`,
-            right: `-${frameOutsetPct}`,
-            bottom: `-${frameOutsetPct}`,
-            left: `-${frameOutsetPct}`,
-          }}
-        >
-          <Image
-            src={framePng}
-            alt=""
-            fill
-            className="object-contain"
-            quality={92}
-            sizes={`(min-width:1536px) ${desktopWidthPx + 64}px,
-                    (min-width:1280px) ${desktopWidthPx + 48}px,
-                    (min-width:1024px) ${desktopWidthPx + 32}px,
-                    (min-width:640px) 55vw,
-                    95vw`}
-            priority={false}
-          />
-        </div>
-      </div>
-    </motion.div>
-  );
-}
+const GALLERY = [
+  { src: '/photos/mentor2.png', alt: 'General Meeting', span: 'col-span-2 row-span-2' },
+  { src: '/photos/mentor3.png', alt: 'More Winners!', span: 'col-span-2 row-span-2' },
+  { src: '/photos/mentor6.png', alt: 'More fun!', span: 'col-span-2 row-span-2' },
+  { src: '/photos/mentor4.png', alt: 'Workshop', span: 'col-span-2 row-span-2' },
+  { src: '/photos/mentor5.png', alt: 'Participants', span: 'col-span-1 row-span-2' },
+  { src: '/photos/mentor1.JPG', alt: 'More Workshop!', span: 'col-span-2 row-span-2' },
+  { src: '/photos/mentor7.JPG', alt: 'More Workshop!', span: 'col-span-1 row-span-2' },
+];
 
 function TextBubble({ text, className = '', delay = 0, flip = false, flipY = false }) {
   return (
@@ -101,6 +39,51 @@ function TextBubble({ text, className = '', delay = 0, flip = false, flipY = fal
           <p className="text-neutral-900 leading-snug">{text}</p>
         </div>
       </div>
+    </motion.div>
+  );
+}
+
+function MosaicGallery({ items }) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: '-20% 0px -10% 0px' }}
+      variants={{
+        hidden: { opacity: 0 },
+        show: { opacity: 1, transition: { staggerChildren: 0.06 } },
+      }}
+      className="relative"
+    >
+      <div className="mb-4 ml-1 text-xs tracking-widest uppercase text-black/70">Previous Mentorship Programs!</div>
+      <div className="grid grid-cols-6 auto-rows-[7rem] sm:auto-rows-[8rem] grid-flow-dense gap-3 sm:gap-4">
+        {items.map((it, i) => (
+          <Tile key={i} src={it.src} alt={it.alt} span={it.span} />
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function Tile({ src, alt, span }) {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 12 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+      }}
+      whileHover={{ scale: 1.02 }}
+      className={`${span} relative overflow-hidden rounded-xl lg:rounded-2xl ring-1 ring-white/10 bg-white/5`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover select-none"
+        sizes="(max-width: 1024px) 100vw, 560px"
+        priority={false}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
     </motion.div>
   );
 }
@@ -123,15 +106,6 @@ export default function About() {
       delay: 0.5,
       flipY: true,
     },
-  ];
-
-  const framedPhotos = [
-    { src: '/photos/datafun7.jpg', alt: 'Friends', className: 'w-[270px] top-[68%] left-[23%] z-10', delay: 0.25, desktopWidthPx: 270 },
-    { src: '/photos/workshop.JPG', alt: 'Workshop', className: 'w-[310px] top-[50%] right-[82%] z-10', delay: 0.35, desktopWidthPx: 310 },
-    { src: '/photos/datafun1.jpg', alt: 'Deep discussion', className: 'w-[320px] top-[50%] left-[80%] z-10', delay: 0.45, desktopWidthPx: 320 },
-    { src: '/photos/datathon2.png', alt: 'Besties', className: 'w-[290px] top-[50%] left-[48%] z-10', delay: 0.55, desktopWidthPx: 290 },
-    { src: '/photos/datafun5.jpg', alt: 'Board', className: 'w-[275px] top-[21%] left-[25%] z-10', delay: 0.65, desktopWidthPx: 275 },
-    { src: '/photos/datafun6.jpg', alt: 'Free drinks!', className: 'w-[290px] top-[19.5%] right-[22%] z-10', delay: 0.75, desktopWidthPx: 290 },
   ];
 
   return (
@@ -182,14 +156,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Participants will collaborate with peers in a small team to develop a data
-              science project under the guidance of an industry mentor. Through this process,
-              they will strengthen their collaboration, problem-solving, and technical data science
-              skills while receiving program support. The program is designed to foster growth,
-              encourage exploration of new ideas, and enable participants to produce a meaningful,
-              high-impact project. Weekly events are held to supplement and support participants, covering 
-              topics such as data visualization, machine learning, and other skills that can be directly 
-              applied to their projects.
+              In this mentorship program, you’ll work in a small team to build a data science project alongside an industry mentor. Along the way, you’ll sharpen your problem-solving, collaboration, and technical skills while getting plenty of guidance and support. The program is designed to help you grow, try new ideas, and create something meaningful you can be proud of. Weekly events are held to supplement and support participants, covering topics such as data visualization, machine learning, and other skills that can be directly applied to the projects. Come build, learn, and have fun with a community of students and mentors who love data!
             </motion.p>
           </div>
         </div>
@@ -215,66 +182,27 @@ export default function About() {
         />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-16 pt-24 md:pt-28 pb-28">
-          <div className="hidden lg:block relative w-full h-[980px] max-w-[1280px] mx-auto overflow-visible">
-            {framedPhotos.map((p, i) => (
-              <FramedPhoto
-                key={i}
-                src={p.src}
-                alt={p.alt}
-                className={p.className}
-                delay={p.delay}
-                desktopWidthPx={p.desktopWidthPx}
-              />
-            ))}
-
-            {bubbles.map((b, i) => (
-              <TextBubble
-                key={i}
-                text={b.text}
-                className={b.className}
-                delay={b.delay}
-                flip={!!b.flip}
-                flipY={!!b.flipY}
-              />
-            ))}
+          <div className="hidden lg:block relative w-full max-w-[1280px] mx-auto">
+            <MosaicGallery items={GALLERY} />
 
             <Image
               alt="white sparkle"
               src={white_sparkle}
               width={240}
               height={240}
-              className="absolute right-[94%] top-[14%] pointer-events-none"
+              className="absolute right-[96%] top-[15%] pointer-events-none"
             />
             <Image
               alt="white sparkle"
               src={white_sparkle}
               width={240}
               height={240}
-              className="absolute left-[99%] top-[45%] pointer-events-none"
-            />
-            <Image
-              alt="white sparkle"
-              src={white_sparkle}
-              width={240}
-              height={240}
-              className="absolute left-[24%] top-[49%] pointer-events-none"
+              className="absolute left-[94%] top-[49%] pointer-events-none"
             />
           </div>
 
-          {/* Mobile stacked */}
           <div className="lg:hidden grid grid-cols-1 gap-6 w-full">
-            {framedPhotos.map((p, i) => (
-              <FramedPhoto
-                key={i}
-                src={p.src}
-                alt={p.alt}
-                className="w-full relative"
-                delay={p.delay}
-                absolute={false}
-                desktopWidthPx={360}
-              />
-            ))}
-
+            <MosaicGallery items={GALLERY} />
             {bubbles.map((b, i) => (
               <div key={i} className="w-full">
                 <div className="relative w-full">
