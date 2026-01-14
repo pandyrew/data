@@ -21,7 +21,7 @@ const GALLERY = [
   { src: '/photos/mentor6.png', alt: 'More fun!', span: 'col-span-2 row-span-2' },
   { src: '/photos/mentor4.png', alt: 'Workshop', span: 'col-span-2 row-span-2' },
   { src: '/photos/mentor5.png', alt: 'Participants', span: 'col-span-1 row-span-2' },
-  { src: '/photos/mentor1.jpg', alt: 'More Workshop!', span: 'col-span-2 row-span-2' },
+  { src: '/photos/mentor1.JPG', alt: 'More Workshop!', span: 'col-span-2 row-span-2' },
   { src: '/photos/mentor7.jpg', alt: 'More Workshop!', span: 'col-span-1 row-span-2' },
 ];
 
