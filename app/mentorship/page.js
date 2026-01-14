@@ -198,20 +198,6 @@ export default function About() {
               className="absolute left-[94%] top-[49%] pointer-events-none"
             />
           </div>
-
-          <div className="lg:hidden grid grid-cols-1 gap-6 w-full">
-            <MosaicGallery items={GALLERY} />
-            {bubbles.map((b, i) => (
-              <div key={i} className="w-full">
-                <div className="relative w-full">
-                  <Image alt="textbox" src={textbox} className="w-full h-auto pointer-events-none" />
-                  <div className="absolute inset-0 px-6 flex items-start pt-10">
-                    <p className="text-neutral-900 leading-snug">{b.text}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </div>
