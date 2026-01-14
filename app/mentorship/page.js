@@ -145,9 +145,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Mentorship Program:
-              <br />
-              Winter Project Series
+              Mentorship Program
             </motion.h1>
 
             <motion.p
