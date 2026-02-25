@@ -208,12 +208,15 @@ export default function Datathon() {
         <Image alt="white sparkle" src={white_sparkle} width={210} height={210} className="absolute left-[48%] top-[50%] pointer-events-none" />
         <motion.div className="absolute left-[5%] top-[190px] max-w-[640px] pt-30 pr-6 z-10" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}>
           <p className="text-white leading-relaxed font-mono">
-            A datathon is a fast-paced, team-based or individual event where you dig into real datasets, uncover insights, and present your findings. Think hackathon—but focused on data exploration, analysis, and storytelling.
+            A datathon is a fast-paced, team-based event where you dig into real datasets, uncover insights, 
+            and present your findings. Think hackathon, but focused on data exploration, analysis, and storytelling.
           </p>
           <div className="mt-4 flex justify-left pt-2">
-            <span className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform">
-              Datathon 2026 Coming Soon
-            </span>
+            <Link
+              href="https://www.unlockingthedata.com/"
+              className="px-5 py-5 bg-[#CAD8F5] text-[#4E74D9] font-bold rounded-full shadow hover:scale-105 transition-transform inline-block">
+              Datathon 2026: Unlock the Data
+            </Link>
           </div>
         </motion.div>
       </motion.div>
@@ -287,8 +290,9 @@ export default function Datathon() {
 }
 
 const content = [
-  { title: 'Datathon 2026: Coming Soon', description: 'Stay tuned for Datathon 2026! This will be our fourth iteration of the event and we are excited to bring you something exciting and new!', content: <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2026</div> },
+  // { title: 'Datathon 2027: Unlock the Data', description: 'Stay tuned for Datathon 2027! This will be our fifth iteration of the event and we are excited to bring you something exciting and new!', content: <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white font-mono">Datathon 2026</div> },
+  { title: 'Datathon 2026: Unlock the Data', description: 'This year, Datathon transforms into a high-stakes digital heist. Participants become data operatives, infiltrating complex datasets, uncovering hidden signals, and extracting insights before time runs out. Assemble your team, trust your instincts, and unlock the data.', content: <div className="h-full w-full bg-[url('/photos/datathon5.png')] bg-cover flex items-center justify-center text-white font-mono">Unlock 2026</div> },
   { title: 'Datathon 2025: Soar into Data', description: 'Inspired by the Seven Wonders of the World, Soar into Data invited participants to embark on a journey of discovery through data—much like how explorers uncovered the mysteries of these magnificent monuments.', content: <div className="h-full w-full bg-[url('/photos/datathon3.png')] bg-cover flex items-center justify-center text-white font-mono">Soar 2025</div> },
-  { title: 'Datathon 2024: Dive into Data', description: 'Our 2024 datathon, Atlantis, served as a beacon guiding us towards uncharted waters of discovery. Like the fabled city lost to the depths of time, our datasets harbored untold stories waiting to be unveiled. Together, we unraveled the mysteries, decoded the patterns, and charedt a course towards new horizons of knowledge and understanding.', content: <div className="h-full w-full bg-[url('/photos/datathon4.png')] bg-cover flex items-center justify-center text-white font-mono">Dive 2024</div> },
+  { title: 'Datathon 2024: Dive into Data', description: 'Our 2024 datathon, Atlantis, served as a beacon guiding us towards uncharted waters of discovery. Like the fabled city lost to the depths of time, our datasets harbored untold stories waiting to be unveiled. Together, we unraveled the mysteries, decoded the patterns, and charted a course towards new horizons of knowledge and understanding.', content: <div className="h-full w-full bg-[url('/photos/datathon4.png')] bg-cover flex items-center justify-center text-white font-mono">Dive 2024</div> },
   { title: 'Datathon 2023: Embark', description: 'In 2023, we introduced our first Datathon as Embark—a theme that reflected our commitment to new adventures and continued growth. We carried this spirit forward, as it was all about trying something new and finding more ways to support our data community. We hoped participants would also discover something through the event that would fascinate them for years to come.', content: <div className="h-full w-full bg-[url('/photos/datathon1.png')] bg-cover flex items-center justify-center text-white font-mono">Embark 2023</div> },
 ];
